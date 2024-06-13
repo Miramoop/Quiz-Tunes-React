@@ -37,6 +37,7 @@ function App() {
 
   return (
     <div className="App">
+      <meta name="google-site-verification" content="MuwejjSJoKIBcN9bCWPbf0-kD_s77cp-55_TMXx_-c8" />
       <Header />
       {error && <div>I&apos;m an Error</div>}
       {currentQuestionIndex === -1 && 
