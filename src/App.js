@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import Header from './components/Header.js'
+import Footer from './components/Footer.js';
 import Home from './components/Home.js'
+import Quiz from './components/Quiz.js';
+import QuizComplete from './components/QuizComplete.js';
 import questionsData from './data/questions.json'
 import weightsData from './data/weights.json'
 import { useState, useEffect } from 'react';
 import './App.css';
 import './styles/styles.css'
-import Quiz from './components/Quiz.js';
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
@@ -16,7 +18,7 @@ function App() {
   const [error, setError] = useState(false);
   useEffect(() => {
     if (isQuizComplete){
-      console.log('Implement get Token');
+      console.log('Quiz is Complete');
     }
   }, [isQuizComplete])
   useEffect(() => {
@@ -37,14 +39,14 @@ function App() {
 
   return (
     <div className="App">
-      <meta name="google-site-verification" content="MuwejjSJoKIBcN9bCWPbf0-kD_s77cp-55_TMXx_-c8" />
       <Header />
       {error && <div>I&apos;m an Error</div>}
       {currentQuestionIndex === -1 && 
       <Home startQuiz={handleStartQuiz}/>
       }
       {currentQuestionIndex === 0 && !isQuizComplete && <Quiz questions={questions} weights={weights} setIsQuizComplete={setIsQuizComplete}/>}
-      {isQuizComplete && <div>Quiz Done!</div>}
+      {isQuizComplete && <QuizComplete/> }
+      <Footer />
     </div>
   );
 }

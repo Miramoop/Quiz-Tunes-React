@@ -5,7 +5,7 @@ const Quiz = ({
   questions,
   weights,
   handleQuestionData,
-  setIsQuizComplete
+  setIsQuizComplete,
 }) => {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
