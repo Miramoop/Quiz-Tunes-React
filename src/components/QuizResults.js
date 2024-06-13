@@ -15,7 +15,7 @@ const QuizResults = ({
         <li>
           <button
             id="resetQuizButton"
-            onClick={resetQuiz} //Add into App.js, ResetQuiz Function
+            onClick={resetQuiz} 
             aria-label="Reset and Start the Quiz Over"
           >
             Return to HomePage

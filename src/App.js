@@ -18,12 +18,7 @@ function App() {
   const [isQuizComplete, setIsQuizComplete] = useState(false);
   const [isCalculatedResults, setCalculatedResults] = useState(false);
   const [error, setError] = useState(false);
-  useEffect(() => {
-    if (isQuizComplete) {
-      console.log("Quiz is Complete");
-    }
-  }, [isQuizComplete]);
-
+  
   useEffect(() => {
     if (isCalculatedResults) {
       console.log("Calculate the Results");
