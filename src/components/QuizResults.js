@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 const QuizResults = ({
   resetQuiz,
   displaySpotifyLink,
   fetchYouTubeDataAndDisplay,
+  spotifyLink,
+  youtubeVideos,
 }) => (
   <section id="results">
     <div id="resultsContent" role="alert">
       Results are Here!
     </div>
-    <div id="videoContent"></div>
     <div id="spotifyContent"></div>
     <div id="buttonHolder">
       <ul>

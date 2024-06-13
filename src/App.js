@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
@@ -7,9 +8,10 @@ import QuizComplete from "./components/QuizComplete.js";
 import QuizResults from "./components/QuizResults.js";
 import questionsData from "./data/questions.json";
 import weightsData from "./data/weights.json";
-import { useState, useEffect } from "react";
 import "./App.css";
 import "./styles/styles.css";
+import { getTrackInfo, getToken } from "./api/spotifyApi.js";
+import { fetchYouTubeData } from "./api/youtubeApi.js";
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
@@ -18,7 +20,16 @@ function App() {
   const [isQuizComplete, setIsQuizComplete] = useState(false);
   const [isCalculatedResults, setCalculatedResults] = useState(false);
   const [error, setError] = useState(false);
-  
+  const [dominantGenre, setDominantGenre] = useState(null);
+  const [spotifyLink, setSpotifyLink] = useState('');
+  const [youTubeVideos, setYouTubeVideos] = useState([]);
+
+  useEffect(() => {
+    if (isQuizComplete) {
+      console.log("Quiz is Complete");
+    }
+  }, [isQuizComplete]);
+
   useEffect(() => {
     if (isCalculatedResults) {
       console.log("Calculate the Results");
@@ -44,21 +55,52 @@ function App() {
   const handleCalculateResults = () => {
     setCalculatedResults(true);
     console.log("Calculate the Results!");
+    const dominant = calculateDominantGenre(weights);
+    setDominantGenre(dominant);
   };
 
   const resetQuiz = () => {
     setCurrentQuestionIndex(-1);
     setIsQuizComplete(false);
     setCalculatedResults(false);
+    setSpotifyLink('');
+    setYouTubeVideos([]);
     console.log("Reset Quiz");
   };
 
-  const displaySpotifyLink = () => {
-    console.log("Display Spotify Link");
+  const calculateDominantGenre = (weights) => {
+    let maxValue = -Infinity;
+    let dominantGenre;
+    for (const genre in weights) {
+      if (weights.hasOwnProperty(genre)) {
+        if (weights[genre] > maxValue) {
+          maxValue = weights[genre];
+          dominantGenre = genre;
+        }
+      }
+    }
+    return dominantGenre;
   };
 
-  const fetchYouTubeDataAndDisplay = () => {
-    console.log("Fetch YouTube Data & Display");
+  const displaySpotifyLink = async () => {
+    try {
+      const token = await getToken();
+      const trackInfo = await getTrackInfo(token, dominantGenre);
+      setSpotifyLink(trackInfo.tracks[0].external_urls.spotify);
+    } catch(error) {
+      console.error("Error fetching Spotify track:", error);
+    }
+  };
+
+  const fetchYouTubeDataAndDisplay = async () => {
+    try {
+      const trackName = localStorage.getItem('track_Name');
+      const artistName = localStorage.getItem('artist_Name');
+      const data = await fetchYouTubeData(trackName, artistName);
+      setYouTubeVideos(data.items);
+    } catch(error){
+      console.error("Error fetching YouTube data:", error);
+    }
   };
 
   return (
@@ -83,6 +125,8 @@ function App() {
         resetQuiz={resetQuiz}
         displaySpotifyLink={displaySpotifyLink}
         fetchYouTubeDataAndDisplay={fetchYouTubeDataAndDisplay}
+        spotifyLink={spotifyLink}
+        youTubeVideos={youTubeVideos}
       />
       )}
       <Footer />
