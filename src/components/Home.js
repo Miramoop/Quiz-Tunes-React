@@ -1,7 +1,7 @@
 import React from "react";
 
 const Home = ({ startQuiz }) => (
-  <section id="home" className="active">
+  <section id="home">
     <h2 aria-label="Welcome to Quiz Tunes!">Welcome to Quiz Tunes!</h2>
     <button
       id="startQuizButton"
