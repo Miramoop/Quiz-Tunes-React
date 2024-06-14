@@ -58,6 +58,7 @@ function App() {
     console.log("Calculate the Results!");
     const dominant = calculateDominantGenre(weights);
     setDominantGenre(dominant);
+    console.log(dominant);
   };
 
   const resetQuiz = () => {

@@ -1,3 +1,5 @@
+/* To Do - Remove any unncessary CSS & Refactor */
+
 :root {
 --border-color: black;
 --button-link-color: white;
@@ -103,7 +105,6 @@ button:focus, button:hover {
     color: var(--button-link-color);
 }
 
-/* #quiz, #questionText, #choicesText, #quizComplete, #errorScreen, #completeTextContainer { */
 #quiz, #questionText, #choicesText, #choices, #quizComplete, #errorScreen, #completeTextContainer {   
     align-items: center;
     padding: 1vh;
@@ -114,12 +115,6 @@ button:focus, button:hover {
 #errorContainer{
     padding-bottom: 3vh;
 }
-
-/* #choicesText {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-} */
 
 .choices {
     align-items: center;
@@ -187,12 +182,6 @@ footer a {
         margin: 0 auto;
         padding: 0;
     }
-
-    /* #choicesText {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        gap: 10px;
-    } */
 
     .choices {
         display: grid;

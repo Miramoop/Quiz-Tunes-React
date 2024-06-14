@@ -9,6 +9,7 @@ const calculateDominantGenre = (weights) => {
       }
     }
   }
+  
   return dominantGenre;
 };
 export { calculateDominantGenre };
