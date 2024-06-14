@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Quiz = ({
-  questions,
-  weights,
-  updateWeights,
-  setIsQuizComplete,
-}) => {
+const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(null);
 
@@ -18,7 +13,8 @@ const Quiz = ({
 
     for (const [key, value] of Object.entries(selectedChoice.weights)) {
       const normalizedKey = key.toLowerCase();
-      updatedWeights[normalizedKey] = (updatedWeights[normalizedKey] || 0) + value;
+      updatedWeights[normalizedKey] =
+        (updatedWeights[normalizedKey] || 0) + value;
     }
 
     updateWeights(updatedWeights);
@@ -37,11 +33,18 @@ const Quiz = ({
 
   return (
     <section id="quiz">
-      <img id="questionImage" src={currentQuestion.questionImage?.src ?? ""} alt={currentQuestion.questionImage?.alt} />
+      <img
+        id="questionImage"
+        src={currentQuestion.questionImage?.src ?? ""}
+        alt={currentQuestion.questionImage?.alt}
+      />
       <div id="questionText">{currentQuestion.question}</div>
       <div className="choices">
         {currentQuestion.choices.map((choice) => (
-          <button key={choice.choice} onClick={() => handleChoiceSelection(choice)}>
+          <button
+            key={choice.choice}
+            onClick={() => handleChoiceSelection(choice)}
+          >
             {choice.choice}
           </button>
         ))}
@@ -51,5 +54,3 @@ const Quiz = ({
 };
 
 export default Quiz;
-
-

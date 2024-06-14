@@ -1,6 +1,6 @@
 import React from "react";
 
-const QuizComplete = ({handleCalculateResults}) => (
+const QuizComplete = ({ handleCalculateResults }) => (
   <section id="quizComplete" role="alert">
     <img
       id="progressImage"

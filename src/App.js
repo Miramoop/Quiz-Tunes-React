@@ -6,7 +6,7 @@ import Quiz from "./components/Quiz";
 import QuizComplete from "./components/QuizComplete";
 import QuizResults from "./components/QuizResults";
 import { calculateDominantGenre } from "./utils";
-import { fetchSpotifyLink } from "./services/spotifyService";
+import { fetchTrackInfo } from "./services/spotifyService";
 import { fetchYouTubeVideos } from "./services/youtubeService";
 import { loadInitialData } from "./services/dataService";
 import "./App.css";
@@ -22,6 +22,7 @@ function App() {
   const [dominantGenre, setDominantGenre] = useState(null);
   const [spotifyLink, setSpotifyLink] = useState("");
   const [youTubeVideos, setYouTubeVideos] = useState([]);
+  const [spotifyTrack, setSpotifyTrack] = useState(null);
 
   useEffect(() => {
     setError(false);
@@ -37,7 +38,6 @@ function App() {
 
   const updateWeights = (updatedWeights) => {
     setWeights(updatedWeights);
-    console.log("Updated Weights:", updatedWeights);
   };
 
   const handleStartQuiz = () => {
@@ -46,10 +46,9 @@ function App() {
 
   const handleCalculateResults = () => {
     setCalculatedResults(true);
-    console.log("Weights:", weights);
     const dominant = calculateDominantGenre(weights);
-    console.log("Dominant Genre:", dominant);
     setDominantGenre(dominant);
+    displayRecommendedTracks(dominant);
   };
 
   const resetQuiz = () => {
@@ -58,14 +57,16 @@ function App() {
     setCalculatedResults(false);
     setSpotifyLink("");
     setYouTubeVideos([]);
+    setSpotifyTrack(null);
   };
 
-  const displaySpotifyLink = async () => {
+  const displaySpotifyInfo = async () => {
     try {
-      const link = await fetchSpotifyLink(dominantGenre);
-      setSpotifyLink(link);
+      const track = await fetchTrackInfo(dominantGenre);
+      setSpotifyLink(track.spotifyUrl);
     } catch (error) {
       console.error("Error in displaying Spotify link:", error);
+      setError(true);
     }
   };
 
@@ -80,29 +81,46 @@ function App() {
     }
   };
 
+  const displayRecommendedTracks = async (genre) => {
+    try {
+      const trackInfo = await fetchTrackInfo(genre);
+      setSpotifyTrack(trackInfo);
+
+      if (trackInfo.name && trackInfo.artist) {
+        localStorage.setItem("track_Name", trackInfo.name);
+        localStorage.setItem("artist_Name", trackInfo.artist);
+      }
+    } catch (error) {
+      console.error("Error fetching recommended tracks:", error);
+    }
+  };
+
   return (
     <div className="App">
       <Header />
       {error && <div>I'm an Error</div>}
       {currentQuestionIndex === -1 && <Home startQuiz={handleStartQuiz} />}
-      {currentQuestionIndex >= 0 && currentQuestionIndex < questions.length && !isQuizComplete && (
-        <Quiz
-          questions={questions}
-          weights={weights}
-          updateWeights={updateWeights}
-          setIsQuizComplete={setIsQuizComplete}
-        />
-      )}
+      {currentQuestionIndex >= 0 &&
+        currentQuestionIndex < questions.length &&
+        !isQuizComplete && (
+          <Quiz
+            questions={questions}
+            weights={weights}
+            updateWeights={updateWeights}
+            setIsQuizComplete={setIsQuizComplete}
+          />
+        )}
       {isQuizComplete && !isCalculatedResults && (
         <QuizComplete handleCalculateResults={handleCalculateResults} />
       )}
       {isCalculatedResults && (
         <QuizResults
           resetQuiz={resetQuiz}
-          displaySpotifyLink={displaySpotifyLink}
+          displaySpotifyInfo={displaySpotifyInfo} 
           fetchYouTubeDataAndDisplay={fetchYouTubeDataAndDisplay}
           spotifyLink={spotifyLink}
           youTubeVideos={youTubeVideos}
+          spotifyTrack={spotifyTrack}
         />
       )}
       <Footer />
@@ -111,3 +129,4 @@ function App() {
 }
 
 export default App;
+

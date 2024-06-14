@@ -1,5 +1,3 @@
-//To Do - Fix this function, as it currently outputs a value of null
-
 const calculateDominantGenre = (weights) => {
   let maxValue = -Infinity;
   let dominantGenre = null;
@@ -11,11 +9,8 @@ const calculateDominantGenre = (weights) => {
       }
     }
   }
-  
+
   return dominantGenre;
 };
 
 export { calculateDominantGenre };
-
-
-  
