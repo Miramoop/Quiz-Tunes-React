@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import Home from "./components/Home.js";
