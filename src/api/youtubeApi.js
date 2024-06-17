@@ -1,5 +1,3 @@
-//To Do - Fix issue where video name includes any punctuation, it is displayed not correct
-
 const fetchYouTubeData = async (trackName, artistName) => {
   const BASE_URL = "https://youtube.googleapis.com/youtube/v3/search";
   const API_KEY = "AIzaSyByxk2jK-t32JkvnCeza8q-Lfs2eLsXJPY";
