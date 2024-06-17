@@ -17,7 +17,7 @@ const Footer = () => (
     <a
       href="https://www.linkedin.com/in/mirandamorris845/"
       target="_blank"
-      rel="noopener, noreferrerr"
+      rel="noopener, noreferrer"
       aria-label="Linkedin Page"
     >
       <FontAwesomeIcon icon={faLinkedin} />

@@ -1,27 +1,28 @@
 import React, { useState, useEffect } from "react";
-import Header from "./components/Header.js";
-import Footer from "./components/Footer.js";
-import Home from "./components/Home.js";
-import Quiz from "./components/Quiz.js";
-import QuizComplete from "./components/QuizComplete.js";
-import QuizResults from "./components/QuizResults.js";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Quiz from "./components/Quiz";
+import QuizComplete from "./components/QuizComplete";
+import QuizResults from "./components/QuizResults";
+import { calculateDominantGenre } from "./utils";
+import { fetchTrackInfo } from "./services/spotifyService";
+import { fetchYouTubeVideos } from "./services/youtubeService";
+import { loadInitialData } from "./services/dataService";
 import "./App.css";
 import "./styles/styles.css";
-import { calculateDominantGenre } from "./utils.js";
-import { fetchSpotifyLink } from "./services/spotifyService.js";
-import { fetchYouTubeVideos } from "./services/youtubeService.js";
-import { loadInitialData } from "./services/dataService.js";
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
   const [questions, setQuestions] = useState([]);
-  const [weights, setWeights] = useState([]);
+  const [weights, setWeights] = useState({});
   const [isQuizComplete, setIsQuizComplete] = useState(false);
   const [isCalculatedResults, setCalculatedResults] = useState(false);
   const [error, setError] = useState(false);
   const [dominantGenre, setDominantGenre] = useState(null);
   const [spotifyLink, setSpotifyLink] = useState("");
   const [youTubeVideos, setYouTubeVideos] = useState([]);
+  const [spotifyTrack, setSpotifyTrack] = useState(null);
 
   useEffect(() => {
     setError(false);
@@ -35,29 +36,19 @@ function App() {
     }
   }, []);
 
-  //might need to use these in the future for testing
-  // useEffect(() => {
-  //   if (isQuizComplete) {
-  //     console.log("Quiz is Complete");
-  //   }
-  // }, [isQuizComplete]);
-
-  // useEffect(() => {
-  //   if (isCalculatedResults) {
-  //     console.log("Calculate the Results");
-  //   }
-  // }, [isCalculatedResults]);
+  const updateWeights = (updatedWeights) => {
+    setWeights(updatedWeights);
+  };
 
   const handleStartQuiz = () => {
-    setCurrentQuestionIndex(currentQuestionIndex + 1);
-    console.log("Start Quiz");
+    setCurrentQuestionIndex(0);
   };
 
   const handleCalculateResults = () => {
     setCalculatedResults(true);
-    console.log("Calculate the Results!");
     const dominant = calculateDominantGenre(weights);
     setDominantGenre(dominant);
+    displayRecommendedTracks(dominant);
   };
 
   const resetQuiz = () => {
@@ -66,15 +57,17 @@ function App() {
     setCalculatedResults(false);
     setSpotifyLink("");
     setYouTubeVideos([]);
-    console.log("Reset Quiz");
+    setSpotifyTrack(null);
+    setDominantGenre(null);
   };
 
-  const displaySpotifyLink = async () => {
+  const displaySpotifyInfo = async () => {
     try {
-      const link = await fetchSpotifyLink(dominantGenre);
-      setSpotifyLink(link);
+      const track = await fetchTrackInfo(dominantGenre);
+      setSpotifyLink(track.spotifyUrl);
     } catch (error) {
       console.error("Error in displaying Spotify link:", error);
+      setError(true);
     }
   };
 
@@ -89,10 +82,24 @@ function App() {
     }
   };
 
+  const displayRecommendedTracks = async (genre) => {
+    try {
+      const trackInfo = await fetchTrackInfo(genre);
+      setSpotifyTrack(trackInfo);
+
+      if (trackInfo.name && trackInfo.artist) {
+        localStorage.setItem("track_Name", trackInfo.name);
+        localStorage.setItem("artist_Name", trackInfo.artist);
+      }
+    } catch (error) {
+      console.error("Error fetching recommended tracks:", error);
+    }
+  };
+
   return (
     <div className="App">
       <Header />
-      {error && <div>I&apos;m an Error</div>}
+      {error && <div>I'm an Error</div>}
       {currentQuestionIndex === -1 && <Home startQuiz={handleStartQuiz} />}
       {currentQuestionIndex >= 0 &&
         currentQuestionIndex < questions.length &&
@@ -100,6 +107,7 @@ function App() {
           <Quiz
             questions={questions}
             weights={weights}
+            updateWeights={updateWeights}
             setIsQuizComplete={setIsQuizComplete}
           />
         )}
@@ -109,10 +117,12 @@ function App() {
       {isCalculatedResults && (
         <QuizResults
           resetQuiz={resetQuiz}
-          displaySpotifyLink={displaySpotifyLink}
+          displaySpotifyInfo={displaySpotifyInfo} 
           fetchYouTubeDataAndDisplay={fetchYouTubeDataAndDisplay}
           spotifyLink={spotifyLink}
           youTubeVideos={youTubeVideos}
+          spotifyTrack={spotifyTrack}
+          dominantGenre={dominantGenre}
         />
       )}
       <Footer />
@@ -121,3 +131,4 @@ function App() {
 }
 
 export default App;
+

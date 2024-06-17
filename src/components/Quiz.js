@@ -1,91 +1,53 @@
 import React, { useEffect, useState } from "react";
-import { getToken } from "../api/spotifyApi";
 
-const Quiz = ({
-  questions,
-  weights,
-  handleQuestionData,
-  setIsQuizComplete,
-}) => {
-  const [currentQuestion, setCurrentQuestion] = useState(null);
+const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [questionText, setQuestionText] = useState(null);
-  const [questionImage, setQuestionImage] = useState(null);
-  const [progressImage, setProgressImage] = useState(null);
-  const [questionChoices, setQuestionChoices] = useState(null);
-  const [choiceWeights, setChoiceWeights] = useState(weights);
-  const handleGetToken = async () => {
-    try {
-      const result = await getToken();
-      console.log(result);
-      setCurrentQuestion(questions[currentQuestionIndex]);
-    } catch (e) {}
-  };
-  useEffect(() => {
-    handleGetToken();
-  }, []);
+  const [currentQuestion, setCurrentQuestion] = useState(null);
 
   useEffect(() => {
-    if (currentQuestion !== null && currentQuestion !== undefined) {
-      setQuestionText(currentQuestion.question);
-      setQuestionImage(currentQuestion.questionImage);
-      setProgressImage(currentQuestion.progressImage);
-      setQuestionChoices(currentQuestion.choices);
-    }
-  }, [currentQuestion]);
+    setCurrentQuestion(questions[currentQuestionIndex]);
+  }, [currentQuestionIndex, questions]);
 
   const handleChoiceSelection = (selectedChoice) => {
-    const updatedWeights = { ...choiceWeights.weights };
+    const updatedWeights = { ...weights };
 
     for (const [key, value] of Object.entries(selectedChoice.weights)) {
       const normalizedKey = key.toLowerCase();
-      if (updatedWeights.hasOwnProperty(normalizedKey)) {
-        updatedWeights[normalizedKey] += value;
-      } else {
-        updatedWeights[normalizedKey] = value;
-      }
+      updatedWeights[normalizedKey] =
+        (updatedWeights[normalizedKey] || 0) + value;
     }
 
-    setChoiceWeights({ weights: updatedWeights });
+    updateWeights(updatedWeights);
 
     const nextQuestionIndex = currentQuestionIndex + 1;
     if (nextQuestionIndex < questions.length) {
       setCurrentQuestionIndex(nextQuestionIndex);
-      setCurrentQuestion(questions[nextQuestionIndex]);
     } else {
       setIsQuizComplete(true);
     }
   };
 
-  if (!progressImage || !questionImage || !questionText || !questionChoices) {
-    return <div>Loading</div>;
+  if (!currentQuestion) {
+    return <div>Loading...</div>;
   }
 
   return (
     <section id="quiz">
       <img
-        id="progressImage"
-        src={progressImage.src ?? ""}
-        alt={progressImage.alt}
-      />
-      <img
         id="questionImage"
-        src={questionImage.src ?? ""}
-        alt={questionImage.alt}
+        src={currentQuestion.questionImage?.src ?? ""}
+        alt={currentQuestion.questionImage?.alt}
       />
-      <div id="questionText" tabindex="-1">
-        {questionText}
-      </div>
+      <div id="questionText">{currentQuestion.question}</div>
       <div className="choices">
-        {questionChoices?.length > 0 &&
-          questionChoices.map((choice) => (
-            <button
-              id={choice.choice}
-              onClick={() => handleChoiceSelection(choice)}
-            >
-              {choice.choice}
-            </button>
-          ))}
+        {currentQuestion.choices.map((choice) => (
+          <button
+            key={choice.choice}
+            onClick={() => handleChoiceSelection(choice)}
+          >
+            {choice.choice}
+          </button>
+        ))}
       </div>
     </section>
   );
