@@ -9,6 +9,9 @@ const QuizResults = ({
   spotifyTrack,
   dominantGenre,
 }) => {
+
+  const [isSpotifyTrackButtonDisabled, setSpotifyTrackButtonDisabled] = useState(false);
+  const [isYouTubeVideoButtonDisabled, setYouTubeVideoButtonDisabled] = useState(false);
   const [videosFetched, setVideosFetched] = useState(false);
 
   const sanitizeTitle = (title) => {
@@ -89,18 +92,24 @@ const QuizResults = ({
         </button>
         <button
           id="spotifyTrackButton"
-          onClick={displaySpotifyInfo} 
+          onClick={ () => {
+            setSpotifyTrackButtonDisabled(true);
+            displaySpotifyInfo();
+          }} 
           aria-label="View the Spotify Track"
+          disabled={isSpotifyTrackButtonDisabled}
         >
           View the Spotify Track
         </button>
         <button
           id="youtubeVideoButton"
           onClick={() => {
+            setYouTubeVideoButtonDisabled(true);
             fetchYouTubeDataAndDisplay();
             setVideosFetched(true);
           }}
           aria-label="View the YouTube Video"
+          disabled={isYouTubeVideoButtonDisabled}
         >
           View the YouTube Video
         </button>
