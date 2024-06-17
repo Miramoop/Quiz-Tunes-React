@@ -1,9 +1,10 @@
+//To Do - Fix issue where video name includes any punctuation, it is displayed not correct
+
 const fetchYouTubeData = async (trackName, artistName) => {
   const BASE_URL = "https://youtube.googleapis.com/youtube/v3/search";
   const API_KEY = "AIzaSyByxk2jK-t32JkvnCeza8q-Lfs2eLsXJPY";
   const PART = "snippet";
   const MAX_RESULTS = 1;
-  //To Do - Fix issue where null by null is being passed in
   const QUERY = `${trackName} by ${artistName}`;
   const TYPE = "video";
   const VIDEO_EMBEDDABLE = "true";

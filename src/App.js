@@ -58,6 +58,7 @@ function App() {
     setSpotifyLink("");
     setYouTubeVideos([]);
     setSpotifyTrack(null);
+    setDominantGenre(null);
   };
 
   const displaySpotifyInfo = async () => {
@@ -121,6 +122,7 @@ function App() {
           spotifyLink={spotifyLink}
           youTubeVideos={youTubeVideos}
           spotifyTrack={spotifyTrack}
+          dominantGenre={dominantGenre}
         />
       )}
       <Footer />

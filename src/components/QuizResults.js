@@ -7,13 +7,16 @@ const QuizResults = ({
   spotifyLink,
   youTubeVideos,
   spotifyTrack,
+  dominantGenre,
 }) => {
   const [videosFetched, setVideosFetched] = useState(false);
 
+
+  //To Do - Fix the formatting on this page on bigger screens
   return (
     <section id="results">
       <div id="resultsContent" role="alert">
-       <p>Results are Here!</p> 
+       <p>Your Recommended Song is: </p> 
       </div>
 
       <div className="resultsSection">
@@ -27,6 +30,7 @@ const QuizResults = ({
               <p>Track Name: {spotifyTrack.name}</p>
               <p>Artist: {spotifyTrack.artist}</p>
               <p>Album: {spotifyTrack.albumName}</p>
+              <p>Genre: {dominantGenre ? dominantGenre.charAt(0).toUpperCase() + dominantGenre.slice(1) : "Not Available"}</p>
             </>
           )}
         </div>
