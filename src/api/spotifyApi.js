@@ -36,7 +36,6 @@ async function getTrackInfo(access_token, genre) {
       throw new Error("No tracks found for the genre");
     }
   
-    // Fetch genres from artist
     const track = recommendations.tracks[0];
     const artistId = track.artists[0].id;
     const artistResponse = await fetch(
@@ -47,8 +46,7 @@ async function getTrackInfo(access_token, genre) {
       }
     );
     const artist = await artistResponse.json();
-  
-    // Add genres to the track information
+
     track.genres = artist.genres;
   
     return { tracks: [track] };

@@ -11,15 +11,20 @@ const QuizResults = ({
 }) => {
   const [videosFetched, setVideosFetched] = useState(false);
 
+  const sanitizeTitle = (title) => {
+    return title 
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "lt;")
+      .replace(/>/g, "gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  };
 
-  //To Do - Fix the formatting on this page on bigger screens
   return (
     <section id="results">
       <div id="resultsContent" role="alert">
-       <p>Your Recommended Song is: </p> 
-      </div>
-
-      <div className="resultsSection">
+       <h2>Your Recommended Song is: </h2> 
+       <div className="resultsSection">
         <div id="trackInfo">
           {spotifyTrack && (
             <>
@@ -34,6 +39,8 @@ const QuizResults = ({
             </>
           )}
         </div>
+      </div>
+
         <div id="spotifyLinkDiv">
           {spotifyLink && (
             <a
@@ -52,7 +59,7 @@ const QuizResults = ({
         {videosFetched && youTubeVideos && youTubeVideos.length > 0 && (
           youTubeVideos.map((video) => (
             <div key={video.id.videoId} className="video-container">
-              <h2>{video.snippet.title}</h2>
+              <h2 dangerouslySetInnerHTML={{ __html: sanitizeTitle(video.snippet.title) }}></h2>
               <iframe
                 title={video.snippet.title}
                 src={`https://www.youtube.com/embed/${video.id.videoId}`}
@@ -71,6 +78,7 @@ const QuizResults = ({
         )}
       </div>
 
+{/* To Do - Make these buttons inactive after first press, then ensure that they are able to be activated again if you go through quiz again */}
       <div id="buttonHolder">
         <button
           id="resetQuizButton"
