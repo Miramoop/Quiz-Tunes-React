@@ -144,8 +144,7 @@ button:hover {
 
 #buttonHolder,
 .resultsContent p,
-#resultsSection
-.videoContent {
+#resultsSection .videoContent {
   align-content: space-between;
 }
 

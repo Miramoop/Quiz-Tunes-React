@@ -13,7 +13,7 @@ const fetchTrackInfo = async (genre) => {
       name: trackInfo.tracks[0].name,
       artist: trackInfo.tracks[0].artists[0].name,
       spotifyUrl: trackInfo.tracks[0].external_urls.spotify,
-      albumCover: trackInfo.tracks[0].album.images[1]?.url, 
+      albumCover: trackInfo.tracks[0].album.images[1]?.url,
       albumName: trackInfo.tracks[0].album.name,
     };
   } catch (error) {
@@ -23,4 +23,3 @@ const fetchTrackInfo = async (genre) => {
 };
 
 export { fetchTrackInfo };
-
