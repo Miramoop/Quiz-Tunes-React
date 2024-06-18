@@ -1,6 +1,6 @@
 const fetchYouTubeData = async (trackName, artistName) => {
   const BASE_URL = "https://youtube.googleapis.com/youtube/v3/search";
-  const API_KEY = "AIzaSyByxk2jK-t32JkvnCeza8q-Lfs2eLsXJPY";
+  const API_KEY = process.env.API_KEY;
   const PART = "snippet";
   const MAX_RESULTS = 1;
   const QUERY = `${trackName} by ${artistName}`;
