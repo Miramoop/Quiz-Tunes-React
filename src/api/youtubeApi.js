@@ -1,15 +1,10 @@
-const fetchYouTubeData = async (trackName, artistName) => {
-  const BASE_URL = "https://youtube.googleapis.com/youtube/v3/search";
-  const API_KEY = process.env.REACT_APP_API_KEY;
-  const PART = "snippet";
-  const MAX_RESULTS = 1;
-  const QUERY = `${trackName} by ${artistName}`;
-  const TYPE = "video";
-  const VIDEO_EMBEDDABLE = "true";
+import Constants from "../data/constants";
 
-  const fetchUrl = `${BASE_URL}?part=${PART}&maxResults=${MAX_RESULTS}&q=${encodeURIComponent(
+const fetchYouTubeData = async (trackName, artistName) => {
+  const QUERY = `${trackName} by ${artistName}`;
+  const fetchUrl = `${Constants.YOUTUBE_API_BASE_URL}?part=${Constants.YOUTUBE_API_PART}&maxResults=${Constants.YOUTUBE_API_MAX_RESULTS}&q=${encodeURIComponent(
     QUERY
-  )}&type=${TYPE}&videoEmbeddable=${VIDEO_EMBEDDABLE}&key=${API_KEY}`;
+  )}&type=${Constants.YOUTUBE_API_TYPE}&videoEmbeddable=${Constants.YOUTUBE_API_VIDEO_EMBEDDABLE}&key=${Constants.YOUTUBE_API_KEY}`;
 
   try {
     const response = await fetch(fetchUrl);

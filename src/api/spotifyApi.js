@@ -1,19 +1,17 @@
-const client_id = process.env.REACT_APP_CLIENT_ID;
-const client_secret = process.env.REACT_APP_CLIENT_SECRET;
+import Constants from "../data/constants";
 
 async function getToken() {
-  const url = "https://accounts.spotify.com/api/token";
   const payload = {
     method: "POST",
     body: new URLSearchParams({
-      grant_type: "client_credentials",
+      grant_type: Constants.SPOTIFY_GRANT_TYPE,
     }),
     headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-      Authorization: "Basic " + btoa(client_id + ":" + client_secret),
+      "Content-Type": Constants.CONTENT_TYPE_URLENCODED,
+      Authorization: "Basic " + btoa(`${Constants.SPOTIFY_CLIENT_ID}:${Constants.SPOTIFY_CLIENT_SECRET}`),
     },
   };
-  const response = await fetch(url, payload);
+  const response = await fetch(Constants.SPOTIFY_TOKEN_URL, payload);
   const data = await response.json();
   if (response.ok) {
     localStorage.setItem("access_token", data.access_token);
@@ -25,7 +23,7 @@ async function getToken() {
 }
 async function getTrackInfo(access_token, genre) {
     const recommendationsResponse = await fetch(
-      `https://api.spotify.com/v1/recommendations?limit=1&seed_genres=${genre}`,
+      `${Constants.SPOTIFY_API_BASE_URL}/recommendations?limit=1&seed_genres=${genre}`,
       {
         method: "GET",
         headers: { Authorization: "Bearer " + access_token },
@@ -40,7 +38,7 @@ async function getTrackInfo(access_token, genre) {
     const track = recommendations.tracks[0];
     const artistId = track.artists[0].id;
     const artistResponse = await fetch(
-      `https://api.spotify.com/v1/artists/${artistId}`,
+      `${Constants.SPOTIFY_API_BASE_URL}/artists/${artistId}`,
       {
         method: "GET",
         headers: { Authorization: "Bearer " + access_token },
