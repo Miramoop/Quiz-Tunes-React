@@ -61,13 +61,18 @@ function App() {
     setDominantGenre(null);
   };
 
-  const displaySpotifyInfo = async () => {
+  const displaySpotifyInfo = () => {
     try {
-      const track = await fetchTrackInfo(dominantGenre);
-      setSpotifyLink(track.spotifyUrl);
+      if (!spotifyTrack) {
+        throw new Error("No Spotify track information available.");
+      }
+  
+      const { spotifyUrl } = spotifyTrack; 
+
+      setSpotifyLink(spotifyUrl);
     } catch (error) {
       console.error("Error in displaying Spotify link:", error);
-      setError(true);
+      setError(true); 
     }
   };
 
