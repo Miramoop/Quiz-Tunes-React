@@ -13,18 +13,6 @@
   scroll-behavior: smooth;
 }
 
-.hidden {
-  display: none;
-}
-
-.active {
-  display: block;
-}
-
-ul {
-  list-style-type: none;
-}
-
 .wrapper {
   padding: 0 15px;
 }
@@ -41,8 +29,7 @@ body {
 header {
   align-items: center;
   color: var(--main-color);
-  display: flex;
-  justify-content: flex-start;
+  display: block;
   margin: 0vh;
   overflow: hidden;
   text-align: center;
@@ -148,24 +135,11 @@ button:hover {
   align-content: space-between;
 }
 
-#buttonHolder ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0 15px;
-}
-
-#buttonHolder li {
-  display: flex;
-  flex-direction: column;
-}
-
 .videoContent {
   padding: 5px;
 }
 
 footer {
-  align-items: center;
   margin: 0vh;
   padding: 1vh;
   text-align: center;
