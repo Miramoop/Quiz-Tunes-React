@@ -10,6 +10,8 @@ import { fetchTrackInfo } from "./services/spotifyService";
 import { fetchYouTubeVideos } from "./services/youtubeService";
 import { loadInitialData } from "./services/dataService";
 import ErrorBoundary from "./components/errors/ErrorBoundary";
+import { ErrorMessages } from "./components/errors/ErrorMessages";
+
 import "./App.css";
 import "./styles/styles.css";
 
@@ -20,6 +22,8 @@ function App() {
   const [isQuizComplete, setIsQuizComplete] = useState(false);
   const [isCalculatedResults, setCalculatedResults] = useState(false);
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [errorType, setErrorType] = useState("");
   const [dominantGenre, setDominantGenre] = useState(null);
   const [spotifyLink, setSpotifyLink] = useState("");
   const [youTubeVideos, setYouTubeVideos] = useState([]);
@@ -31,9 +35,11 @@ function App() {
       const { questions, weights } = loadInitialData();
       setQuestions(questions);
       setWeights(weights);
-    } catch (e) {
-      console.error(e);
+    } catch (error) {
+      console.error("Error loading intial data:", error);
       setError(true);
+      setErrorType("InitialDataLoadError");
+      setErrorMessage(ErrorMessages.InitialDataLoadError);
     }
   }, []);
 
@@ -61,15 +67,22 @@ function App() {
     setSpotifyTrack(null);
     setDominantGenre(null);
     setError(false);
+    setErrorMessage("");
+    setErrorType("");
   };
 
   const displaySpotifyInfo = async () => {
     try {
       const track = await fetchTrackInfo(dominantGenre);
+      if (!track || !track.spotifyUrl) {
+        throw new Error("Invalid Spotify track data");
+      }
       setSpotifyLink(track.spotifyUrl);
     } catch (error) {
       console.error("Error in displaying Spotify link:", error);
       setError(true);
+      setErrorType("SpotifyFetchError");
+      setErrorMessage(ErrorMessages.SpotifyFetchError);
     }
   };
 
@@ -77,17 +90,28 @@ function App() {
     try {
       const trackName = localStorage.getItem("track_Name");
       const artistName = localStorage.getItem("artist_Name");
+      if (!trackName || artistName) {
+        throw new Error("Missing track name or artist name in local storage");
+      }
       const videos = await fetchYouTubeVideos(trackName, artistName);
+      if (!videos || !videos.items) {
+        throw new Error("Invalid YouTube video data");
+      }
       setYouTubeVideos(videos.items);
     } catch (error) {
-      console.error("Error displaying YouTube videos:", error);
+      console.error("Error displaying YouTube video:", error);
       setError(true);
+      setErrorType("YouTubeFetchError");
+      setErrorMessage(ErrorMessages.YouTubeFetchError);
     }
   };
 
   const displayRecommendedTracks = async (genre) => {
     try {
       const trackInfo = await fetchTrackInfo(genre);
+      if (!trackInfo || !trackInfo.name || !trackInfo.artist) {
+        throw new Error("Invalid recommended track data");
+      }
       setSpotifyTrack(trackInfo);
 
       if (trackInfo.name && trackInfo.artist) {
@@ -95,8 +119,10 @@ function App() {
         localStorage.setItem("artist_Name", trackInfo.artist);
       }
     } catch (error) {
-      console.error("Error fetching recommended tracks:", error);
+      console.error("Error fetching recommended track:", error);
       setError(true);
+      setErrorType("RecommendedTrackFetchError");
+      setErrorMessage(ErrorMessages.RecommendedTrackFetchError);
     }
   };
 
@@ -106,7 +132,7 @@ function App() {
       <ErrorBoundary resetQuiz={resetQuiz}>
         {error ? (
           <div className="error-section">
-            <p>Oops! Something went wrong. Please try again later.</p>
+            <p>{errorMessage}</p>
             <button
               id="returnHomeButton"
               onClick={resetQuiz}
@@ -117,7 +143,9 @@ function App() {
           </div>
         ) : (
           <>
-            {currentQuestionIndex === -1 && <Home startQuiz={handleStartQuiz} />}
+            {currentQuestionIndex === -1 && (
+              <Home startQuiz={handleStartQuiz} />
+            )}
             {currentQuestionIndex >= 0 &&
               currentQuestionIndex < questions.length &&
               !isQuizComplete && (
