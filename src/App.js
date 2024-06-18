@@ -9,6 +9,7 @@ import { calculateDominantGenre } from "./utils";
 import { fetchTrackInfo } from "./services/spotifyService";
 import { fetchYouTubeVideos } from "./services/youtubeService";
 import { loadInitialData } from "./services/dataService";
+import ErrorBoundary from "./components/errors/ErrorBoundary";
 import "./App.css";
 import "./styles/styles.css";
 
@@ -59,6 +60,7 @@ function App() {
     setYouTubeVideos([]);
     setSpotifyTrack(null);
     setDominantGenre(null);
+    setError(false);
   };
 
   const displaySpotifyInfo = async () => {
@@ -79,6 +81,7 @@ function App() {
       setYouTubeVideos(videos.items);
     } catch (error) {
       console.error("Error displaying YouTube videos:", error);
+      setError(true);
     }
   };
 
@@ -93,42 +96,58 @@ function App() {
       }
     } catch (error) {
       console.error("Error fetching recommended tracks:", error);
+      setError(true);
     }
   };
 
   return (
     <div className="App">
       <Header />
-      {error && <div>I'm an Error</div>}
-      {currentQuestionIndex === -1 && <Home startQuiz={handleStartQuiz} />}
-      {currentQuestionIndex >= 0 &&
-        currentQuestionIndex < questions.length &&
-        !isQuizComplete && (
-          <Quiz
-            questions={questions}
-            weights={weights}
-            updateWeights={updateWeights}
-            setIsQuizComplete={setIsQuizComplete}
-          />
+      <ErrorBoundary resetQuiz={resetQuiz}>
+        {error ? (
+          <div className="error-section">
+            <p>Oops! Something went wrong. Please try again later.</p>
+            <button
+              id="returnHomeButton"
+              onClick={resetQuiz}
+              aria-label="Return to HomePage"
+            >
+              Return to HomePage
+            </button>
+          </div>
+        ) : (
+          <>
+            {currentQuestionIndex === -1 && <Home startQuiz={handleStartQuiz} />}
+            {currentQuestionIndex >= 0 &&
+              currentQuestionIndex < questions.length &&
+              !isQuizComplete && (
+                <Quiz
+                  questions={questions}
+                  weights={weights}
+                  updateWeights={updateWeights}
+                  setIsQuizComplete={setIsQuizComplete}
+                />
+              )}
+            {isQuizComplete && !isCalculatedResults && (
+              <QuizComplete handleCalculateResults={handleCalculateResults} />
+            )}
+            {isCalculatedResults && (
+              <QuizResults
+                resetQuiz={resetQuiz}
+                displaySpotifyInfo={displaySpotifyInfo}
+                fetchYouTubeDataAndDisplay={fetchYouTubeDataAndDisplay}
+                spotifyLink={spotifyLink}
+                youTubeVideos={youTubeVideos}
+                spotifyTrack={spotifyTrack}
+                dominantGenre={dominantGenre}
+              />
+            )}
+          </>
         )}
-      {isQuizComplete && !isCalculatedResults && (
-        <QuizComplete handleCalculateResults={handleCalculateResults} />
-      )}
-      {isCalculatedResults && (
-        <QuizResults
-          resetQuiz={resetQuiz}
-          displaySpotifyInfo={displaySpotifyInfo} 
-          fetchYouTubeDataAndDisplay={fetchYouTubeDataAndDisplay}
-          spotifyLink={spotifyLink}
-          youTubeVideos={youTubeVideos}
-          spotifyTrack={spotifyTrack}
-          dominantGenre={dominantGenre}
-        />
-      )}
+      </ErrorBoundary>
       <Footer />
     </div>
   );
 }
 
 export default App;
-
