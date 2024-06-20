@@ -1,10 +1,9 @@
 import React from "react";
 
-const QuizComplete = ({handleCalculateResults}) => (
+const QuizComplete = ({ handleCalculateResults }) => (
   <section id="quizComplete" role="alert">
     <img
       id="progressImage"
-      role="img"
       src="img/quizcompleteprogress.jpg"
       alt="Progress indicator with all 10 circles filled"
     />

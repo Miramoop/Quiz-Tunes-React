@@ -1,18 +1,25 @@
 import { getTrackInfo, getToken } from "../api/spotifyApi";
 
-const fetchSpotifyLink = async (genre) => {
-    try {
-        const tokenData = await getToken();
-        const trackInfo = await getTrackInfo(tokenData.access_token, genre);
-        if (trackInfo && trackInfo.tracks && trackInfo.tracks.length > 0) {
-            return trackInfo.tracks[0].external_urls.spotify;
-        }
-        else {
-            throw new Error("No tracks found for the genre");
-        } 
-    } catch (error) {
-        console.error("Error fetching Spotify track:", error);
-        throw error;
+const fetchTrackInfo = async (genre) => {
+  try {
+    const tokenData = await getToken();
+    const trackInfo = await getTrackInfo(tokenData.access_token, genre);
+
+    if (!trackInfo.tracks || trackInfo.tracks.length === 0) {
+      throw new Error("No tracks found for the genre");
     }
+
+    return {
+      name: trackInfo.tracks[0].name,
+      artist: trackInfo.tracks[0].artists[0].name,
+      spotifyUrl: trackInfo.tracks[0].external_urls.spotify,
+      albumCover: trackInfo.tracks[0].album.images[1]?.url,
+      albumName: trackInfo.tracks[0].album.name,
+    };
+  } catch (error) {
+    console.error("Error fetching Spotify track:", error);
+    throw error;
+  }
 };
-export { fetchSpotifyLink }; 
+
+export { fetchTrackInfo };
