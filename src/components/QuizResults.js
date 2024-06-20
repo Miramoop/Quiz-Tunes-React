@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/quizResultsStyles.scss";
 
 const QuizResults = ({
   resetQuiz,
