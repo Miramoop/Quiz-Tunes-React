@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/quizResultsStyles.scss";
 
 const QuizResults = ({
   resetQuiz,
@@ -18,8 +19,8 @@ const QuizResults = ({
   const sanitizeTitle = (title) => {
     return title
       .replace(/&/g, "&amp;")
-      .replace(/</g, "lt;")
-      .replace(/>/g, "gt;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
   };

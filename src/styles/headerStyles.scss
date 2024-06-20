@@ -1,0 +1,11 @@
+@import "variables", "mainStyles", "mediaQueries";;
+
+header {
+    align-items: center;
+    color: $mainTextColor;
+    display: block;
+    margin: 0vh;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
