@@ -1,6 +1,9 @@
-# Quiz Tunes!
+<a name="logo" href="" ><img align="center" src="public/img/logo/QuizTunesCardLogo.png" alt="Quiz Tunes Card Logo" style="width:100%; height: 100%"></a>
 
-<!-- Add my logo -->
+<h1 align="center" style="display: block; font-size: 2.5em; font-weight: bold; margin-block-start: 1em; margin-block-end: 1em;"> Quiz Tunes </h1>
+
+## Introduction
+
 <!-- Add other images/cool stuff -->
 
 Quiz Tunes is a web application built with REACT, HTML, CSS, JavaScript, Spotify API, and the YouTube API.
