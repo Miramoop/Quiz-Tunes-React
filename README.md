@@ -2,17 +2,44 @@
 
 <h1 align="center" style="display: block; font-size: 2.5em; font-weight: bold; margin-block-start: 1em; margin-block-end: 1em;"> Quiz Tunes React</h1>
 
+<table style="margin: 0 auto;">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Miramoop/Quiz-Tunes-React/commits/main">
+        <img src="https://img.shields.io/github/last-commit/Miramoop/Quiz-Tunes-React" alt="GitHub last commit">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Miramoop/Quiz-Tunes-React/issues">
+        <img src="https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React" alt="GitHub issues">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Miramoop/Quiz-Tunes-React/pulls">
+        <img src="https://img.shields.io/github/issues-pr-raw/Miramoop/Quiz-Tunes-React.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub pull requests">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <a href="https://vercel.com/mirandas-projects-f2ddefbd/quiz-tunes-react/deployments" target="_blank">
+        <img src="https://deploy-badge.vercel.app/vercel/quiz-tunes-react" alt="Vercel Deploy" style="width: 100px; height: auto;">
+      </a>
+    </td>
+  </tr>
+</table>
+
 <!-- Add other images/cool stuff before Introduction section-->
 
 ## Introduction
 
 <!-- Should mention how I have a version that is just built in basic HTML, CSS, & JavaScript. Also add a link to that repo -->
 
-Quiz Tunes is a web application built with REACT, HTML, CSS, JavaScript, Spotify API, and the YouTube API.
-It asks the user a variety of questions in the form of a quiz, then recommends the user a song on
-Spotify and YouTube based on their quiz results.
-I became inspired to create a web quiz after a couple of friends showed me this [cute fruit quiz](https://github.com/Gudetea/FruitCard-Odyssey) that they found online! Thanks for the inspiration [Gudetea](https://github.com/Gudetea)!
-All the Images are Public Domain obtained from [rawpixel](https://www.rawpixel.com/) under the [CC0 1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/)
+<p>Quiz Tunes is a web application built with REACT, HTML, CSS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of 
+questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to 
+create a web quiz after a couple of friends showed me this <a href="https://github.com/Gudetea/FruitCard-Odyssey" target="_blank">cute fruit quiz</a> 
+that they found online. Thanks for the inspiration <a href="https://github.com/Gudetea" target="_blank">Gudatea</a>! All the images are Public 
+Domain obtained from <a href="https://www.rawpixel.com/" target="_blank">rawpixel</a> under the <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal License</a>.</p>
 
 <!--Add Icons to each heading -->
 
