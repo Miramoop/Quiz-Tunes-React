@@ -1,10 +1,12 @@
 <a name="logo" href="" ><img align="center" src="public/img/logo/QuizTunesCardLogo.png" alt="Quiz Tunes Card Logo" style="width:100%; height: 100%"></a>
 
-<h1 align="center" style="display: block; font-size: 2.5em; font-weight: bold; margin-block-start: 1em; margin-block-end: 1em;"> Quiz Tunes </h1>
+<h1 align="center" style="display: block; font-size: 2.5em; font-weight: bold; margin-block-start: 1em; margin-block-end: 1em;"> Quiz Tunes React</h1>
+
+<!-- Add other images/cool stuff before Introduction section-->
 
 ## Introduction
 
-<!-- Add other images/cool stuff -->
+<!-- Should mention how I have a version that is just built in basic HTML, CSS, & JavaScript. Also add a link to that repo -->
 
 Quiz Tunes is a web application built with REACT, HTML, CSS, JavaScript, Spotify API, and the YouTube API.
 It asks the user a variety of questions in the form of a quiz, then recommends the user a song on
@@ -13,7 +15,6 @@ I became inspired to create a web quiz after a couple of friends showed me this 
 All the Images are Public Domain obtained from [rawpixel](https://www.rawpixel.com/) under the [CC0 1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/)
 
 <!--Add Icons to each heading -->
-<!-- Add back to home link -->
 
 ## Table of Contents
 
@@ -33,6 +34,9 @@ All the Images are Public Domain obtained from [rawpixel](https://www.rawpixel.c
   <li>Here are the instructions on how to clone the repo if needed:
   <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository" target="_blank">Github Docs on Cloning a Repo</a></li>
   <!--Possibly could add the instructions in here? -->
+
+<br>
+  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
 </details>
 
 ## Create an Environment File
@@ -51,6 +55,7 @@ REACT_APP_CLIENT_SECRET=PLACE YOUR SPOTIFY SECRET ID CODE HERE
 REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 ```
 
+  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
 </details>
 
 ## Obtain the Spotify API Keys
@@ -72,6 +77,8 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
     <i>Note: In order to view the client secret, you must click the view client secret button</i>
     <!--Add image of the dashboard showing keys, but blur out mine-->
     <li>Copy & Paste these images into the .env file created in the steps above</li>
+<br>
+  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
 </details>
 
 ## Obtain the YouTube API Key
@@ -88,6 +95,8 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
  <li>Click on the "Credentials" button & then the "Create button"</li>
  <li>Choose the public data option & copy the API key given into the .env file created in the steps above</li>
  <!--Add Images into this to make explanation easier -->
+<br>
+  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
 </details>
 
 ## Check for Node and Npm Installations
@@ -104,6 +113,8 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 <li>If either of these commands do not give a version or give an error, we must install them</li>
 <li>The instructions for installation can be found at: <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">Docs on Installation of Node & Npm</a></li>
 <!--Possibly could add the instructions in here? -->
+<br>
+  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
 </details>
 
 ## Make Repo into React App
@@ -121,4 +132,8 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 <pre>npm run start</pre>
 <i>Note: To terminate the local development server, select the command prompt used to start the server & press "ctrl + c", then press y when prompted</i>
 
+<br>
+  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
 </details>
+
+<!-- Add social links to the bottom, similar to the actual web app -->
