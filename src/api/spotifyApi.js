@@ -15,6 +15,8 @@ async function getToken() {
         ),
     },
   };
+
+  //TO DO - Take out local storage & potentially use another method
   const response = await fetch(Constants.SPOTIFY_TOKEN_URL, payload);
   const data = await response.json();
   if (response.ok) {
