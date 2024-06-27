@@ -9,19 +9,19 @@
         <img src="https://img.shields.io/github/last-commit/Miramoop/Quiz-Tunes-React" alt="GitHub last commit">
       </a>
     </td>
-    <td align="center">
-      <a href="https://github.com/Miramoop/Quiz-Tunes-React/issues">
-        <img src="https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React" alt="GitHub issues">
-      </a>
-    </td>
-    <td align="center">
+     <td align="center">
       <a href="https://github.com/Miramoop/Quiz-Tunes-React/pulls">
         <img src="https://img.shields.io/github/issues-pr-raw/Miramoop/Quiz-Tunes-React.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub pull requests">
       </a>
     </td>
   </tr>
   <tr>
-    <td colspan="3" align="center">
+    <td align="center">
+      <a href="https://github.com/Miramoop/Quiz-Tunes-React/issues">
+        <img src="https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React" alt="GitHub issues">
+      </a>
+    </td>
+    <td align="center">
       <a href="https://vercel.com/mirandas-projects-f2ddefbd/quiz-tunes-react/deployments" target="_blank">
         <img src="https://deploy-badge.vercel.app/vercel/quiz-tunes-react" alt="Vercel Deploy" style="width: 100px; height: auto;">
       </a>
@@ -34,6 +34,7 @@
 ## Introduction
 
 <!-- Should mention how I have a version that is just built in basic HTML, CSS, & JavaScript. Also add a link to that repo -->
+<!-- Original Project can be found here: https://github.com/Miramoop/Quiz-Tunes -->
 
 <p>Quiz Tunes is a web application built with REACT, HTML, CSS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of 
 questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to 
