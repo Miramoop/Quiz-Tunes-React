@@ -1,4 +1,7 @@
-<!-- Ignore Preview because this works fine on github -->
+|                                                                                      |                                                                                     |                                                                                                                                                 |                                                                              |
+| ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| ![Commit Badge](https://img.shields.io/github/last-commit/Miramoop/Quiz-Tunes-React) | ![Issues Badge](https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React) | ![Pull Requests Badge](https://img.shields.io/github/issues-pr-raw/Miramoop/Quiz-Tunes-React.svg?style=flat-square&logo=github&logoColor=white) | ![Deployment Badge](https://deploy-badge.vercel.app/vercel/quiz-tunes-react) |
+
 <div align="center">
   <h1>Quiz Tunes React</h1>
   <img src="public/img/logo/QuizTunesCardLogo.png" alt="Quiz Tunes Card Logo" width="300">
@@ -64,10 +67,10 @@ Original Project can be found here: https://github.com/Miramoop/Quiz-Tunes -->
       <li>Here are the instructions on how to clone the repo if needed:
       <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository" target="_blank">Github Docs on Cloning a Repo</a></li>
       <!--Possibly could add the instructions in here? -->
-    </ul>
+   </ul>
     <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
     </div>
-  </details>
+</details>
 
 ## Create an Environment File
 
