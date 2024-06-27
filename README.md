@@ -1,8 +1,11 @@
-<a name="logo" href="" ><img align="center" src="public/img/logo/QuizTunesCardLogo.png" alt="Quiz Tunes Card Logo" style="width:100%; height: 100%"></a>
-
-<h1 align="center" style="display: block; font-size: 2.5em; font-weight: bold; margin-block-start: 1em; margin-block-end: 1em;"> Quiz Tunes React</h1>
-
-<table style="margin: 0 auto;">
+<table width="100%" border="1" style="border-collapse: collapse; border: 1px solid #ddd; margin-bottom: 10px;">
+  <tr>
+    <td style="padding: 10px;">
+      <h1 align="center">Quiz Tunes React</h1>
+      <p align="center">
+        <img src="public/img/logo/QuizTunesCardLogo.png" alt="Quiz Tunes Card Logo" width="300">
+      </p>
+      <table style="margin: 0 auto;">
   <tr>
     <td align="center">
       <a href="https://github.com/Miramoop/Quiz-Tunes-React/commits/main">
@@ -24,30 +27,41 @@
         <img src="https://deploy-badge.vercel.app/vercel/quiz-tunes-react" alt="Vercel Deploy" style="width: 100px; height: auto;">
       </a>
     </td>
+    <td align="center">
+    <div style="text-align: center;">
+      <img src="public/img/badge/MadeWithBadge.svg" alt="Made with HTML, SASS, Js, & React" width="225"/>
+    </div>
+  </tr>
+</table>
+<br>
+      <p style="text-align: center;">
+        Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of 
+        questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to 
+        create a web quiz after a couple of friends showed me this 
+        <a href="https://github.com/Gudetea/FruitCard-Odyssey" target="_blank">cute fruit quiz</a> that they found online. Thanks for the inspiration 
+        <a href="https://github.com/Gudetea" target="_blank">Gudatea</a>! All the images are Public Domain obtained from 
+        <a href="https://www.rawpixel.com/" target="_blank">rawpixel</a> under the 
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal License</a>.
+      </p>
+    </td>
   </tr>
 </table>
 
-<br>
-<div style="text-align: center;">
-  <img src="public/img/badge/MadeWithBadge.svg" alt="Made with HTML, SASS, Js, & React" />
-</div>
-<br>
+<!-- ## Introduction
 
-## Introduction
+Add other images/cool stuff before Introduction section
 
-<!-- Add other images/cool stuff before Introduction section-->
-
-<!-- Should mention how I have a version that is just built in basic HTML, CSS, & JavaScript. Also add a link to that repo -->
-<!-- Original Project can be found here: https://github.com/Miramoop/Quiz-Tunes -->
+Should mention how I have a version that is just built in basic HTML, CSS, & JavaScript. Also add a link to that repo
+Original Project can be found here: https://github.com/Miramoop/Quiz-Tunes
 
 <div style="border: 1px solid #ddd; padding: 8px; width: 100%;">
       <p>
-      Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of 
-      questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to 
-      create a web quiz after a couple of friends showed me this <a href="https://github.com/Gudetea/FruitCard-Odyssey" target="_blank">cute fruit quiz</a> 
-      that they found online. Thanks for the inspiration <a href="https://github.com/Gudetea" target="_blank">Gudatea</a>! All the images are Public 
+      Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of
+      questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to
+      create a web quiz after a couple of friends showed me this <a href="https://github.com/Gudetea/FruitCard-Odyssey" target="_blank">cute fruit quiz</a>
+      that they found online. Thanks for the inspiration <a href="https://github.com/Gudetea" target="_blank">Gudatea</a>! All the images are Public
       Domain obtained from <a href="https://www.rawpixel.com/" target="_blank">rawpixel</a> under the <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal License</a>.</p>
-</div>
+</div> -->
 
 <!--Add Icons to each heading -->
 
