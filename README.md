@@ -2,7 +2,6 @@
 <div align="center">
   <h1>Quiz Tunes React</h1>
   <img src="public/img/logo/QuizTunesCardLogo.png" alt="Quiz Tunes Card Logo" width="300">
-  <br>
   <table style="margin-top: 20px;">
     <tr>
       <td>
@@ -57,14 +56,14 @@ Original Project can be found here: https://github.com/Miramoop/Quiz-Tunes -->
 
 ## Clone the Repo
 
-  <details>
+<details>
     <summary>Click to show / hide <code>Clone the Repo</code></summary><br>
     <div style="border: 1px solid #ddd; padding: 8px; width: 100%;">
     <ul>
       <li>Clone the Github Repo into any directory of your choice on your local machine.</li>
       <li>Here are the instructions on how to clone the repo if needed:
       <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository" target="_blank">Github Docs on Cloning a Repo</a></li>
-      <!--Possibly could add the instructions in here?-->
+      <!--Possibly could add the instructions in here? -->
     </ul>
     <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
     </div>
