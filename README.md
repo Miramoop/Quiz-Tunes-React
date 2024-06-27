@@ -6,52 +6,9 @@
 | ![Commit Badge](https://img.shields.io/github/last-commit/Miramoop/Quiz-Tunes-React) | ![Issues Badge](https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React) | ![Pull Requests Badge](https://img.shields.io/github/issues-pr-raw/Miramoop/Quiz-Tunes-React.svg?style=flat-square&logo=github&logoColor=white) | ![Deployment Badge](https://deploy-badge.vercel.app/vercel/quiz-tunes-react) |
 | :----------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
 
-Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to create a web quiz after a couple of friends showed me this [cute fruit quiz](https://github.com/Gudetea/FruitCard-Odyssey) that they found online. Thanks for the inspiration [Gudatea](https://github.com/Gudetea)! All the images are Public Domain obtained from [rawpixel](https://www.rawpixel.com/) under the [CC0 1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/).
+Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to create a web quiz after a couple of friends showed me this [cute fruit quiz](https://github.com/Gudetea/FruitCard-Odyssey) that they found online. Thanks for the inspiration [Gudatea](https://github.com/Gudetea)! All the images are Public Domain obtained from [rawpixel](https://www.rawpixel.com/) under the [CC0 1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/). The [original project](https://github.com/Miramoop/Quiz-Tunes) was written in basic HTML, CSS, & JavaScript.
 
 </div>
-<!-- <div align="center">
-  <h1>Quiz Tunes React</h1>
-  <img src="public/img/logo/QuizTunesCardLogo.png" alt="Quiz Tunes Card Logo" width="300">
-  <table style="margin-top: 20px;">
-    <tr>
-      <td>
-        <a href="https://github.com/Miramoop/Quiz-Tunes-React/commits/main">
-          <img src="https://img.shields.io/github/last-commit/Miramoop/Quiz-Tunes-React" alt="GitHub last commit">
-        </a>
-      </td>
-      <td>
-        <a href="https://github.com/Miramoop/Quiz-Tunes-React/issues">
-          <img src="https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React" alt="GitHub issues">
-        </a>
-      </td>
-      <td>
-        <a href="https://github.com/Miramoop/Quiz-Tunes-React/pulls">
-          <img src="https://img.shields.io/github/issues-pr-raw/Miramoop/Quiz-Tunes-React.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub pull requests">
-        </a>
-      </td>
-      <td>
-        <a href="https://vercel.com/mirandas-projects-f2ddefbd/quiz-tunes-react/deployments" target="_blank">
-          <img src="https://deploy-badge.vercel.app/vercel/quiz-tunes-react" alt="Vercel Deploy" style="width: 100px; height: auto;">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="4">
-        <img src="public/img/badge/MadeWithBadge.svg" alt="Made with HTML, SASS, Js, & React" width="225"/>
-      </td>
-    </tr>
-    <tr> -->
-      <!-- <td colspan="4" style="padding: 10px;">
-        <p>
-          Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to create a web quiz after a couple of friends showed me this <a href="https://github.com/Gudetea/FruitCard-Odyssey" target="_blank">cute fruit quiz</a> that they found online. Thanks for the inspiration <a href="https://github.com/Gudetea" target="_blank">Gudatea</a>! All the images are Public Domain obtained from <a href="https://www.rawpixel.com/" target="_blank">rawpixel</a> under the <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal License</a>.
-        </p>
-      </td>
-    </tr>
-  </table>
-</div> -->
-
-<!-- Should mention how I have a version that is just built in basic HTML, CSS, & JavaScript. Also add a link to that repo
-Original Project can be found here: https://github.com/Miramoop/Quiz-Tunes -->
 
 <!--Add Icons to each heading -->
 
