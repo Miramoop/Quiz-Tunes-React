@@ -5,7 +5,7 @@
       <p align="center">
         <img src="public/img/logo/QuizTunesCardLogo.png" alt="Quiz Tunes Card Logo" width="300">
       </p>
-      <table style="margin: 0 auto;">
+      <table align="center" style="margin: 0 auto;">
   <tr>
     <td align="center">
       <a href="https://github.com/Miramoop/Quiz-Tunes-React/commits/main">
