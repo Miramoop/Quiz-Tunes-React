@@ -6,13 +6,13 @@
 | ![Commit Badge](https://img.shields.io/github/last-commit/Miramoop/Quiz-Tunes-React) | ![Issues Badge](https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React) | ![Pull Requests Badge](https://img.shields.io/github/issues-pr-raw/Miramoop/Quiz-Tunes-React.svg?style=flat-square&logo=github&logoColor=white) | ![Deployment Badge](https://deploy-badge.vercel.app/vercel/quiz-tunes-react) |
 | :----------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
 
-Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to create a web quiz after a couple of friends showed me this [cute fruit quiz](https://github.com/Gudetea/FruitCard-Odyssey) that they found online. Thanks for the inspiration [Gudatea](https://github.com/Gudetea)! All the images are Public Domain obtained from [rawpixel](https://www.rawpixel.com/) under the [CC0 1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/). The [original project](https://github.com/Miramoop/Quiz-Tunes) was written in basic HTML, CSS, & JavaScript.
+Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to create a web quiz after a couple of friends showed me this [cute fruit quiz](https://github.com/Gudetea/FruitCard-Odyssey) that they found online. Thanks for the inspiration [Gudatea](https://github.com/Gudetea)! All the images are Public Domain obtained from [rawpixel](https://www.rawpixel.com/) under the [CC0 1.0 Universal License](https://creativecommons.org/publicdomain/zero/1.0/). The [original QuizTunes project](https://github.com/Miramoop/Quiz-Tunes) was written in basic HTML, CSS, & JavaScript.
 
 </div>
 
 <!--Add Icons to each heading -->
 
-## Table of Contents
+## :scroll: Table of Contents
 
 > - [Clone the Repo](#clone-the-repo)
 > - [Create an Environment File](#create-an-environment-file)
@@ -21,7 +21,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 > - [Check for Node and Npm Installations](#check-for-node-and-npm-installations)
 > - [Make Repo into React App](#make-repo-into-react-app)
 
-## Clone the Repo
+## :cyclone: Clone the Repo
 
 <details>
     <summary>Click to show / hide <code>Clone the Repo</code></summary><br>
@@ -36,7 +36,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     </div>
 </details>
 
-## Create an Environment File
+## :leaves: Create an Environment File
 
   <details>
     <summary>Click to show / hide <code>Create an Environment File</code></summary><br>
@@ -56,7 +56,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     </div>
   </details>
 
-## Obtain the Spotify API Keys
+## :notes: Obtain the Spotify API Keys
 
  <details>
     <summary>Click to show / hide <code>Obtain the Spotify API Keys</code></summary><br>
@@ -81,7 +81,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     </div>
   </details>
 
-## Obtain the YouTube API Key
+## :tv: Obtain the YouTube API Key
 
  <details>
     <summary>Click to show / hide <code>Obtain the YouTube API Key</code></summary><br>
@@ -102,7 +102,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     </div>
   </details>
 
-## Check for Node and Npm Installations
+## :computer: Check for Node and Npm Installations
 
  <details>
     <summary>Click to show / hide <code>Check for Node and Npm Installations</code></summary></br>
@@ -120,7 +120,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     </div>
   </details>
 
-## Make Repo into React App
+## :floppy_disk: Make Repo into React App
 
  <details>
     <summary>Click to show / hide <code>Make Repo into React App</code></summary></br>
@@ -142,3 +142,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
   </details>
 
 <!-- Add social links to the bottom, similar to the actual web app -->
+<!-- <div align="center">
+| ![Commit Badge](https://img.shields.io/github/last-commit/Miramoop/Quiz-Tunes-React) | ![Issues Badge](https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React) | ![Pull Requests Badge](https://img.shields.io/github/issues-pr-raw/Miramoop/Quiz-Tunes-React.svg?style=flat-square&logo=github&logoColor=white) | ![Deployment Badge](https://deploy-badge.vercel.app/vercel/quiz-tunes-react) |
+| :----------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
+<div align="center"> -->
