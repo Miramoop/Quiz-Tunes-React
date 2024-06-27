@@ -12,7 +12,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 
 <!--Add Icons to each heading -->
 
-## :scroll: Table of Contents
+## Table of Contents
 
 - [Clone the Repo](#clone-the-repo)
 - [Create an Environment File](#create-an-environment-file)
@@ -21,14 +21,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 - [Check for Node and Npm Installations](#check-for-node-and-npm-installations)
 - [Make Repo into React App](#make-repo-into-react-app)
 
-<!-- > - [Clone the Repo](#clone-the-repo)
-> - [Create an Environment File](#create-an-environment-file)
-> - [Obtain the Spotify API Keys](#obtain-the-spotify-api-keys)
-> - [Obtaining the YouTube API Key](#obtain-the-youtube-api-key)
-> - [Check for Node and Npm Installations](#check-for-node-and-npm-installations)
-> - [Make Repo into React App](#make-repo-into-react-app) -->
-
-## :cyclone: Clone the Repo
+## Clone the Repo
 
 <details>
     <summary>Click to show / hide <code>Clone the Repo</code></summary><br>
@@ -43,7 +36,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     </div>
 </details>
 
-## :leaves: Create an Environment File
+## Create an Environment File
 
   <details>
     <summary>Click to show / hide <code>Create an Environment File</code></summary><br>
@@ -63,7 +56,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     </div>
   </details>
 
-## :notes: Obtain the Spotify API Keys
+## Obtain the Spotify API Keys
 
  <details>
     <summary>Click to show / hide <code>Obtain the Spotify API Keys</code></summary><br>
@@ -88,7 +81,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     </div>
   </details>
 
-## :tv: Obtain the YouTube API Key
+## Obtain the YouTube API Key
 
  <details>
     <summary>Click to show / hide <code>Obtain the YouTube API Key</code></summary><br>
@@ -109,7 +102,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     </div>
   </details>
 
-## :computer: Check for Node and Npm Installations
+## Check for Node and Npm Installations
 
  <details>
     <summary>Click to show / hide <code>Check for Node and Npm Installations</code></summary></br>
@@ -127,7 +120,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     </div>
   </details>
 
-## :floppy_disk: Make Repo into React App
+## Make Repo into React App
 
  <details>
     <summary>Click to show / hide <code>Make Repo into React App</code></summary></br>
