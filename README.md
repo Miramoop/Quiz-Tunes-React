@@ -1,51 +1,108 @@
 <table width="100%" border="1" style="border-collapse: collapse; border: 1px solid #ddd; margin-bottom: 10px;">
   <tr>
+    <td style="padding: 10px; text-align: center;">
+      <h1>Quiz Tunes React</h1>
+      <p>
+        <img src="public/img/logo/QuizTunesCardLogo.png" alt="Quiz Tunes Card Logo" width="300">
+      </p>
+      <table align="center" style="margin: 0 auto;">
+        <tr>
+          <td align="center">
+            <a href="https://github.com/Miramoop/Quiz-Tunes-React/commits/main">
+              <img src="https://img.shields.io/github/last-commit/Miramoop/Quiz-Tunes-React" alt="GitHub last commit">
+            </a>
+          </td>
+          <td align="center">
+            <a href="https://github.com/Miramoop/Quiz-Tunes-React/issues">
+              <img src="https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React" alt="GitHub issues">
+            </a>
+          </td>
+          <td align="center">
+            <a href="https://github.com/Miramoop/Quiz-Tunes-React/pulls">
+              <img src="https://img.shields.io/github/issues-pr-raw/Miramoop/Quiz-Tunes-React.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub pull requests">
+            </a>
+          </td>
+          <td align="center">
+            <a href="https://vercel.com/mirandas-projects-f2ddefbd/quiz-tunes-react/deployments" target="_blank">
+              <img src="https://deploy-badge.vercel.app/vercel/quiz-tunes-react" alt="Vercel Deploy" style="width: 100px; height: auto;">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center">
+            <img src="public/img/badge/MadeWithBadge.svg" alt="Made with HTML, SASS, Js, & React" width="225"/>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" style="padding: 10px; text-align: center;">
+            <p style="text-align: center;"> 
+              Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety <br> of 
+              questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became <br> inspired to 
+              create a web quiz after a couple of friends showed me this 
+              <a href="https://github.com/Gudetea/FruitCard-Odyssey" target="_blank">cute fruit quiz</a> that they found online. Thanks for the <br> inspiration 
+              <a href="https://github.com/Gudetea" target="_blank">Gudatea</a>!  All the images are Public Domain obtained from 
+              <a href="https://www.rawpixel.com/" target="_blank">rawpixel</a> under the 
+              <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal License</a>.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!-- <table width="100%" border="1" style="border-collapse: collapse; border: 1px solid #ddd; margin-bottom: 10px;">
+  <tr>
     <td style="padding: 10px;">
       <h1 align="center">Quiz Tunes React</h1>
       <p align="center">
         <img src="public/img/logo/QuizTunesCardLogo.png" alt="Quiz Tunes Card Logo" width="300">
       </p>
       <table align="center" style="margin: 0 auto;">
-  <tr>
-    <td align="center">
-      <a href="https://github.com/Miramoop/Quiz-Tunes-React/commits/main">
-        <img src="https://img.shields.io/github/last-commit/Miramoop/Quiz-Tunes-React" alt="GitHub last commit">
-      </a>
+        <tr>
+          <td align="center">
+            <a href="https://github.com/Miramoop/Quiz-Tunes-React/commits/main">
+              <img src="https://img.shields.io/github/last-commit/Miramoop/Quiz-Tunes-React" alt="GitHub last commit">
+            </a>
+          </td>
+          <td align="center">
+            <a href="https://github.com/Miramoop/Quiz-Tunes-React/issues">
+              <img src="https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React" alt="GitHub issues">
+            </a>
+          </td>
+          <td align="center">
+            <a href="https://github.com/Miramoop/Quiz-Tunes-React/pulls">
+              <img src="https://img.shields.io/github/issues-pr-raw/Miramoop/Quiz-Tunes-React.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub pull requests">
+            </a>
+          </td>
+          <td align="center">
+            <a href="https://vercel.com/mirandas-projects-f2ddefbd/quiz-tunes-react/deployments" target="_blank">
+              <img src="https://deploy-badge.vercel.app/vercel/quiz-tunes-react" alt="Vercel Deploy" style="width: 100px; height: auto;">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center">
+            <img src="public/img/badge/MadeWithBadge.svg" alt="Made with HTML, SASS, Js, & React" width="225"/>
+          </td>
+        </tr>
+      </table>
     </td>
-    <td align="center">
-      <a href="https://github.com/Miramoop/Quiz-Tunes-React/issues">
-        <img src="https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React" alt="GitHub issues">
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/Miramoop/Quiz-Tunes-React/pulls">
-        <img src="https://img.shields.io/github/issues-pr-raw/Miramoop/Quiz-Tunes-React.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub pull requests">
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://vercel.com/mirandas-projects-f2ddefbd/quiz-tunes-react/deployments" target="_blank">
-        <img src="https://deploy-badge.vercel.app/vercel/quiz-tunes-react" alt="Vercel Deploy" style="width: 100px; height: auto;">
-      </a>
-    </td>
-    <td align="center">
-    <div style="text-align: center;">
-      <img src="public/img/badge/MadeWithBadge.svg" alt="Made with HTML, SASS, Js, & React" width="225"/>
-    </div>
   </tr>
 </table>
 <br>
       <p style="text-align: center;">
-        Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of 
-        questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to 
-        create a web quiz after a couple of friends showed me this 
-        <a href="https://github.com/Gudetea/FruitCard-Odyssey" target="_blank">cute fruit quiz</a> that they found online. Thanks for the inspiration 
-        <a href="https://github.com/Gudetea" target="_blank">Gudatea</a>! All the images are Public Domain obtained from 
-        <a href="https://www.rawpixel.com/" target="_blank">rawpixel</a> under the 
+        Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of
+        questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to
+        create a web quiz after a couple of friends showed me this
+        <a href="https://github.com/Gudetea/FruitCard-Odyssey" target="_blank">cute fruit quiz</a> that they found online. Thanks for the inspiration
+        <a href="https://github.com/Gudetea" target="_blank">Gudatea</a>! All the images are Public Domain obtained from
+        <a href="https://www.rawpixel.com/" target="_blank">rawpixel</a> under the
         <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal License</a>.
       </p>
     </td>
   </tr>
-</table>
+</table> -->
 
 <!-- ## Introduction
 
