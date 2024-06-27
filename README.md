@@ -1,6 +1,10 @@
 <a name="logo" href="" ><img align="center" src="public/img/logo/QuizTunesCardLogo.png" alt="Quiz Tunes Card Logo" style="width:100%; height: 100%"></a>
 
 <h1 align="center" style="display: block; font-size: 2.5em; font-weight: bold; margin-block-start: 1em; margin-block-end: 1em;"> Quiz Tunes React</h1>
+<p align="center" style="display: block; font-size: 1em; margin-block-start: 1em; margin-block-end: 1em;"> Discover new music with Quiz Tunes, a web application that offers a fun and interactive quiz experience.</p>
+<img src="public/img/badge/MadeWithBadge.svg" alt="Made with HTML, SASS, Js, & React">
+
+## Project Details
 
 <table style="margin: 0 auto;">
   <tr>
@@ -36,7 +40,7 @@
 <!-- Should mention how I have a version that is just built in basic HTML, CSS, & JavaScript. Also add a link to that repo -->
 <!-- Original Project can be found here: https://github.com/Miramoop/Quiz-Tunes -->
 
-<p>Quiz Tunes is a web application built with REACT, HTML, CSS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of 
+<p>Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotify API, and the YouTube API. It asks the user a variety of 
 questions in the form of a quiz, then recommends the user a song on Spotify and YouTube based on their quiz results. I became inspired to 
 create a web quiz after a couple of friends showed me this <a href="https://github.com/Gudetea/FruitCard-Odyssey" target="_blank">cute fruit quiz</a> 
 that they found online. Thanks for the inspiration <a href="https://github.com/Gudetea" target="_blank">Gudatea</a>! All the images are Public 
@@ -46,6 +50,7 @@ Domain obtained from <a href="https://www.rawpixel.com/" target="_blank">rawpixe
 
 ## Table of Contents
 
+- [Project Details](#project-details)
 - [Clone the Repo](#clone-the-repo)
 - [Create an Environment File](#create-an-environment-file)
 - [Obtain the Spotify API Keys](#obtain-the-spotify-api-keys)
@@ -64,7 +69,7 @@ Domain obtained from <a href="https://www.rawpixel.com/" target="_blank">rawpixe
   <!--Possibly could add the instructions in here? -->
 
 <br>
-  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
+  <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
 </details>
 
 ## Create an Environment File
@@ -83,7 +88,7 @@ REACT_APP_CLIENT_SECRET=PLACE YOUR SPOTIFY SECRET ID CODE HERE
 REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 ```
 
-  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
+  <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
 </details>
 
 ## Obtain the Spotify API Keys
@@ -91,22 +96,23 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 <details>
     <summary>Click to show / hide <code>Obtain the Spotify API Keys</code></summary></br>
     <li>These Keys are obtained at: <a href="https://developer.spotify.com/" target="_blank">Spotify Developer Dashboard</a></li>
-    <i>Note: You must log in with a Spotify account (it can be either free or premium)</i>
+    <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
+    <strong>NOTE:</strong> You must log in with a Spotify account (it can be either free or premium)</div>
     <li>Once logged in press your profile at the top right of the screen & select dashboard from the dropdown</li>
-    <li>Then click the Create App button</li>
-    <i>Note: You can choose any app name or decription</i>
+    <li>Then click the Create App button (Choose any name and description)</li>
     <li>Set the redirect uri to localhost:3000/</li>
-    <i>Note: The redirect uri must be set to this in order for the local server to run properly using react</i>
+    <div style=" border-left: 5px solid #f44336; padding: 10px; margin: 10px 0;">
+    <strong>IMPORTANT:</strong> The redirect uri must be set to this in order for the local server to run properly using react </div>
     <li>Make sure to select the Web API within the API used category</li>
     <li>Accept Spotify's terms, then press save</li>
     <!--Add image of the proper settings-->
     <li>You can now find the keys by clicking on the app that you just created in your dashboard</li>
-    <li>Click the settings button and the keys should appear</li>
-    <i>Note: In order to view the client secret, you must click the view client secret button</i>
+    <li>Click the settings button and the keys should appear (client secret is hidden behind a button press)</li>
     <!--Add image of the dashboard showing keys, but blur out mine-->
-    <li>Copy & Paste these images into the .env file created in the steps above</li>
+    <li>Copy & Paste these keys into the .env file created in the steps above</li>
+
 <br>
-  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
+  <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
 </details>
 
 ## Obtain the YouTube API Key
@@ -117,14 +123,15 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
  <li>Sign in or create a Google account</li>
  <li>Click on the top left button titled "Select a Project"</li>
  <li>Press the "New Project" button & Press "Create"</li>
- <i>Note: You can use any project name or organization that you'd like</i>
+ <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
+ <strong>NOTE:</strong> Any project name and organization can be used</div>
  <li>Once the project is created, press "Enable APIs & Services</li>
  <li>Search for "YouTube Data API v3" & Click to enable it</li>
  <li>Click on the "Credentials" button & then the "Create button"</li>
  <li>Choose the public data option & copy the API key given into the .env file created in the steps above</li>
  <!--Add Images into this to make explanation easier -->
 <br>
-  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
+  <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
 </details>
 
 ## Check for Node and Npm Installations
@@ -142,7 +149,7 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 <li>The instructions for installation can be found at: <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">Docs on Installation of Node & Npm</a></li>
 <!--Possibly could add the instructions in here? -->
 <br>
-  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
+  <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
 </details>
 
 ## Make Repo into React App
@@ -158,10 +165,10 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 <li>Open the command prompt & ensure that you are in the proper project directory, then run the below command to start the server:</li>
 <br>
 <pre>npm run start</pre>
-<i>Note: To terminate the local development server, select the command prompt used to start the server & press "ctrl + c", then press y when prompted</i>
-
+<div style=" border-left: 5px solid #f44336; padding: 10px; margin: 10px 0;">
+<strong>IMPORTANT:</strong> To terminate the local development server, select the command prompt used to start the server & press "ctrl + c", then press y when prompted</div>
 <br>
-  <div align="left">[ <a href="#table-of-contents">↑ Back to top ↑</a> ]</div>
+  <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
 </details>
 
 <!-- Add social links to the bottom, similar to the actual web app -->
