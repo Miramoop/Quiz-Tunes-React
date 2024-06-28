@@ -21,6 +21,8 @@ function App() {
   const [spotifyLink, setSpotifyLink] = useState("");
   const [youTubeVideos, setYouTubeVideos] = useState([]);
   const [spotifyTrack, setSpotifyTrack] = useState(null);
+  const [trackName, setTrackName] = useState('');
+  const [artistName, setArtistName] = useState('');
 
   useEffect(() => {
     setError(false);
@@ -74,30 +76,26 @@ function App() {
     }
   };
 
-    //TO DO - Take out local storage & potentially use another method
+    const displayRecommendedTracks = async (genre) => {
+      try {
+        const trackInfo = await fetchTrackInfo(genre);
+        setSpotifyTrack(trackInfo);
+  
+        if (trackInfo.name && trackInfo.artist) {
+          setTrackName(trackInfo.name);
+          setArtistName(trackInfo.artist);
+        }
+      } catch (error) {
+        console.error("Error fetching recommended tracks:", error);
+      }
+    };
+
   const fetchYouTubeDataAndDisplay = async () => {
     try {
-      const trackName = localStorage.getItem("track_Name");
-      const artistName = localStorage.getItem("artist_Name");
       const videos = await fetchYouTubeVideos(trackName, artistName);
       setYouTubeVideos(videos.items);
     } catch (error) {
       console.error("Error displaying YouTube videos:", error);
-    }
-  };
-
-    //TO DO - Take out local storage & potentially use another method
-  const displayRecommendedTracks = async (genre) => {
-    try {
-      const trackInfo = await fetchTrackInfo(genre);
-      setSpotifyTrack(trackInfo);
-
-      if (trackInfo.name && trackInfo.artist) {
-        localStorage.setItem("track_Name", trackInfo.name);
-        localStorage.setItem("artist_Name", trackInfo.artist);
-      }
-    } catch (error) {
-      console.error("Error fetching recommended tracks:", error);
     }
   };
 
