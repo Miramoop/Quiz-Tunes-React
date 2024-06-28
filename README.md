@@ -24,8 +24,11 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 
 <details>
     <summary>Click to show / hide <code>Clone the Repo</code></summary><br>
-    <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
-      <strong>NOTE:</strong> We need to clone the Github Repo onto your local machine. If you are not sure how to do this, you can follow the below instructions to learn how to clone the repo.</div>
+     <blockquote>
+    <strong>NOTE:</strong> We need to clone the Github Repo onto your local machine. If you are not sure how to do this, you can follow the below instructions to learn how to clone the repo.
+  </blockquote>
+    <!-- <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
+      <strong>NOTE:</strong> We need to clone the Github Repo onto your local machine. If you are not sure how to do this, you can follow the below instructions to learn how to clone the repo.</div> -->
     <ol>
       <li>Open the command prompt on your computer (It will open to the below directory as default)</li>
       <pre><code>C:\Users\YOURUSERNAME></pre></code>
@@ -124,7 +127,7 @@ REACT_APP_CLIENT_SECRET=SPOTIFY SECRET CODE
 REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
     </code></pre>
     <li>Save the environment file and you can now close it without any issues<li>
-    </ol>
+  </ol>
     <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
   </details>
 
@@ -139,7 +142,7 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
       <pre><code>npm -v</code></pre>
       <li>Check for the node version using the below command</li>
       <pre><code>node -v</code></pre>
-    <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
+      <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
       <strong>NOTE:</strong> If either of these commands do not give a version number or give an error we must install node and npm </div>
       <li>Install npm using the below command</li>
          <pre><code>npm install latest</code></pre>
