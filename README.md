@@ -10,9 +10,9 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 
 </div>
 
-## Table of Contents
+## 📝 Table of Contents
 
-- [Table of Contents](#table-of-contents)
+- [📝 Table of Contents](#-table-of-contents)
 - [Clone the Repo](#clone-the-repo)
 - [Create an Environment File](#create-an-environment-file)
 - [Obtain the Spotify API Keys](#obtain-the-spotify-api-keys)
@@ -25,7 +25,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 <details>
     <summary>Click to show / hide <code>Clone the Repo</code></summary><br>
     <blockquote>
-    <strong>NOTE:</strong> We need to clone the Github Repo onto your local machine. If you are not sure how to do this, you can follow the below instructions to learn how to clone the repo.
+    <strong>📓NOTE:</strong> We need to clone the Github Repo onto your local machine. If you are not sure how to do this, you can follow the below instructions to learn how to clone the repo.
     </blockquote>
     <ol>
       <li>Open the command prompt on your computer (It will open to the below directory as default)</li>
@@ -37,11 +37,13 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
       <li>That link is copied into the below command</li>
       <pre><code>C:\Users\YOURUSERNAME> git clone https://github.com/Miramoop/Quiz-Tunes-React.git</pre></code>
       <blockquote>
-      <strong>IMPORTANT:</strong> Make sure to keep the command prompt open for the next step
+      <strong>❗️IMPORTANT:</strong> Make sure to keep the command prompt open for the next step
       </blockquote>
       <li> Here are more instructions on cloning a repo, if you need any help:  <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">GitHub Docs on Cloning Repos</a></li>
    </ol>
-    <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
+
+[↑ Back to Top ↑](#-table-of-contents)
+
 </details>
 
 ## Create an Environment File
@@ -56,11 +58,13 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
       <li>Now we must access that file using the following command</li>
       <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> echo. > environment.env </pre></code>
       <blockquote>
-      <strong>IMPORTANT:</strong> We will get the exact keys that need to be added into this file in the next two steps, so keep this file open.
+      <strong>❗️IMPORTANT:</strong> We will get the exact keys that need to be added into this file in the next two steps, so keep this file open.
       </blockquote>
     </ol>
     <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
   </details>
+
+  <!-- Maybe add docs for environment files to explain what they are -->
 
 ## Obtain the Spotify API Keys
 
@@ -69,7 +73,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     <ol>
       <li>We must go to the <a href="https://developer.spotify.com/" target="_blank">Spotify Developer Dashboard</a> to get our Spotify API keys
     <blockquote>
-    <strong>NOTE:</strong> You must log in with a Spotify account (it can be either free or premium)
+    <strong>📓NOTE:</strong> You must log in with a Spotify account (it can be either free or premium)
     </blockquote>
       <li>Once logged in, you must click the button in the top right of the screen and select dashboard from the dropdown</li>
       <img src="public/img/readmeInstructions/spotify/spotify-developer-dashboard-button.png" alt="Spotify dashboard button with red square around it">
@@ -80,7 +84,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
       <li>The redirect uri must be set to localhost:3000/</li>
       <img src="public/img/readmeInstructions/spotify/spotify-developer-dashboard-redirect-uri-add-button.png" alt="Spotify create app dashboard with app name and description entered">
       <blockquote>
-      <strong>IMPORTANT:</strong> Ensure you press the add button! Also, the redirect uri must be set to this in order for the local server to run properly using react.
+      <strong>❗️IMPORTANT:</strong> Ensure you press the add button! Also, the redirect uri must be set to this in order for the local server to run properly using react.
       </blockquote>
       <li>Select the Web API checkbox, read and accept Spotify's terms, then save your app </li>
       <img src="public/img/readmeInstructions/spotify/spotify-developer-dashboard-api-terms-save.png" alt="Spotify dashboard create app dashboard with web api selected and terms box selected">
@@ -89,7 +93,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
       <li>The Client ID and Client Secret keys will be able to be viewed here (mine is blacked out, but yours won't be)</li>
         <img src="public/img/readmeInstructions/spotify/spotify-app-dashboard-keys.png" alt="Spotify app dashboard settings button with red square around it">
         <blockquote>
-        <strong>IMPORTANT:</strong> You must press the view client secret button to see the secret key.
+        <strong>❗️IMPORTANT:</strong> You must press the view client secret button to see the secret key.
         </blockquote>
       <li>Copy and paste the client id and client secret keys into the <code>environment.env</code> file we created earlier in this format and save the file. Keep the file open for the next step!</li>
          <pre><code>
@@ -99,6 +103,8 @@ REACT_APP_CLIENT_SECRET=PLACE YOUR SPOTIFY SECRET ID CODE HERE
     <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
   </details>
 
+  <!-- Maybe add docs for spotify api -->
+
 ## Obtain the YouTube API Key
 
  <details>
@@ -106,7 +112,7 @@ REACT_APP_CLIENT_SECRET=PLACE YOUR SPOTIFY SECRET ID CODE HERE
     <ol>
       <li>We must go to the <a href="https://console.cloud.google.com/apis/dashboard" target="_blank">Google API Dashboard</a> to obtain our YouTube API Key</li>
       <blockquote>
-      <strong>NOTE:</strong> You must log in with a Google account
+      <strong>📓NOTE:</strong> You must log in with a Google account
       </blockquote>
       <li>Click on the top left button titled "Select a Project" (mine shows a project name only because I already have created one before)</li>
       <img src="public/img/readmeInstructions/google/google-api-create-project-button.png" alt="Google API dashboard select a project button with red square around it">
@@ -135,12 +141,14 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
     <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
   </details>
 
+  <!-- Maybe add docs for youtube api -->
+
 ## Check for Node and Npm Installations
 
  <details>
     <summary>Click to show / hide <code>Check for Node and Npm Installations</code></summary></br>
       <blockquote>
-      <strong>NOTE:</strong> We need to ensure that you have Node & Npm installed on your local machine.
+      <strong>📓NOTE:</strong> We need to ensure that you have Node & Npm installed on your local machine.
       </blockquote>
     <ol>
       <li>Check for the npm version using the below command</li>
@@ -148,7 +156,7 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
       <li>Check for the node version using the below command</li>
       <pre><code>node -v</code></pre>
       <blockquote>
-      <strong>NOTE:</strong> If either of these commands do not give a version number or give an error we must install node and npm
+      <strong>📓NOTE:</strong> If either of these commands do not give a version number or give an error we must install node and npm
       </blockquote>
       <li>Install npm using the below command</li>
          <pre><code>npm install latest</code></pre>
@@ -156,12 +164,14 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
          <pre><code>npm install node</code></pre>
       <li>Run the same commands to check the versions of each to ensure that they installed properly</li>
       <blockquote>
-      <strong>IMPORTANT:</strong> If the command prompt does not allow you to run any of these commands. Make sure to exit and run command prompt as administrator
+      <strong>❗️IMPORTANT:</strong> If the command prompt does not allow you to run any of these commands. Make sure to exit and run command prompt as administrator
       </blockquote>
       <img src="public/img/readmeInstructions/cmd-run-as-admin.png" alt="Windows search for command prompt with run as administrator button circled in red">
     </ol>
     <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
   </details>
+
+  <!-- Maybe add docs for node and npm -->
 
 ## Make Repo into React App
 
@@ -175,12 +185,13 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
     <li>Now our project is a react app, we can run it on our local machine using the following command</li>
       <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> npm run start</pre></code>
       <blockquote>
-      <strong>IMPORTANT:</strong> To terminate the local development server, open the windows powershell that was opened by your local machine to host the local server & press "ctrl + c", then press y when prompted.
+      <strong>❗️IMPORTANT:</strong> To terminate the local development server, open the windows powershell that was opened by your local machine to host the local server & press "ctrl + c", then press y when prompted.
       </blockquote>
       <blockquote>
-      <strong>NOTE:</strong> The browser window where the local development server is being run will not close automatically, you must close it yourself.
+      <strong>📓NOTE:</strong> The browser window where the local development server is being run will not close automatically, you must close it yourself.
       </blockquote>
     </ol>
     <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
-
   </details>
+
+  <!-- Maybe add docs for react -->
