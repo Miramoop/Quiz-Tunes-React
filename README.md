@@ -42,7 +42,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
       <li> Here are more instructions on cloning a repo, if you need any help:  <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">GitHub Docs on Cloning Repos</a></li>
    </ol>
 
-[↑ Back to Top ↑](#-table-of-contents)
+[[↑ Back to Top ↑]](#-table-of-contents)
 
 </details>
 
@@ -60,11 +60,12 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
       <blockquote>
       <strong>❗️IMPORTANT:</strong> We will get the exact keys that need to be added into this file in the next two steps, so keep this file open.
       </blockquote>
+       <li> Here is some more info on environment variable files, if you need any help:  <a href="https://create-react-app.dev/docs/adding-custom-environment-variables/"> React docs on environment files</a></li>
     </ol>
-    <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
-  </details>
 
-  <!-- Maybe add docs for environment files to explain what they are -->
+[[↑ Back to Top ↑]](#-table-of-contents)
+
+  </details>
 
 ## 🎶 Obtain the Spotify API Keys
 
@@ -100,10 +101,11 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 REACT_APP_CLIENT_ID=PLACE YOUR SPOTIFY CLIENT ID CODE HERE 
 REACT_APP_CLIENT_SECRET=PLACE YOUR SPOTIFY SECRET ID CODE HERE
     </code></pre>
-    <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
-  </details>
+    <li> Here is some more info on the Spotify API, if you need any help:  <a href="https://developer.spotify.com/documentation/web-api"> Spotify Docs on their Web API</a></li></ol>
 
-  <!-- Maybe add docs for spotify api -->
+[[↑ Back to Top ↑]](#-table-of-contents)
+
+  </details>
 
 ## 📺 Obtain the YouTube API Key
 
@@ -136,12 +138,13 @@ REACT_APP_CLIENT_ID=SPOTIFY CLIENT CODE
 REACT_APP_CLIENT_SECRET=SPOTIFY SECRET CODE
 REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
     </code></pre>
-   <li>Save the environment file and you can now close it without any issues</li>
-  </ol>
-    <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
-  </details>
+    <li>Save the environment file and you can now close it without any issues</li>
+    <li> Here is some more info on the YouTube API, if you need any help:  <a href="https://developers.google.com/youtube/v3/docs"> Google Docs on their YouTube API</a></li>
+   </ol>
 
-  <!-- Maybe add docs for youtube api -->
+[[↑ Back to Top ↑]](#-table-of-contents)
+
+  </details>
 
 ## 💾 Check for Node and Npm Installations
 
@@ -167,11 +170,13 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
       <strong>❗️IMPORTANT:</strong> If the command prompt does not allow you to run any of these commands. Make sure to exit and run command prompt as administrator
       </blockquote>
       <img src="public/img/readmeInstructions/cmd-run-as-admin.png" alt="Windows search for command prompt with run as administrator button circled in red">
+      <li> Here is some more info on Node, if you need any help:  <a href="https://nodejs.org/docs/latest/api/"> Docs on Node</a></li>
+      <li> Here is some more info on Npm, if you need any help:  <a href="https://docs.npmjs.com/"> Docs on Npm</a></li>
     </ol>
-    <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
-  </details>
 
-  <!-- Maybe add docs for node and npm -->
+[[↑ Back to Top ↑]](#-table-of-contents)
+
+  </details>
 
 ## 💻 Make Repo into React App
 
@@ -190,8 +195,9 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
       <blockquote>
       <strong>📓NOTE:</strong> The browser window where the local development server is being run will not close automatically, you must close it yourself.
       </blockquote>
+      <li> Here is some more info on React, if you need any help:  <a href="https://react.dev/"> Docs on React</a></li>
     </ol>
-    <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
-  </details>
 
-  <!-- Maybe add docs for react -->
+[[↑ Back to Top ↑]](#-table-of-contents)
+
+  </details>
