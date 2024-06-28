@@ -13,14 +13,14 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 ## 📝 Table of Contents
 
 - [📝 Table of Contents](#-table-of-contents)
-- [Clone the Repo](#clone-the-repo)
-- [Create an Environment File](#create-an-environment-file)
-- [Obtain the Spotify API Keys](#obtain-the-spotify-api-keys)
-- [Obtain the YouTube API Key](#obtain-the-youtube-api-key)
-- [Check for Node and Npm Installations](#check-for-node-and-npm-installations)
-- [Make Repo into React App](#make-repo-into-react-app)
+- [👽 Clone the Repo](#-clone-the-repo)
+- [🍃 Create an Environment File](#-create-an-environment-file)
+- [🎶 Obtain the Spotify API Keys](#-obtain-the-spotify-api-keys)
+- [📺 Obtain the YouTube API Key](#-obtain-the-youtube-api-key)
+- [💾 Check for Node and Npm Installations](#-check-for-node-and-npm-installations)
+- [💻 Make Repo into React App](#-make-repo-into-react-app)
 
-## Clone the Repo
+## 👽 Clone the Repo
 
 <details>
     <summary>Click to show / hide <code>Clone the Repo</code></summary><br>
@@ -46,7 +46,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 
 </details>
 
-## Create an Environment File
+## 🍃 Create an Environment File
 
   <details>
     <summary>Click to show / hide <code>Create an Environment File</code></summary><br>
@@ -66,7 +66,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 
   <!-- Maybe add docs for environment files to explain what they are -->
 
-## Obtain the Spotify API Keys
+## 🎶 Obtain the Spotify API Keys
 
  <details>
     <summary>Click to show / hide <code>Obtain the Spotify API Keys</code></summary><br>
@@ -105,7 +105,7 @@ REACT_APP_CLIENT_SECRET=PLACE YOUR SPOTIFY SECRET ID CODE HERE
 
   <!-- Maybe add docs for spotify api -->
 
-## Obtain the YouTube API Key
+## 📺 Obtain the YouTube API Key
 
  <details>
     <summary>Click to show / hide <code>Obtain the YouTube API Key</code></summary><br>
@@ -143,7 +143,7 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 
   <!-- Maybe add docs for youtube api -->
 
-## Check for Node and Npm Installations
+## 💾 Check for Node and Npm Installations
 
  <details>
     <summary>Click to show / hide <code>Check for Node and Npm Installations</code></summary></br>
@@ -173,7 +173,7 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 
   <!-- Maybe add docs for node and npm -->
 
-## Make Repo into React App
+## 💻 Make Repo into React App
 
  <details>
     <summary>Click to show / hide <code>Make Repo into React App</code></summary></br>
