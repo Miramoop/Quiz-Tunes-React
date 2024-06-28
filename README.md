@@ -24,16 +24,15 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 
 <details>
     <summary>Click to show / hide <code>Clone the Repo</code></summary><br>
-    <ul>
-      <li>Clone the Github Repo into any directory of your choice on your local machine if you know how to do that. If not, you can follow the below instructions to learn how to clone.</li>
-    </ul>
+    <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
+      <strong>NOTE:</strong> We need to clone the Github Repo onto your local machine. If you are not sure how to do this, you can follow the below instructions to learn how to clone the repo.</div>
     <ol>
       <li>Open the command prompt on your computer (It will open to the below directory as default)</li>
       <pre><code>C:\Users\YOURUSERNAME></pre></code>
       <li>Click the code button on the GitHub Repo</li>
-      <img src="public/img/readmeInstructions/github-clone-code-button-red.png" alt="GitHub Clone Code Button with Red Square around it">
+      <img src="public/img/readmeInstructions/github/github-clone-code-button-red.png" alt="GitHub Clone Code Button with Red Square around it">
       <li>It opens to reveal the HTTPS code for Cloning the Repo</li>
-       <img src="public/img/readmeInstructions/github-clone-https-link-button.png" alt="GitHub Clone Link with Red Square around it">
+       <img src="public/img/readmeInstructions/github/github-clone-https-link-button.png" alt="GitHub Clone Link with Red Square around it">
       <li>That link is copied into the below command</li>
       <pre><code>C:\Users\YOURUSERNAME> git clone https://github.com/Miramoop/Quiz-Tunes-React.git</pre></code>
       <div style=" border-left: 5px solid #f44336; padding: 10px; margin: 10px 0;">
@@ -69,21 +68,21 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
       <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
       <strong>NOTE:</strong> You must log in with a Spotify account (it can be either free or premium)</div>
       <li>Once logged in, you must click the button in the top right of the screen and select dashboard from the dropdown</li>
-      <img src="public/img/readmeInstructions/spotify-developer-dashboard-button.png" alt="Spotify dashboard button with red square around it">
+      <img src="public/img/readmeInstructions/spotify/spotify-developer-dashboard-button.png" alt="Spotify dashboard button with red square around it">
       <li>Then click the Create App button</li>
-       <img src="public/img/readmeInstructions/spotify-developer-dashboard-create-app-button.png" alt="Spotify dashboard create app button with red square around it">
+       <img src="public/img/readmeInstructions/spotify/spotify-developer-dashboard-create-app-button.png" alt="Spotify dashboard create app button with red square around it">
       <li>Create the app name and description (it can be whatever you would like)</li>
-       <img src="public/img/readmeInstructions/spotify-developer-dashboard-app-name-description.png" alt="Spotify create app dashboard with app name and description entered">
+       <img src="public/img/readmeInstructions/spotify/spotify-developer-dashboard-app-name-description.png" alt="Spotify create app dashboard with app name and description entered">
       <li>The redirect uri must be set to localhost:3000/</li>
-      <img src="public/img/readmeInstructions/spotify-developer-dashboard-redirect-uri-add-button.png" alt="Spotify create app dashboard with app name and description entered">
+      <img src="public/img/readmeInstructions/spotify/spotify-developer-dashboard-redirect-uri-add-button.png" alt="Spotify create app dashboard with app name and description entered">
       <div style=" border-left: 5px solid #f44336; padding: 10px; margin: 10px 0;">
       <strong>IMPORTANT:</strong> Ensure you press the add button! Also, the redirect uri must be set to this in order for the local server to run properly using react </div>
       <li>Select the Web API checkbox, read and accept Spotify's terms, then save your app </li>
-      <img src="public/img/readmeInstructions/spotify-developer-dashboard-api-terms-save.png" alt="Spotify dashboard create app dashboard with web api selected and terms box selected">
+      <img src="public/img/readmeInstructions/spotify/spotify-developer-dashboard-api-terms-save.png" alt="Spotify dashboard create app dashboard with web api selected and terms box selected">
       <li>Click the settings button</li>
-      <img src="public/img/readmeInstructions/spotify-app-dashboard-settings-button.png" alt="Spotify app dashboard settings button with red square around it">
+      <img src="public/img/readmeInstructions/spotify/spotify-app-dashboard-settings-button.png" alt="Spotify app dashboard settings button with red square around it">
       <li>The Client ID and Client Secret keys will be able to be viewed here (mine is blacked out, but yours won't be)</li>
-        <img src="public/img/readmeInstructions/spotify-app-dashboard-keys.png" alt="Spotify app dashboard settings button with red square around it">
+        <img src="public/img/readmeInstructions/spotify/spotify-app-dashboard-keys.png" alt="Spotify app dashboard settings button with red square around it">
         <div style=" border-left: 5px solid #f44336; padding: 10px; margin: 10px 0;">
         <strong>IMPORTANT:</strong> You must press the view client secret button to see the secret key</div>
       <li>Copy and paste the client id and client secret keys into the <code>environment.env</code> file we created earlier in this format and save the file. Keep the file open for the next step!</li>
@@ -103,21 +102,21 @@ REACT_APP_CLIENT_SECRET=PLACE YOUR SPOTIFY SECRET ID CODE HERE
       <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
       <strong>NOTE:</strong> You must log in with a Google account</div>
       <li>Click on the top left button titled "Select a Project" (mine shows a project name only because I already have created one before)</li>
-      <img src="public/img/readmeInstructions/google-api-create-project-button.png" alt="Google API dashboard select a project button with red square around it">
+      <img src="public/img/readmeInstructions/google/google-api-create-project-button.png" alt="Google API dashboard select a project button with red square around it">
       <li>Press the button titled "New Project"</li>
-       <img src="public/img/readmeInstructions/google-api-create-new-project-button.png" alt="Google API dashboard new project button with red square around it">
+       <img src="public/img/readmeInstructions/google/google-api-create-new-project-button.png" alt="Google API dashboard new project button with red square around it">
       <li>Create the app name (it can be whatever you would like) and choose any organization. Then press the "Create" button</li>
-      <img src="public/img/readmeInstructions/google-api-new-project-creation-screen.png" alt="Google API dashboard new project creation screen with details filled in">
+      <img src="public/img/readmeInstructions/google/google-api-new-project-creation-screen.png" alt="Google API dashboard new project creation screen with details filled in">
       <li>Press the "Enable APIs and Services" button</li>
-      <img src="public/img/readmeInstructions/google-api-enable-apis-and-services-button.png" alt="Google API dashboard enable APIs and Services button with red square around it">
+      <img src="public/img/readmeInstructions/google/google-api-enable-apis-and-services-button.png" alt="Google API dashboard enable APIs and Services button with red square around it">
       <li>Search for "YouTube Data API v3" & Click to enable it</li>
-         <img src="public/img/readmeInstructions/youtube-api-enable-button.png" alt="YouTube data api v3 enable button with red square around it">
+         <img src="public/img/readmeInstructions/google/youtube-api-enable-button.png" alt="YouTube data api v3 enable button with red square around it">
       <li>Click the "Create Credentials" button</li>
-         <img src="public/img/readmeInstructions/youtube-api-create-credentials-button.png" alt="YouTube data api v3 create credentials button with red square around it">
+         <img src="public/img/readmeInstructions/google/youtube-api-create-credentials-button.png" alt="YouTube data api v3 create credentials button with red square around it">
         <li>Select the public data checkbox and press next</li>
-         <img src="public/img/readmeInstructions/youtube-api-public-data-select-and-next-button.png" alt="YouTube data api v3 public data option selected, and a next button with a red square around it">
+         <img src="public/img/readmeInstructions/google/youtube-api-public-data-select-and-next-button.png" alt="YouTube data api v3 public data option selected, and a next button with a red square around it">
          <li>Now your YouTube API key is given (mine is blacked out but yours won't be)</li>
-         <img src="public/img/readmeInstructions/youtube-api-key.png" alt="YouTube data api v3 api key">
+         <img src="public/img/readmeInstructions/google/youtube-api-key.png" alt="YouTube data api v3 api key">
          <li>Copy and paste your YouTube API key into the <code>environment file</code> created in the steps above right below your other two keys</li>
            <pre><code>
 REACT_APP_CLIENT_ID=SPOTIFY CLIENT CODE
@@ -128,49 +127,48 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
     </ol>
     <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
   </details>
-<!-- Delete this file: public/img/readmeInstructions/google-api-search-results.png -->
 
 ## Check for Node and Npm Installations
 
  <details>
     <summary>Click to show / hide <code>Check for Node and Npm Installations</code></summary></br>
-    <div style="border: 1px solid #ddd; padding: 8px; width: 100%;">
-    <ul> 
-    <li>Ensure that you have Node & Npm installed on your local machine</li>
-    <li>Open the command prompt & run the command below to check the version of node installed</li>
-    <pre><code> node -v </code></pre>
-    <li>Open the command prompt & run the command below to check the version of npm installed</li>
-    <pre><code> npm -v </code></pre>
-    <li>If either of these commands do not give a version or give an error, we must install them</li>
-    <li>The instructions for installation can be found at: <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">Docs on Installation of Node & Npm</a></li>
-    <!--Add Images into this to make explanation easier -->
+    <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
+      <strong>NOTE:</strong> We need to ensure that you have Node & Npm installed on your local machine. </div>
+    <ol>
+      <li>Check for the npm version using the below command</li>
+      <pre><code>npm -v</code></pre>
+      <li>Check for the node version using the below command</li>
+      <pre><code>node -v</code></pre>
+    <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
+      <strong>NOTE:</strong> If either of these commands do not give a version number or give an error we must install node and npm </div>
+      <li>Install npm using the below command</li>
+         <pre><code>npm install latest</code></pre>
+      <li>Install node using the below command</li>
+         <pre><code>npm install node</code></pre>
+      <li>Run the same commands to check the versions of each to ensure that they installed properly</li>
+      <div style=" border-left: 5px solid #f44336; padding: 10px; margin: 10px 0;">
+      <strong>IMPORTANT:</strong> If the command prompt does not allow you to run any of these commands. Make sure to exit and run command prompt as administrator</div>
+      <img src="public/img/readmeInstructions/cmd-run-as-admin.png" alt="Windows search for command prompt with run as administrator button circled in red">
+    </ol>
     <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
-    </div>
   </details>
 
 ## Make Repo into React App
 
  <details>
     <summary>Click to show / hide <code>Make Repo into React App</code></summary></br>
-    <div style="border: 1px solid #ddd; padding: 8px; width: 100%;">
-    <ul> 
-    <li>Open the command prompt & ensure it is in the proper project directory</li>
-    <!--Add image here-->
-    <li>Run the command below to install the necessary react elements into our project</li>
-    <pre><code>npm install create-react-app</code></pre>
-    <li>Once installed we can run the project in our local development server</li>
-    <li>Open the command prompt & ensure that you are in the proper project directory, then run the below command to start the server:</li>
-    <pre><code>npm run start</code></pre>
+    <ol>
+    <li>Open the command prompt and get to the proper directory for your project using this command</li>
+     <pre><code>C:\Users\YOURUSERNAME> cd quiz-tunes-react</pre></code>
+    <li>Now that we are in the proper place, we have to make this project into a react app using this command</li>
+      <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> npm install create-react-app</pre></code>
+    <li>Now our project is a react app, we can run it on our local machine using the following command</li>
+      <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> npm run start</pre></code>
     <div style=" border-left: 5px solid #f44336; padding: 10px; margin: 10px 0;">
-    <strong>IMPORTANT:</strong> To terminate the local development server, select the command prompt used to start the server & press "ctrl + c", then press y when prompted</div>
-    </ul>
-    <!--Add Images into this to make explanation easier -->
+    <strong>IMPORTANT:</strong> To terminate the local development server, open the windows powershell that was opened by your local machine to host the local server & press "ctrl + c", then press y when prompted. </div>
+    <div style="border-left: 5px solid #2196f3; padding: 10px; margin: 10px 0;">
+    <strong>NOTE:</strong> The browser window where the local development server is being run will not close automatically, you must close it yourself. </div>
+    </ol>
     <div align="right">[ <a href="#table-of-contents">↑ Back to Top ↑</a> ]</div>
-    </div>
-  </details>
 
-<!-- Add social links to the bottom, similar to the actual web app -->
-<!-- <div align="center">
-| ![Linkedin](https://www.linkedin.com/in/mirandamorris845/) | ![Issues Badge](https://img.shields.io/github/issues-raw/Miramoop/Quiz-Tunes-React) | ![Pull Requests Badge](https://img.shields.io/github/issues-pr-raw/Miramoop/Quiz-Tunes-React.svg?style=flat-square&logo=github&logoColor=white) | ![Deployment Badge](https://deploy-badge.vercel.app/vercel/quiz-tunes-react) |
-| :----------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-</div> -->
+  </details>
