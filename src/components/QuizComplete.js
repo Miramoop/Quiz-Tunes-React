@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/quizCompleteStyles.scss";
 
 const QuizComplete = ({ handleCalculateResults }) => (
   <section id="quizComplete" role="alert">

@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/homeStyles.scss";
 
 const Home = ({ startQuiz }) => (
   <section id="home">
