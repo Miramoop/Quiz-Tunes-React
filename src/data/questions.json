@@ -1,10 +1,6 @@
 [
   {
     "question": "What is your ideal way to spend a Saturday afternoon?",
-    "progressImage": {
-      "src": "img/q1progress.jpg",
-      "alt": "Progress indicator with no circles filled"
-    },
     "choices": [
       {
         "choice": "Reading a book",
@@ -54,10 +50,6 @@
   },
   {
     "question": "What is your ideal vacation?",
-    "progressImage": {
-      "src": "img/q2progress.jpg",
-      "alt": "Progress indicator with 1 circle filled"
-    },
     "choices": [
       {
         "choice": "Beach Resort",
@@ -107,10 +99,6 @@
   },
   {
     "question": "If you were able to travel to any of these countries, where would you choose?",
-    "progressImage": {
-      "src": "img/q3progress.jpg",
-      "alt": "Progress indicator with 2 circles filled"
-    },
     "choices": [
       {
         "choice": "Japan",
@@ -160,10 +148,6 @@
   },
   {
     "question": "What type of exercise do you prefer?",
-    "progressImage": {
-      "src": "img/q4progress.jpg",
-      "alt": "Progress indicator with 3 circles filled"
-    },
     "choices": [
       {
         "choice": "Dance",
@@ -213,10 +197,6 @@
   },
   {
     "question": "What kind of music do you prefer to listen to?",
-    "progressImage": {
-      "src": "img/q5progress.jpg",
-      "alt": "Progress indicator with 4 circles filled"
-    },
     "choices": [
       {
         "choice": "Country",
@@ -266,10 +246,6 @@
   },
   {
     "question": "Which season do you enjoy the most?",
-    "progressImage": {
-      "src": "img/q6progress.jpg",
-      "alt": "Progress indicator with 5 circles filled"
-    },
     "choices": [
       {
         "choice": "Fall",
@@ -319,10 +295,6 @@
   },
   {
     "question": "What types of movies do you prefer?",
-    "progressImage": {
-      "src": "img/q7progress.jpg",
-      "alt": "Progress indicator with 6 circles filled"
-    },
     "choices": [
       {
         "choice": "Action",
@@ -372,10 +344,6 @@
   },
   {
     "question": "What is your favorite flower?",
-    "progressImage": {
-      "src": "img/q8progress.jpg",
-      "alt": "Progress indicator with 7 circles filled"
-    },
     "choices": [
       {
         "choice": "Rose",
@@ -425,10 +393,6 @@
   },
   {
     "question": "What type of cuisine do you enjoy the most?",
-    "progressImage": {
-      "src": "img/q9progress.jpg",
-      "alt": "Progress indicator with 8 circles filled"
-    },
     "choices": [
       {
         "choice": "Japanese",
@@ -478,10 +442,6 @@
   },
   {
     "question": "What is your favorite time of day?",
-    "progressImage": {
-      "src": "img/q10progress.jpg",
-      "alt": "Progress indicator with 9 circles filled"
-    },
     "choices": [
       {
         "choice": "Morning",

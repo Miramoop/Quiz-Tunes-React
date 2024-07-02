@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { styled } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
-import '../index.css';
+import '../styles/index.css';
 import "../styles/quizStyles.scss";
 import StepsComponent from "./StepsComponent";
 

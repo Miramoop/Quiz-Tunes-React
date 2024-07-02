@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/index.css";
 import "../styles/homeStyles.scss";
 
 const Home = ({ startQuiz }) => (

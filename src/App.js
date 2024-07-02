@@ -9,6 +9,7 @@ import { calculateDominantGenre } from "./utils";
 import { fetchTrackInfo } from "./services/spotifyService";
 import { fetchYouTubeVideos } from "./services/youtubeService";
 import { loadInitialData } from "./services/dataService";
+import '../src/styles/index.css';
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);

@@ -5,8 +5,10 @@ footer {
     padding: 1vh;
     text-align: center;
     width: 100%;
+    color: $mainTextColor;
   }
   
   footer a {
     padding: 0.4vh;
+    color: $hoverColor;
   }
