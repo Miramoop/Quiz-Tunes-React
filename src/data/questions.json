@@ -5,7 +5,7 @@
       {
         "choice": "Reading a book",
         "image": {
-          "src": "/img/questionchoices/q1/q1book.jpg",
+          "src": "/img/questionchoices/q1/book.jpg",
           "alt": "An image of someone reading a book"
         },
         "weights": {
@@ -16,7 +16,7 @@
       {
         "choice": "Hiking in the Forest",
         "image": {
-          "src": "/img/questionchoices/q1/q1tree.jpg",
+          "src": "/img/questionchoices/q1/tree.jpg",
           "alt": "An image of a forest trail"
         },
         "weights": {
@@ -27,7 +27,7 @@
       {
         "choice": "Hanging out with Friends",
         "image": {
-          "src": "/img/questionchoices/q1/q1friends.jpg",
+          "src": "/img/questionchoices/q1/friends.jpg",
           "alt": "An image of friends hanging out"
         },
         "weights": {
@@ -38,7 +38,7 @@
       {
         "choice": "Watching movies or TV shows",
         "image": {
-          "src": "/img/questionchoices/q1/q1tv.jpg",
+          "src": "/img/questionchoices/q1/tv.jpg",
           "alt": "An image of a TV or movie scene"
         },
         "weights": {
@@ -54,7 +54,7 @@
       {
         "choice": "Beach Resort",
         "image": {
-          "src": "/img/questionchoices/q2/q2palmtree.jpg",
+          "src": "/img/questionchoices/q2/palmtree.jpg",
           "alt": "An image of a beach resort"
         },
         "weights": {
@@ -65,7 +65,7 @@
       {
         "choice": "Mountain Retreat",
         "image": {
-          "src": "/img/questionchoices/q2/q2mountains.jpg",
+          "src": "/img/questionchoices/q2/mountains.jpg",
           "alt": "An image of a mountain retreat"
         },
         "weights": {
@@ -76,7 +76,7 @@
       {
         "choice": "City Exploration",
         "image": {
-          "src": "/img/questionchoices/q2/q2city.jpg",
+          "src": "/img/questionchoices/q2/city.jpg",
           "alt": "An image of a city landscape"
         },
         "weights": {
@@ -87,7 +87,7 @@
       {
         "choice": "Chilling at Home",
         "image": {
-          "src": "/img/questionchoices/q2/q2home.jpg",
+          "src": "/img/questionchoices/q2/home.jpg",
           "alt": "An image of someone chilling at home"
         },
         "weights": {
@@ -103,7 +103,7 @@
       {
         "choice": "Japan",
         "image": {
-          "src": "/img/questionchoices/q3/q3japan.jpg",
+          "src": "/img/questionchoices/q3/japan.jpg",
           "alt": "An image of Japan"
         },
         "weights": {
@@ -114,7 +114,7 @@
       {
         "choice": "Australia",
         "image": {
-          "src": "/img/questionchoices/q3/q3australia.jpg",
+          "src": "/img/questionchoices/q3/australia.jpg",
           "alt": "An image of Australia"
         },
         "weights": {
@@ -125,7 +125,7 @@
       {
         "choice": "France",
         "image": {
-          "src": "/img/questionchoices/q3/q3france.jpg",
+          "src": "/img/questionchoices/q3/france.jpg",
           "alt": "An image of France"
         },
         "weights": {
@@ -136,7 +136,7 @@
       {
         "choice": "Mexico",
         "image": {
-          "src": "/img/questionchoices/q3/q3mexico.jpg",
+          "src": "/img/questionchoices/q3/mexico.jpg",
           "alt": "An image of Mexico"
         },
         "weights": {
@@ -152,7 +152,7 @@
       {
         "choice": "Dance",
         "image": {
-          "src": "/img/questionchoices/q4/q4dance.jpg",
+          "src": "/img/questionchoices/q4/dance.jpg",
           "alt": "An image of someone dancing"
         },
         "weights": {
@@ -163,7 +163,7 @@
       {
         "choice": "Jogging",
         "image": {
-          "src": "/img/questionchoices/q4/q4jogging.jpg",
+          "src": "/img/questionchoices/q4/jogging.jpg",
           "alt": "An image of someone jogging"
         },
         "weights": {
@@ -174,7 +174,7 @@
       {
         "choice": "Weight Training",
         "image": {
-          "src": "/img/questionchoices/q4/q4weights.jpg",
+          "src": "/img/questionchoices/q4/weights.jpg",
           "alt": "An image of weight training"
         },
         "weights": {
@@ -185,7 +185,7 @@
       {
         "choice": "Yoga",
         "image": {
-          "src": "/img/questionchoices/q4/q4yoga.jpg",
+          "src": "/img/questionchoices/q4/yoga.jpg",
           "alt": "An image of someone practicing yoga"
         },
         "weights": {
@@ -201,7 +201,7 @@
       {
         "choice": "Country",
         "image": {
-          "src": "/img/questionchoices/q5/q5country.jpg",
+          "src": "/img/questionchoices/q5/country.jpg",
           "alt": "An image of country music"
         },
         "weights": {
@@ -212,7 +212,7 @@
       {
         "choice": "Rock",
         "image": {
-          "src": "/img/questionchoices/q5/q5rock.jpg",
+          "src": "/img/questionchoices/q5/rock.jpg",
           "alt": "An image of rock music"
         },
         "weights": {
@@ -223,7 +223,7 @@
       {
         "choice": "Dance",
         "image": {
-          "src": "/img/questionchoices/q5/q5dance.jpg",
+          "src": "/img/questionchoices/q5/dance.jpg",
           "alt": "An image of dance music"
         },
         "weights": {
@@ -234,7 +234,7 @@
       {
         "choice": "Chill",
         "image": {
-          "src": "/img/questionchoices/q5/q5chill.jpg",
+          "src": "/img/questionchoices/q5/chill.jpg",
           "alt": "An image of chill music"
         },
         "weights": {
@@ -250,7 +250,7 @@
       {
         "choice": "Fall",
         "image": {
-          "src": "/img/questionchoices/q6/q6fall.jpg",
+          "src": "/img/questionchoices/q6/fall.jpg",
           "alt": "An image of autumn leaves"
         },
         "weights": {
@@ -261,7 +261,7 @@
       {
         "choice": "Winter",
         "image": {
-          "src": "/img/questionchoices/q6/q6winter.jpg",
+          "src": "/img/questionchoices/q6/winter.jpg",
           "alt": "An image of winter snow"
         },
         "weights": {
@@ -272,7 +272,7 @@
       {
         "choice": "Spring",
         "image": {
-          "src": "/img/questionchoices/q6/q6spring.jpg",
+          "src": "/img/questionchoices/q6/spring.jpg",
           "alt": "An image of spring flowers"
         },
         "weights": {
@@ -283,7 +283,7 @@
       {
         "choice": "Summer",
         "image": {
-          "src": "/img/questionchoices/q6/q6summer.jpg",
+          "src": "/img/questionchoices/q6/summer.jpg",
           "alt": "An image of a summer beach"
         },
         "weights": {
@@ -299,7 +299,7 @@
       {
         "choice": "Action",
         "image": {
-          "src": "/img/questionchoices/q7/q7action.jpg",
+          "src": "/img/questionchoices/q7/action.jpg",
           "alt": "An image of an action movie"
         },
         "weights": {
@@ -310,7 +310,7 @@
       {
         "choice": "Comedy",
         "image": {
-          "src": "/img/questionchoices/q7/q7comedy.jpg",
+          "src": "/img/questionchoices/q7/comedy.jpg",
           "alt": "An image of a comedy movie"
         },
         "weights": {
@@ -321,7 +321,7 @@
       {
         "choice": "Drama",
         "image": {
-          "src": "/img/questionchoices/q7/q7drama.jpg",
+          "src": "/img/questionchoices/q7/drama.jpg",
           "alt": "An image of a drama movie"
         },
         "weights": {
@@ -332,7 +332,7 @@
       {
         "choice": "Horror",
         "image": {
-          "src": "/img/questionchoices/q7/q7horror.jpg",
+          "src": "/img/questionchoices/q7/horror.jpg",
           "alt": "An image of a horror movie"
         },
         "weights": {
@@ -348,7 +348,7 @@
       {
         "choice": "Rose",
         "image": {
-          "src": "/img/questionchoices/q8/q8rose.jpg",
+          "src": "/img/questionchoices/q8/rose.jpg",
           "alt": "An image of a rose"
         },
         "weights": {
@@ -359,7 +359,7 @@
       {
         "choice": "Tulip",
         "image": {
-          "src": "/img/questionchoices/q8/q8tulip.jpg",
+          "src": "/img/questionchoices/q8/tulip.jpg",
           "alt": "An image of a tulip"
         },
         "weights": {
@@ -370,7 +370,7 @@
       {
         "choice": "Sunflower",
         "image": {
-          "src": "/img/questionchoices/q8/q8sunflower.jpg",
+          "src": "/img/questionchoices/q8/sunflower.jpg",
           "alt": "An image of a sunflower"
         },
         "weights": {
@@ -381,7 +381,7 @@
       {
         "choice": "Orchids",
         "image": {
-          "src": "/img/questionchoices/q8/q8orchids.jpg",
+          "src": "/img/questionchoices/q8/orchids.jpg",
           "alt": "An image of orchids"
         },
         "weights": {
@@ -397,7 +397,7 @@
       {
         "choice": "Japanese",
         "image": {
-          "src": "/img/questionchoices/q9/q9japan.jpg",
+          "src": "/img/questionchoices/q9/japan.jpg",
           "alt": "An image of Japanese cuisine"
         },
         "weights": {
@@ -408,7 +408,7 @@
       {
         "choice": "Spanish",
         "image": {
-          "src": "/img/questionchoices/q9/q9spain.jpg",
+          "src": "/img/questionchoices/q9/spain.jpg",
           "alt": "An image of Spanish cuisine"
         },
         "weights": {
@@ -419,7 +419,7 @@
       {
         "choice": "French",
         "image": {
-          "src": "/img/questionchoices/q9/q9france.jpg",
+          "src": "/img/questionchoices/q9/france.jpg",
           "alt": "An image of French cuisine"
         },
         "weights": {
@@ -430,7 +430,7 @@
       {
         "choice": "American",
         "image": {
-          "src": "/img/questionchoices/q9/q9america.jpg",
+          "src": "/img/questionchoices/q9/america.jpg",
           "alt": "An image of American cuisine"
         },
         "weights": {
@@ -446,7 +446,7 @@
       {
         "choice": "Morning",
         "image": {
-          "src": "/img/questionchoices/q10/q10morning.jpg",
+          "src": "/img/questionchoices/q10/morning.jpg",
           "alt": "An image of a morning sunrise"
         },
         "weights": {
@@ -457,7 +457,7 @@
       {
         "choice": "Afternoon",
         "image": {
-          "src": "/img/questionchoices/q10/q10afternoon.jpg",
+          "src": "/img/questionchoices/q10/afternoon.jpg",
           "alt": "An image of an afternoon scene"
         },
         "weights": {
@@ -468,7 +468,7 @@
       {
         "choice": "Evening",
         "image": {
-          "src": "/img/questionchoices/q10/q10evening.jpg",
+          "src": "/img/questionchoices/q10/evening.jpg",
           "alt": "An image of an evening sunset"
         },
         "weights": {
@@ -479,7 +479,7 @@
       {
         "choice": "Night",
         "image": {
-          "src": "/img/questionchoices/q10/q10night.jpg",
+          "src": "/img/questionchoices/q10/night.jpg",
           "alt": "An image of a night scene"
         },
         "weights": {
