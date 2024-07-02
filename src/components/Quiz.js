@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { styled } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
+import '../index.css';
 import "../styles/quizStyles.scss";
+import StepsComponent from "./StepsComponent";
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
@@ -15,7 +17,6 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
   overflow: 'hidden',
   backgroundColor: 'rgba(0, 0, 0, 0.1)',
   transition: 'background-color 0.3s',
-
   '&:hover, &.Mui-focusVisible': {
     zIndex: 1,
     '& .MuiImageBackdrop-root': {
@@ -38,23 +39,29 @@ const ImageOverlay = styled('div')({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  background: 'rgba(0, 0, 0, 0.5)', // Semi-transparent dark overlay
+  background: 'rgba(0, 0, 0, 0.5)', 
   color: 'white',
   textAlign: 'center',
   padding: '10px',
-  boxSizing: 'border-box', // Include padding in width and height calculations
+  boxSizing: 'border-box',
 });
 
 const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(null);
-
-  useEffect(() => {
-    setCurrentQuestion(questions[currentQuestionIndex]);
-  }, [currentQuestionIndex, questions]);
+  const [selectedChoices, setSelectedChoices] = useState({}); 
+  const [answeredQuestions, setAnsweredQuestions] = useState({}); 
 
   const handleChoiceSelection = (selectedChoice) => {
+    const previousChoice = selectedChoices[currentQuestionIndex];
     const updatedWeights = { ...weights };
+
+    if (previousChoice) {
+      for (const [key, value] of Object.entries(previousChoice.weights)) {
+        const normalizedKey = key.toLowerCase();
+        updatedWeights[normalizedKey] =
+          (updatedWeights[normalizedKey] || 0) - value;
+      }
+    }
 
     for (const [key, value] of Object.entries(selectedChoice.weights)) {
       const normalizedKey = key.toLowerCase();
@@ -63,49 +70,102 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
     }
 
     updateWeights(updatedWeights);
+    setSelectedChoices({
+      ...selectedChoices,
+      [currentQuestionIndex]: selectedChoice,
+    });
+    setAnsweredQuestions({
+      ...answeredQuestions,
+      [currentQuestionIndex]: true,
+    });
+  };
 
-    const nextQuestionIndex = currentQuestionIndex + 1;
-    if (nextQuestionIndex < questions.length) {
-      setCurrentQuestionIndex(nextQuestionIndex);
-    } else {
+  const handleStepClick = (index) => {
+    setCurrentQuestionIndex(index);
+  };
+
+  const handleFinishQuiz = () => {
+    const allQuestionsAnswered = questions.length === Object.keys(answeredQuestions).length;
+    if (allQuestionsAnswered) {
       setIsQuizComplete(true);
+    } else {
+      alert("Please answer all questions before completing the quiz.");
     }
   };
 
-  if (!currentQuestion) {
-    return <div>Loading...</div>;
-  }
+  const currentQuestion = questions[currentQuestionIndex];
+  const isFirstQuestion = currentQuestionIndex === 0;
+  const isLastQuestion = currentQuestionIndex === questions.length - 1;
 
   return (
     <section id="quiz">
+      <StepsComponent
+        steps={questions.map((_, idx) => `Step ${idx + 1}`)}  
+        activeStep={currentQuestionIndex}
+        onStepClick={handleStepClick}
+      />
       <div id="questionText">{currentQuestion.question}</div>
       <div className="choices">
-        {currentQuestion.choices.map((choice) => (
-          <ImageButton
-            key={choice.choice}
-            onClick={() => handleChoiceSelection(choice)}
+        {currentQuestion.choices.map((choice) => {
+          const isSelected = selectedChoices[currentQuestionIndex]?.choice === choice.choice;
+          return (
+            <ImageButton
+              key={choice.choice}
+              onClick={() => handleChoiceSelection(choice)}
+              style={{
+                border: isSelected ? '2px solid blue' : 'none',
+                backgroundColor: isSelected ? 'rgba(0, 0, 255, 0.1)' : 'initial',
+              }}
+            >
+              <div
+                className="image-bg"
+                style={{ backgroundImage: `url(${choice.image.src})` }}
+              />
+              <ImageOverlay>
+                <Typography
+                  component="span"
+                  variant="subtitle1"
+                  className="image-text"
+                >
+                  {choice.choice}
+                </Typography>
+              </ImageOverlay>
+            </ImageButton>
+          );
+        })}
+      </div>
+      <div className="quiz-navigation">
+        {!isFirstQuestion && (
+          <button
+            className="navigation-button"
+            onClick={() => handleStepClick(currentQuestionIndex - 1)}
           >
-            <div
-              className="image-bg"
-              style={{ backgroundImage: `url(${choice.image.src})` }}
-            />
-            <ImageOverlay>
-              <Typography
-                component="span"
-                variant="subtitle1"
-                className="image-text"
-              >
-                {choice.choice}
-              </Typography>
-            </ImageOverlay>
-          </ImageButton>
-        ))}
+            Previous
+          </button>
+        )}
+        {isLastQuestion ? (
+          <button className="navigation-button" onClick={handleFinishQuiz}>Finish</button>
+        ) : (
+          <button
+            className="navigation-button"
+            onClick={() => handleStepClick(currentQuestionIndex + 1)}
+          >
+            Next
+          </button>
+        )}
       </div>
     </section>
   );
 };
 
 export default Quiz;
+
+
+
+
+
+
+
 
 
 
