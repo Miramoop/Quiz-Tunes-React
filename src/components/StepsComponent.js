@@ -1,20 +1,19 @@
 import React from "react";
 
-const StepsComponent = ({ steps, activeStep, onStepClick }) => {
+const StepsComponent = ({ steps, answeredQuestions, activeStep, onStepClick }) => {
   return (
     <ul className="steps">
-      {steps && steps.map((step, index) => (
+      {steps.map((stepIndex) => (
         <li 
-          key={index}
-          className={`step ${activeStep >= index ? 'step-primary' : ''}`} 
-          onClick={() => onStepClick(index)}
-        >
-          {step}
-        </li>
+          key={stepIndex}
+          className={`step ${answeredQuestions[stepIndex] ? 'step-success' : (stepIndex < activeStep ? 'step-warning' : '')}`} 
+          onClick={() => onStepClick(stepIndex)}
+        />
       ))}
     </ul>
   );
 };
 
 export default StepsComponent;
+
 

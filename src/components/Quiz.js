@@ -49,7 +49,7 @@ const ImageOverlay = styled('div')({
 const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedChoices, setSelectedChoices] = useState({}); 
-  const [answeredQuestions, setAnsweredQuestions] = useState({}); 
+  const [answeredQuestions, setAnsweredQuestions] = useState(new Array(questions.length).fill(false)); // Track answered questions
 
   const handleChoiceSelection = (selectedChoice) => {
     const previousChoice = selectedChoices[currentQuestionIndex];
@@ -74,10 +74,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
       ...selectedChoices,
       [currentQuestionIndex]: selectedChoice,
     });
-    setAnsweredQuestions({
-      ...answeredQuestions,
-      [currentQuestionIndex]: true,
-    });
+    setAnsweredQuestions(answeredQuestions.map((answered, index) => index === currentQuestionIndex ? true : answered));
   };
 
   const handleStepClick = (index) => {
@@ -85,7 +82,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   };
 
   const handleFinishQuiz = () => {
-    const allQuestionsAnswered = questions.length === Object.keys(answeredQuestions).length;
+    const allQuestionsAnswered = answeredQuestions.every(answered => answered);
     if (allQuestionsAnswered) {
       setIsQuizComplete(true);
     } else {
@@ -100,7 +97,8 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   return (
     <section id="quiz">
       <StepsComponent
-        steps={questions.map((_, idx) => `Step ${idx + 1}`)}  
+        steps={Array.from(Array(questions.length).keys())} 
+        answeredQuestions={answeredQuestions}
         activeStep={currentQuestionIndex}
         onStepClick={handleStepClick}
       />
@@ -159,6 +157,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
 };
 
 export default Quiz;
+
 
 
 
