@@ -1,4 +1,4 @@
-@import "variables", "mainStyles", "mediaQueries";
+// @import "variables", "styles";
 
 #questionImage,
 #progressImage {
@@ -17,8 +17,16 @@
     flex-direction: column;
     gap: 10px;
     justify-content: center;
+
+      button {
+        max-width: 300px;
+      }
   }
-  
-  .choices button {
-    max-width: 300px;
+
+  @media screen and (min-width: 768px) {  
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+    }
   }

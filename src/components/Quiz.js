@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../styles/quizStyles.scss";
 
 const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

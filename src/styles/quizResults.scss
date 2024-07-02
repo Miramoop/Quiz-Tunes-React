@@ -1,0 +1,56 @@
+// @import "variables", "styles";
+
+.results {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#buttonHolder,
+.resultsContent p,
+#resultsSection .videoContent {
+  align-content: space-between;
+}
+
+.videoContent {
+  padding: 5px;
+}
+
+.video-container {
+  max-width: 560px;
+  margin: auto;
+
+    iframe {
+      width: 100%;
+      height: auto;
+    }
+}
+#spotifyContent {
+  padding: 5px;
+}
+
+#spotifyLink {
+  flex-grow: 1;
+  transition-duration: 0.4s;
+
+    &:hover {
+      background-color: $hoverColor;
+      color: $mainTextColor;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .video-container iframe {
+    width: 560px;
+    height: 315px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #results {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    text-align: center;
+  }
+}

@@ -8,6 +8,23 @@
   padding: 0 15px;
 }
 
+@media screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+
+@media screen and (min-width: 1400px) {
+  .wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
 body {
   background: lightgoldenrodyellow;
   background-image: linear-gradient(180deg, slateblue, palegoldenrod);
@@ -41,7 +58,6 @@ button {
   }
 }
 
-//TO DO - Maybe Change this into something else to make easier to use in code? like a variable?
 #quiz,
 #questionText,
 #choicesText,
