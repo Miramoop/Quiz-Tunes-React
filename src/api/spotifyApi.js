@@ -16,11 +16,12 @@ async function getToken() {
     },
   };
 
-  //TO DO - Take out local storage & potentially use another method
+
+  //MAKE SURE TO CHECK ACCESS TOKEN
   const response = await fetch(Constants.SPOTIFY_TOKEN_URL, payload);
   const data = await response.json();
   if (response.ok) {
-    localStorage.setItem("access_token", data.access_token);
+    let access_token = data.access_token;
     return data;
   } else {
     console.error("Error getting token: ", data);
