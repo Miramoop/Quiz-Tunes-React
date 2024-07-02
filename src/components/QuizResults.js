@@ -15,15 +15,6 @@ const QuizResults = ({
     useState(false);
   const [videosFetched, setVideosFetched] = useState(false);
 
-  const sanitizeTitle = (title) => {
-    return title
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "lt;")
-      .replace(/>/g, "gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#039;");
-  };
-
   return (
     <section id="results">
       <div id="resultsContent" role="alert">
@@ -71,11 +62,6 @@ const QuizResults = ({
           youTubeVideos.length > 0 &&
           youTubeVideos.map((video) => (
             <div key={video.id.videoId} className="video-container">
-              <h2
-                dangerouslySetInnerHTML={{
-                  __html: sanitizeTitle(video.snippet.title),
-                }}
-              ></h2>
               <iframe
                 title={video.snippet.title}
                 src={`https://www.youtube.com/embed/${video.id.videoId}`}

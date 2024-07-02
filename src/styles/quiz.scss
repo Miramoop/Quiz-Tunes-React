@@ -1,0 +1,32 @@
+// @import "variables", "styles";
+
+#questionImage,
+#progressImage {
+  border-color: var(--border-color);
+  border-radius: 10px;
+  border-style: outset;
+}
+
+#progressImage {
+  border-style: inset;
+}
+
+.choices {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+
+      button {
+        max-width: 300px;
+      }
+  }
+
+  @media screen and (min-width: 768px) {  
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+    }
+  }

@@ -9,8 +9,7 @@ import { calculateDominantGenre } from "./utils";
 import { fetchTrackInfo } from "./services/spotifyService";
 import { fetchYouTubeVideos } from "./services/youtubeService";
 import { loadInitialData } from "./services/dataService";
-import "./App.css";
-import "./styles/styles.css";
+import './styles/styles.css';
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
@@ -76,6 +75,7 @@ function App() {
     }
   };
 
+    //TO DO - Take out local storage & potentially use another method
   const fetchYouTubeDataAndDisplay = async () => {
     try {
       const trackName = localStorage.getItem("track_Name");
@@ -87,6 +87,7 @@ function App() {
     }
   };
 
+    //TO DO - Take out local storage & potentially use another method
   const displayRecommendedTracks = async (genre) => {
     try {
       const trackInfo = await fetchTrackInfo(genre);
