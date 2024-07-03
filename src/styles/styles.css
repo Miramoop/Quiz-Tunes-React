@@ -1,3 +1,4 @@
+@import 'daisyui/dist/full.css';
 * {
   box-sizing: border-box;
   font-family: "Lucida Console", "Courier New", monospace;
@@ -40,17 +41,17 @@ img {
 }
 
 button {
-  align-items: center;
-  background: white;
-  border-radius: 10px;
-  padding: 3vh;
-  transition-duration: 0.4s;
+  align-items: center !important;
+  background: white !important;
+  border-radius: 10px !important;
+  padding: 3vh !important;
+  transition-duration: 0.4s !important;
 }
 button:focus, button:hover {
-  background-color: rgb(77, 57, 206);
-  color: white;
-  outline: 2px solid #000;
-  outline-offset: 2px;
+  background-color: rgb(77, 57, 206) !important;
+  color: white !important;
+  outline: 2px solid #000 !important;
+  outline-offset: 2px !important;
 }
 
 #quiz,

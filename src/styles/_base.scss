@@ -43,18 +43,18 @@ img {
 }
 
 button {
-  align-items: center;
-  background: $buttonLinkColor;
-  border-radius: 10px;
-  padding: 3vh;
-  transition-duration: 0.4s;
+  align-items: center !important;
+  background: $buttonLinkColor !important;
+  border-radius: 10px !important;
+  padding: 3vh !important;
+  transition-duration: 0.4s !important;
 
   &:focus,
   &:hover {
-    background-color: $hoverColor;
-    color: $buttonLinkColor;
-    outline: 2px solid #000;
-    outline-offset: 2px;
+    background-color: $hoverColor !important;
+    color: $buttonLinkColor !important;
+    outline: 2px solid #000 !important;
+    outline-offset: 2px !important;
   }
 }
 
