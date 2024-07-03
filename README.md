@@ -19,6 +19,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 - [📺 Obtain the YouTube API Key](#-obtain-the-youtube-api-key)
 - [💾 Check for Node and Npm Installations](#-check-for-node-and-npm-installations)
 - [💻 Make Repo into React App](#-make-repo-into-react-app)
+- [👕 Install all the dependencies for style elements](#-install-style-dependencies)
 
 ## 👽 Clone the Repo
 
@@ -30,7 +31,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     <ol>
       <li>Open the command prompt on your computer (It will open to the below directory as default)</li>
       <pre><code>C:\Users\YOURUSERNAME></pre></code>
-      <li>Click the code button on the GitHub Repo</li>
+      <li>Click the code button on the <code>GitHub</code> Repo</li>
       <img src="public/img/readmeInstructions/github/github-clone-code-button-red.png" alt="GitHub Clone Code Button with Red Square around it">
       <li>It opens to reveal the HTTPS code for Cloning the Repo</li>
        <img src="public/img/readmeInstructions/github/github-clone-https-link-button.png" alt="GitHub Clone Link with Red Square around it">
@@ -53,14 +54,14 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     <ol>
       <li>Navigate to the cloned repo folder on your computer using the below command</li>
          <pre><code>C:\Users\YOURUSERNAME> cd quiz-tunes-react</pre></code>
-      <li>Next, we must create an environment variables file using the following command</li>
+      <li>Next, we must create an <code>environment file</code> using the following command</li>
        <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> echo. > environment.env </pre></code>
       <li>Now we must access that file using the following command</li>
       <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> echo. > environment.env </pre></code>
       <blockquote>
       <strong>❗️IMPORTANT:</strong> We will get the exact keys that need to be added into this file in the next two steps, so keep this file open.
       </blockquote>
-       <li> Here is some more info on environment variable files, if you need any help:  <a href="https://create-react-app.dev/docs/adding-custom-environment-variables/"> React docs on environment files</a></li>
+       <li> Here is some more info on <code>environment files</code>, if you need any help:  <a href="https://create-react-app.dev/docs/adding-custom-environment-variables/"> React docs on environment files</a></li>
     </ol>
 
 [[↑ Back to Top ↑]](#-table-of-contents)
@@ -76,9 +77,9 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
     <blockquote>
     <strong>📓NOTE:</strong> You must log in with a Spotify account (it can be either free or premium)
     </blockquote>
-      <li>Once logged in, you must click the button in the top right of the screen and select dashboard from the dropdown</li>
+      <li>Once logged in, you must <code>click the button</code> in the top right of the screen and <code>select dashboard</code> from the dropdown</li>
       <img src="public/img/readmeInstructions/spotify/spotify-developer-dashboard-button.png" alt="Spotify dashboard button with red square around it">
-      <li>Then click the Create App button</li>
+      <li>Then click the <code>Create App button</code></li>
        <img src="public/img/readmeInstructions/spotify/spotify-developer-dashboard-create-app-button.png" alt="Spotify dashboard create app button with red square around it">
       <li>Create the app name and description (it can be whatever you would like)</li>
        <img src="public/img/readmeInstructions/spotify/spotify-developer-dashboard-app-name-description.png" alt="Spotify create app dashboard with app name and description entered">
@@ -185,9 +186,9 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
     <ol>
     <li>Open the command prompt and get to the proper directory for your project using this command</li>
      <pre><code>C:\Users\YOURUSERNAME> cd quiz-tunes-react</pre></code>
-    <li>Now that we are in the proper place, we have to make this project into a react app using this command</li>
+    <li>Now that we are in the proper place, we have to make this project into a <code>React</code> app using this command</li>
       <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> npm install create-react-app</pre></code>
-    <li>Now our project is a react app, we can run it on our local machine using the following command</li>
+    <li>Now our project is a <code>React</code> app, we can run it on our local machine using the following command</li>
       <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> npm run start</pre></code>
       <blockquote>
       <strong>❗️IMPORTANT:</strong> To terminate the local development server, open the windows powershell that was opened by your local machine to host the local server & press "ctrl + c", then press y when prompted.
@@ -201,3 +202,28 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 [[↑ Back to Top ↑]](#-table-of-contents)
 
   </details>
+
+## 👕 Install Style Dependencies
+
+<details>
+  <summary>Click to show / hide <code>Install Style Dependencies</code></summary></br>
+  <ol>
+  <li>Open the command prompt and get to the proper directory of your project using this command</li>
+  <pre><code>C:\Users\YOURUSERNAME> cd quiz-tunes-react</pre></code>
+  <li>We must install concurrently to allow the <code>SASS files</code> to be redployed locally whenever changes are made because of the function that I added in the <code>package.json</code> file using this command</li>
+  <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> npm install concurrently --save-dev</pre></code>
+  <li>Install <code>Tailwind CSS</code> in order to properly display the styled components within the cloned project using this command</li>
+  <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> npm install tailwindcss@latest</pre></code>
+  <li>Install the <code>React</code> version of the <code>Tailwind CSS</code> using this command</li>
+  <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> npm install @headlessui/react @heroicons/react</pre></code>
+  <li>Install <code>Daisy UI</code> for some of the styled components within the cloned project</li>
+  <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> npm i -D daisyui@latest</pre></code>
+  <li>We must ensure that we have both <code>React</code> and <code>React-Dom</code> installed using this command</li>
+  <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> npm install react@latest react-dom@latest</pre></code>
+  <li>Install <code>Material UI</code> for the image buttons within the project with this command</li>
+  <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> npm install @mui/material @emotion/react @emotion/styled</pre></code>
+  </ol>
+
+[[↑ Back to Top ↑]](#-table-of-contents)
+
+</details>
