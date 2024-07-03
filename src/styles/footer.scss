@@ -1,11 +1,27 @@
 footer {
-    margin: 0;
-    padding: 1vh;
-    text-align: center;
-    width: 100%;
+  margin: 0;
+  padding: 1vh;
+  text-align: center;
+  width: 100%;
+  color: $mainTextColor;
 
-    a {
-      padding: 0.4vh;
-    }
-
+  h6 {
+    font-size: 15px;
   }
+
+  a {
+    display: inline-block; 
+    padding: 1vh;
+    vertical-align: middle; 
+
+    &:focus,
+    &:hover {
+      background-color: $hoverColor !important;
+      color: $buttonLinkColor !important;
+      outline: 2px solid #000;
+      outline-offset: 2px;
+    }
+  }
+}
+
+

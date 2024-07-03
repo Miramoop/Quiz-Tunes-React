@@ -86,9 +86,21 @@ footer {
   padding: 1vh;
   text-align: center;
   width: 100%;
+  color: black;
+}
+footer h6 {
+  font-size: 15px;
 }
 footer a {
-  padding: 0.4vh;
+  display: inline-block;
+  padding: 1vh;
+  vertical-align: middle;
+}
+footer a:focus, footer a:hover {
+  background-color: rgb(77, 57, 206) !important;
+  color: white !important;
+  outline: 2px solid #000;
+  outline-offset: 2px;
 }
 
 #home {
