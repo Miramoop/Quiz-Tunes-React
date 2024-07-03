@@ -1,7 +1,7 @@
 import React from "react";
 
 const Header = () => (
-  <header className="active">
+  <header>
     <img
       id="headerLogo"
       src="/img/logo/QuizTunesLogo.png"
