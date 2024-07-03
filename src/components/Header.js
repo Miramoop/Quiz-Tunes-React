@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/headerStyles.scss";
 
 const Header = () => (
   <header className="active">

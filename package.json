@@ -17,19 +17,21 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "create-react-app": "^5.0.1",
     "dotenv": "^16.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
-    "sass": "^1.77.6",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+"scripts": {
+  "start": "concurrently \"npm run watch-sass\" \"react-scripts start\"",
+  "build": "npm run sass && react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
+  "sass": "sass src/styles/index.scss src/styles/styles.css",
+  "watch-sass": "sass --watch src/styles/index.scss:src/styles/styles.css"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -52,6 +54,9 @@
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.12.10",
     "postcss": "^8.4.39",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.4",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "concurrently": "^8.2.2",
+    "sass": "^1.77.6"
   }
 }
