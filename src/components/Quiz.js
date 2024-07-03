@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import StepsComponent from "./StepsComponent";
 
 const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
