@@ -42,14 +42,14 @@ img {
 
 button {
   align-items: center !important;
-  background: white !important;
+  background: #AAB0EE !important;
   border-radius: 10px !important;
   padding: 3vh !important;
   transition-duration: 0.4s !important;
 }
 button:focus, button:hover {
-  background-color: rgb(77, 57, 206) !important;
-  color: white !important;
+  background-color: #6a5acd !important;
+  color: #AAB0EE !important;
   outline: 2px solid #000 !important;
   outline-offset: 2px !important;
 }
@@ -105,8 +105,8 @@ footer a {
   vertical-align: middle;
 }
 footer a:focus, footer a:hover {
-  background-color: rgb(77, 57, 206) !important;
-  color: white !important;
+  background-color: #6a5acd !important;
+  color: #AAB0EE !important;
   outline: 2px solid #000;
   outline-offset: 2px;
 }
@@ -119,6 +119,9 @@ footer a:focus, footer a:hover {
 #home h2 {
   font-size: 20px;
   padding-bottom: 10px;
+}
+#home #startQuizButton {
+  color: black;
 }
 
 #quiz {
@@ -224,15 +227,15 @@ footer a:focus, footer a:hover {
 }
 .quiz-navigation .navigation-button {
   align-items: center;
-  background: white;
+  background: #AAB0EE;
   border-radius: 10px;
   padding: 3vh;
   transition-duration: 0.4s;
   margin: 0 10px;
 }
 .quiz-navigation .navigation-button:focus, .quiz-navigation .navigation-button:hover {
-  background-color: rgb(77, 57, 206);
-  color: white;
+  background-color: #6a5acd;
+  color: #AAB0EE;
   outline: 2px solid #000;
   outline-offset: 2px;
 }
@@ -271,7 +274,7 @@ footer a:focus, footer a:hover {
   transition-duration: 0.4s;
 }
 #spotifyLink:hover {
-  background-color: rgb(77, 57, 206);
+  background-color: #6a5acd;
   color: black;
 }
 
