@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
-const ErrorComponent = () => {
+const AlertBox = () => {
     return (
       <div role="alert" className="alert alert-error">
         <FontAwesomeIcon icon={faExclamationTriangle} className="error-icon" />
@@ -11,7 +11,7 @@ const ErrorComponent = () => {
     );
   };
   
-  export default ErrorComponent;
+  export default AlertBox;
   
 
 
