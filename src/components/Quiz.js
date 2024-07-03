@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import ImageButton from './ImageButton';
 import ImageOverlay from './ImageOverlay';
 import StepsComponent from './StepsComponent';
+import ErrorComponent from './ErrorComponent'; 
 
 const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -10,6 +11,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [answeredQuestions, setAnsweredQuestions] = useState(
     new Array(questions.length).fill(false)
   );
+  const [error, setError] = useState(false); 
 
   const handleChoiceSelection = (selectedChoice) => {
     const previousChoice = selectedChoices[currentQuestionIndex];
@@ -35,7 +37,6 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
       [currentQuestionIndex]: selectedChoice,
     });
 
-    console.log(updatedWeights);
     setAnsweredQuestions(answeredQuestions.map((answered, index) =>
       index === currentQuestionIndex || answered ? true : false
     ));
@@ -50,7 +51,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
     if (allQuestionsAnswered) {
       setIsQuizComplete(true);
     } else {
-      alert('Please answer all questions before completing the quiz.');
+      setError(true); 
     }
   };
 
@@ -108,7 +109,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
         )}
         {isLastQuestion ? (
           <button className="navigation-button" onClick={handleFinishQuiz}>
-            Finish
+            Done
           </button>
         ) : (
           <button
@@ -119,9 +120,11 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
           </button>
         )}
       </div>
+      {error && <ErrorComponent />}
     </section>
   );
 };
 
 export default Quiz;
+
 
