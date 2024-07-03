@@ -85,6 +85,9 @@ header h1 {
   font-size: 30px;
   font-weight: bold;
 }
+header #headerLogo {
+  max-width: 15vh;
+}
 
 footer {
   margin: 0;
@@ -113,23 +116,9 @@ footer a:focus, footer a:hover {
   width: 100%;
   color: black;
 }
-
-#headerLogo {
-  max-width: 15vh;
-}
-
-.navigation-button {
-  align-items: center;
-  background: white !important;
-  border-radius: 10px;
-  padding: 3vh;
-  transition-duration: 0.4s;
-}
-.navigation-button:focus, .navigation-button:hover {
-  background-color: rgb(77, 57, 206) !important;
-  color: white !important;
-  outline: 2px solid #000;
-  outline-offset: 2px;
+#home h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
 }
 
 #quiz {

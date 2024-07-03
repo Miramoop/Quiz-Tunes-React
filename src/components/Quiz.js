@@ -16,7 +16,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   useEffect(() => {
     const allAnswered = answeredQuestions.every((answered) => answered);
     if (allAnswered) {
-      setError(false); // Hide the error message if all questions are answered
+      setError(false); 
     }
   }, [answeredQuestions]);
 
