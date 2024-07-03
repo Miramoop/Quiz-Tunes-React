@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
-import StepsComponent from "./StepsComponent";
+import React, { useState } from "react";
+import Typography from '@mui/material/Typography';
+import ImageButton from './ImageButton'; 
+import ImageOverlay from './ImageOverlay'; 
 
 const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedChoices, setSelectedChoices] = useState({}); 
-  const [answeredQuestions, setAnsweredQuestions] = useState(new Array(questions.length).fill(false)); // Track answered questions
+  const [answeredQuestions, setAnsweredQuestions] = useState(new Array(questions.length).fill(false)); 
 
   const handleChoiceSelection = (selectedChoice) => {
     const previousChoice = selectedChoices[currentQuestionIndex];
@@ -51,12 +53,6 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
 
   return (
     <section id="quiz">
-      <StepsComponent
-        steps={Array.from(Array(questions.length).keys())} 
-        answeredQuestions={answeredQuestions}
-        activeStep={currentQuestionIndex}
-        onStepClick={handleStepClick}
-      />
       <div id="questionText">{currentQuestion.question}</div>
       <div className="choices">
         {currentQuestion.choices.map((choice) => {
@@ -112,14 +108,5 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
 };
 
 export default Quiz;
-
-
-
-
-
-
-
-
-
 
 
