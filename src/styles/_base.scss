@@ -53,7 +53,7 @@ button {
   &:hover {
     background-color: $hoverColor;
     color: $buttonLinkColor;
-    outline: 2px solid #000;
+    outline: 2px solid black;
     outline-offset: 2px;
   }
 }

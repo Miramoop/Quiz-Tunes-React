@@ -11,7 +11,7 @@
   width: 100%;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: black; 
   color: white;
   font-size: 1.5rem;
   text-align: center;
@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: black;
   transition: background-color 0.3s;
 
   &:hover, &.Mui-focusVisible {
@@ -78,7 +78,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5); 
+  background: black; 
   color: white;
   text-align: center;
   padding: 10px;
@@ -88,8 +88,8 @@
 .image-text {
   padding: 10px;
   border-radius: 4px; 
-  background: rgba(255, 255, 255, 0.7); 
-  color: #000; 
+  background: white; 
+  color: black; 
 }
 
 .quiz-navigation {
@@ -109,7 +109,7 @@
     &:hover {
       background-color: $hoverColor;
       color: $buttonLinkColor;
-      outline: 2px solid #000;
+      outline: 2px solid black;
       outline-offset: 2px;
     }
   }
