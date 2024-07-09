@@ -1,17 +1,13 @@
 [
   {
     "question": "What is your ideal way to spend a Saturday afternoon?",
-    "questionImage": {
-      "src": "img/q1.jpg",
-      "alt": "A book, a tree, three girls swinging, and a tv"
-    },
-    "progressImage": {
-      "src": "img/q1progress.jpg",
-      "alt": "Progress indicator with no circles filled"
-    },
     "choices": [
       {
         "choice": "Reading a book",
+        "image": {
+          "src": "/img/questionchoices/q1/book.jpg",
+          "alt": "An image of someone reading a book"
+        },
         "weights": {
           "chill": 25,
           "ambient": 30
@@ -19,6 +15,10 @@
       },
       {
         "choice": "Hiking in the Forest",
+        "image": {
+          "src": "/img/questionchoices/q1/tree.jpg",
+          "alt": "An image of a forest trail"
+        },
         "weights": {
           "country": 30,
           "ambient": 15
@@ -26,6 +26,10 @@
       },
       {
         "choice": "Hanging out with Friends",
+        "image": {
+          "src": "/img/questionchoices/q1/friends.jpg",
+          "alt": "An image of friends hanging out"
+        },
         "weights": {
           "indie": 30,
           "pop": 25
@@ -33,6 +37,10 @@
       },
       {
         "choice": "Watching movies or TV shows",
+        "image": {
+          "src": "/img/questionchoices/q1/tv.jpg",
+          "alt": "An image of a TV or movie scene"
+        },
         "weights": {
           "movies": 35,
           "anime": 25
@@ -42,18 +50,13 @@
   },
   {
     "question": "What is your ideal vacation?",
-    "questionImage": {
-      "src": "img/q2.jpg",
-      "alt": "A palm tree, a mountainscape, a cityscape, and multiple houses"
-    },
-    "progressImage": {
-      "src": "img/q2progress.jpg",
-      "alt": "Progress indicator with 1 circle filled"
-    },
-
     "choices": [
       {
         "choice": "Beach Resort",
+        "image": {
+          "src": "/img/questionchoices/q2/palmtree.jpg",
+          "alt": "An image of a beach resort"
+        },
         "weights": {
           "chill": 30,
           "dance": 20
@@ -61,6 +64,10 @@
       },
       {
         "choice": "Mountain Retreat",
+        "image": {
+          "src": "/img/questionchoices/q2/mountains.jpg",
+          "alt": "An image of a mountain retreat"
+        },
         "weights": {
           "rock": 35,
           "ambient": 20
@@ -68,6 +75,10 @@
       },
       {
         "choice": "City Exploration",
+        "image": {
+          "src": "/img/questionchoices/q2/city.jpg",
+          "alt": "An image of a city landscape"
+        },
         "weights": {
           "anime": 25,
           "movies": 30
@@ -75,6 +86,10 @@
       },
       {
         "choice": "Chilling at Home",
+        "image": {
+          "src": "/img/questionchoices/q2/home.jpg",
+          "alt": "An image of someone chilling at home"
+        },
         "weights": {
           "chill": 25,
           "piano": 20
@@ -84,17 +99,13 @@
   },
   {
     "question": "If you were able to travel to any of these countries, where would you choose?",
-    "questionImage": {
-      "src": "img/q3.jpg",
-      "alt": "A Japanese Fan, An Australian Flag, A French Flag, and a Mexican Flag"
-    },
-    "progressImage": {
-      "src": "img/q3progress.jpg",
-      "alt": "Progress indicator with 2 circles filled"
-    },
     "choices": [
       {
         "choice": "Japan",
+        "image": {
+          "src": "/img/questionchoices/q3/japan.jpg",
+          "alt": "An image of Japan"
+        },
         "weights": {
           "anime": 40,
           "movies": 20
@@ -102,6 +113,10 @@
       },
       {
         "choice": "Australia",
+        "image": {
+          "src": "/img/questionchoices/q3/australia.jpg",
+          "alt": "An image of Australia"
+        },
         "weights": {
           "country": 30,
           "ambient": 10
@@ -109,6 +124,10 @@
       },
       {
         "choice": "France",
+        "image": {
+          "src": "/img/questionchoices/q3/france.jpg",
+          "alt": "An image of France"
+        },
         "weights": {
           "indie": 10,
           "piano": 30
@@ -116,6 +135,10 @@
       },
       {
         "choice": "Mexico",
+        "image": {
+          "src": "/img/questionchoices/q3/mexico.jpg",
+          "alt": "An image of Mexico"
+        },
         "weights": {
           "dance": 40,
           "pop": 25
@@ -125,17 +148,13 @@
   },
   {
     "question": "What type of exercise do you prefer?",
-    "questionImage": {
-      "src": "img/q4.jpg",
-      "alt": "Music notes, a man jogging in the forest, weights on a rack, and a lady practicing yoga outside"
-    },
-    "progressImage": {
-      "src": "img/q4progress.jpg",
-      "alt": "Progress indicator with 3 circles filled"
-    },
     "choices": [
       {
         "choice": "Dance",
+        "image": {
+          "src": "/img/questionchoices/q4/dance.jpg",
+          "alt": "An image of someone dancing"
+        },
         "weights": {
           "dance": 40,
           "movies": 25
@@ -143,6 +162,10 @@
       },
       {
         "choice": "Jogging",
+        "image": {
+          "src": "/img/questionchoices/q4/jogging.jpg",
+          "alt": "An image of someone jogging"
+        },
         "weights": {
           "pop": 30,
           "rock": 20
@@ -150,6 +173,10 @@
       },
       {
         "choice": "Weight Training",
+        "image": {
+          "src": "/img/questionchoices/q4/weights.jpg",
+          "alt": "An image of weight training"
+        },
         "weights": {
           "rock": 35,
           "anime": 30
@@ -157,6 +184,10 @@
       },
       {
         "choice": "Yoga",
+        "image": {
+          "src": "/img/questionchoices/q4/yoga.jpg",
+          "alt": "An image of someone practicing yoga"
+        },
         "weights": {
           "piano": 40,
           "chill": 25
@@ -166,17 +197,13 @@
   },
   {
     "question": "What kind of music do you prefer to listen to?",
-    "questionImage": {
-      "src": "img/q5.jpg",
-      "alt": "An acoustic guitar, an electric guitar, a disco ball, and a pair of headphones"
-    },
-    "progressImage": {
-      "src": "img/q5progress.jpg",
-      "alt": "Progress indicator with 4 circles filled"
-    },
     "choices": [
       {
         "choice": "Country",
+        "image": {
+          "src": "/img/questionchoices/q5/country.jpg",
+          "alt": "An image of country music"
+        },
         "weights": {
           "country": 40,
           "ambient": 15
@@ -184,6 +211,10 @@
       },
       {
         "choice": "Rock",
+        "image": {
+          "src": "/img/questionchoices/q5/rock.jpg",
+          "alt": "An image of rock music"
+        },
         "weights": {
           "indie": 15,
           "rock": 40
@@ -191,6 +222,10 @@
       },
       {
         "choice": "Dance",
+        "image": {
+          "src": "/img/questionchoices/q5/dance.jpg",
+          "alt": "An image of dance music"
+        },
         "weights": {
           "pop": 15,
           "dance": 40
@@ -198,6 +233,10 @@
       },
       {
         "choice": "Chill",
+        "image": {
+          "src": "/img/questionchoices/q5/chill.jpg",
+          "alt": "An image of chill music"
+        },
         "weights": {
           "chill": 40,
           "ambient": 15
@@ -207,17 +246,13 @@
   },
   {
     "question": "Which season do you enjoy the most?",
-    "questionImage": {
-      "src": "img/q6.jpg",
-      "alt": "A tree with orange and green leaves, an igloo, a poppy flower, and the sun"
-    },
-    "progressImage": {
-      "src": "img/q6progress.jpg",
-      "alt": "Progress indicator with 5 circles filled"
-    },
     "choices": [
       {
         "choice": "Fall",
+        "image": {
+          "src": "/img/questionchoices/q6/fall.jpg",
+          "alt": "An image of autumn leaves"
+        },
         "weights": {
           "indie": 20,
           "ambient": 35
@@ -225,6 +260,10 @@
       },
       {
         "choice": "Winter",
+        "image": {
+          "src": "/img/questionchoices/q6/winter.jpg",
+          "alt": "An image of winter snow"
+        },
         "weights": {
           "piano": 25,
           "chill": 30
@@ -232,6 +271,10 @@
       },
       {
         "choice": "Spring",
+        "image": {
+          "src": "/img/questionchoices/q6/spring.jpg",
+          "alt": "An image of spring flowers"
+        },
         "weights": {
           "chill": 10,
           "anime": 15
@@ -239,6 +282,10 @@
       },
       {
         "choice": "Summer",
+        "image": {
+          "src": "/img/questionchoices/q6/summer.jpg",
+          "alt": "An image of a summer beach"
+        },
         "weights": {
           "pop": 30,
           "dance": 40
@@ -248,17 +295,13 @@
   },
   {
     "question": "What types of movies do you prefer?",
-    "questionImage": {
-      "src": "img/q7.jpg",
-      "alt": "A black film clapperboard with the words action, comedy, drama, and horror written on it"
-    },
-    "progressImage": {
-      "src": "img/q7progress.jpg",
-      "alt": "Progress indicator with 6 circles filled"
-    },
     "choices": [
       {
         "choice": "Action",
+        "image": {
+          "src": "/img/questionchoices/q7/action.jpg",
+          "alt": "An image of an action movie"
+        },
         "weights": {
           "rock": 40,
           "anime": 40
@@ -266,6 +309,10 @@
       },
       {
         "choice": "Comedy",
+        "image": {
+          "src": "/img/questionchoices/q7/comedy.jpg",
+          "alt": "An image of a comedy movie"
+        },
         "weights": {
           "indie": 20,
           "chill": 20
@@ -273,6 +320,10 @@
       },
       {
         "choice": "Drama",
+        "image": {
+          "src": "/img/questionchoices/q7/drama.jpg",
+          "alt": "An image of a drama movie"
+        },
         "weights": {
           "indie": 30,
           "pop": 25
@@ -280,6 +331,10 @@
       },
       {
         "choice": "Horror",
+        "image": {
+          "src": "/img/questionchoices/q7/horror.jpg",
+          "alt": "An image of a horror movie"
+        },
         "weights": {
           "pop": 10,
           "rock": 15
@@ -289,17 +344,13 @@
   },
   {
     "question": "What is your favorite flower?",
-    "questionImage": {
-      "src": "img/q8.jpg",
-      "alt": "A rose, a tulip, a sunflower, and an orchid"
-    },
-    "progressImage": {
-      "src": "img/q8progress.jpg",
-      "alt": "Progress indicator with 7 circles filled"
-    },
     "choices": [
       {
         "choice": "Rose",
+        "image": {
+          "src": "/img/questionchoices/q8/rose.jpg",
+          "alt": "An image of a rose"
+        },
         "weights": {
           "indie": 25,
           "movies": 15
@@ -307,6 +358,10 @@
       },
       {
         "choice": "Tulip",
+        "image": {
+          "src": "/img/questionchoices/q8/tulip.jpg",
+          "alt": "An image of a tulip"
+        },
         "weights": {
           "chill": 25,
           "ambient": 15
@@ -314,6 +369,10 @@
       },
       {
         "choice": "Sunflower",
+        "image": {
+          "src": "/img/questionchoices/q8/sunflower.jpg",
+          "alt": "An image of a sunflower"
+        },
         "weights": {
           "pop": 25,
           "dance": 25
@@ -321,6 +380,10 @@
       },
       {
         "choice": "Orchids",
+        "image": {
+          "src": "/img/questionchoices/q8/orchids.jpg",
+          "alt": "An image of orchids"
+        },
         "weights": {
           "rock": 25,
           "piano": 15
@@ -330,17 +393,13 @@
   },
   {
     "question": "What type of cuisine do you enjoy the most?",
-    "questionImage": {
-      "src": "img/q9.jpg",
-      "alt": "A Japanese fan, a Spanish flag, a French flag, and an American flag"
-    },
-    "progressImage": {
-      "src": "img/q9progress.jpg",
-      "alt": "Progress indicator with 8 circles filled"
-    },
     "choices": [
       {
         "choice": "Japanese",
+        "image": {
+          "src": "/img/questionchoices/q9/japan.jpg",
+          "alt": "An image of Japanese cuisine"
+        },
         "weights": {
           "anime": 40,
           "movies": 20
@@ -348,6 +407,10 @@
       },
       {
         "choice": "Spanish",
+        "image": {
+          "src": "/img/questionchoices/q9/spain.jpg",
+          "alt": "An image of Spanish cuisine"
+        },
         "weights": {
           "dance": 40,
           "pop": 30
@@ -355,6 +418,10 @@
       },
       {
         "choice": "French",
+        "image": {
+          "src": "/img/questionchoices/q9/france.jpg",
+          "alt": "An image of French cuisine"
+        },
         "weights": {
           "piano": 40,
           "indie": 20
@@ -362,6 +429,10 @@
       },
       {
         "choice": "American",
+        "image": {
+          "src": "/img/questionchoices/q9/america.jpg",
+          "alt": "An image of American cuisine"
+        },
         "weights": {
           "movies": 40,
           "country": 30
@@ -371,17 +442,13 @@
   },
   {
     "question": "What is your favorite time of day?",
-    "questionImage": {
-      "src": "img/q10.jpg",
-      "alt": "Image of a pocket watch clock pointing at random time"
-    },
-    "progressImage": {
-      "src": "img/q10progress.jpg",
-      "alt": "Progress indicator with 9 circles filled"
-    },
     "choices": [
       {
         "choice": "Morning",
+        "image": {
+          "src": "/img/questionchoices/q10/morning.jpg",
+          "alt": "An image of a morning sunrise"
+        },
         "weights": {
           "piano": 40,
           "ambient": 25
@@ -389,6 +456,10 @@
       },
       {
         "choice": "Afternoon",
+        "image": {
+          "src": "/img/questionchoices/q10/afternoon.jpg",
+          "alt": "An image of an afternoon scene"
+        },
         "weights": {
           "pop": 35,
           "dance": 20
@@ -396,6 +467,10 @@
       },
       {
         "choice": "Evening",
+        "image": {
+          "src": "/img/questionchoices/q10/evening.jpg",
+          "alt": "An image of an evening sunset"
+        },
         "weights": {
           "chill": 30,
           "indie": 20
@@ -403,6 +478,10 @@
       },
       {
         "choice": "Night",
+        "image": {
+          "src": "/img/questionchoices/q10/night.jpg",
+          "alt": "An image of a night scene"
+        },
         "weights": {
           "rock": 25,
           "movies": 15
@@ -411,3 +490,9 @@
     ]
   }
 ]
+
+   
+
+
+
+
