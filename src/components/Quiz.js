@@ -48,7 +48,6 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
       prevAnswers.map((answered, index) =>
         index === currentQuestionIndex || answered
       )
-    );
   };
 
   const handleStepClick = (index) => {

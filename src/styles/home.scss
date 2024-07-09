@@ -10,16 +10,16 @@
 
 .navigation-button {
   align-items: center;
-  background: $buttonLinkColor !important;
+  background: $buttonLinkColor;
   border-radius: 10px;
   padding: 3vh;
   transition-duration: 0.4s;
 
   &:focus,
   &:hover {
-    background-color: $hoverColor !important;
-    color: $buttonLinkColor !important;
-    outline: 2px solid #000;
+    background-color: $hoverColor;
+    color: $buttonLinkColor;
+    outline: 2px solid black;
     outline-offset: 2px;
   }
 }
