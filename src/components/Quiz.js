@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import Typography from '@mui/material/Typography';
-import ImageButton from './ImageButton'; 
-import ImageOverlay from './ImageOverlay'; 
+import ImageButton from './ImageButton';
+import ImageOverlay from './ImageOverlay';
+import StepsComponent from './StepsComponent';
 
 const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedChoices, setSelectedChoices] = useState({}); 
-  const [answeredQuestions, setAnsweredQuestions] = useState(new Array(questions.length).fill(false)); 
+  const [selectedChoices, setSelectedChoices] = useState({});
+  const [answeredQuestions, setAnsweredQuestions] = useState(
+    new Array(questions.length).fill(false)
+  );
 
   const handleChoiceSelection = (selectedChoice) => {
     const previousChoice = selectedChoices[currentQuestionIndex];
@@ -31,7 +34,10 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
       ...selectedChoices,
       [currentQuestionIndex]: selectedChoice,
     });
-    setAnsweredQuestions(answeredQuestions.map((answered, index) => index === currentQuestionIndex ? true : answered));
+
+    setAnsweredQuestions(answeredQuestions.map((answered, index) =>
+      index === currentQuestionIndex || answered ? true : false
+    ));
   };
 
   const handleStepClick = (index) => {
@@ -39,11 +45,11 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   };
 
   const handleFinishQuiz = () => {
-    const areAllQuestionsAnswered = answeredQuestions.every(answered => answered);
-    if (areAllQuestionsAnswered) {
+    const validateQuestionsAnswered = answeredQuestions.every(answered => answered);
+    if (validateQuestionsAnswered) {
       setIsQuizComplete(true);
     } else {
-      alert("Please answer all questions before completing the quiz.");
+      alert('Please answer all questions before completing the quiz.');
     }
   };
 
@@ -53,10 +59,17 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
 
   return (
     <section id="quiz">
+      <StepsComponent
+        totalSteps={questions.length}
+        currentStepIndex={currentQuestionIndex}
+        handleStepClick={handleStepClick}
+        answeredQuestions={answeredQuestions}
+      />
       <div id="questionText">{currentQuestion.question}</div>
       <div className="choices">
         {currentQuestion.choices.map((choice) => {
-          const isSelected = selectedChoices[currentQuestionIndex]?.choice === choice.choice;
+          const isSelected =
+            selectedChoices[currentQuestionIndex]?.choice === choice.choice;
           return (
             <ImageButton
               key={choice.choice}
@@ -93,7 +106,9 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
           </button>
         )}
         {isLastQuestion ? (
-          <button className="navigation-button" onClick={handleFinishQuiz}>Finish</button>
+          <button className="navigation-button" onClick={handleFinishQuiz}>
+            Finish
+          </button>
         ) : (
           <button
             className="navigation-button"
@@ -108,5 +123,4 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
 };
 
 export default Quiz;
-
 
