@@ -5,13 +5,10 @@ footer {
   width: 100%;
   color: $mainTextColor;
 
-  h6 {
-    font-size: 15px;
-  }
-
+  .social-links {
   a {
     display: inline-block; 
-    padding: 1vh;
+    padding: 3vh;
     vertical-align: middle; 
 
     &:focus,
@@ -21,7 +18,25 @@ footer {
       outline: 2px solid #000;
       outline-offset: 2px;
     }
+}
+}
+
+  .copyright {
+    padding-top: 1vh;
   }
 }
+
+//   @media (max-width: 600px) {
+//   }
+
+//   @media (min-width: 601px) and (max-width: 900px) {
+//   }
+
+
+
+
+
+
+
 
 

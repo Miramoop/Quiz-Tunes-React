@@ -29,7 +29,7 @@
     "build": "npm run sass && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass src/styles/index.scss src/styles/styles.css",
+    "sass": "sass src/styles/index.scss src/styles/styles.css", 
     "watch-sass": "sass --watch src/styles/index.scss:src/styles/styles.css"
   },
   "eslintConfig": {

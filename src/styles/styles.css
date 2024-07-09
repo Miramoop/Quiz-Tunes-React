@@ -48,7 +48,7 @@ button {
   transition-duration: 0.4s !important;
 }
 button:focus, button:hover {
-  background-color: rgb(77, 57, 206) !important;
+  background-color: slateblue !important;
   color: white !important;
   outline: 2px solid #000 !important;
   outline-offset: 2px !important;
@@ -85,6 +85,9 @@ header h1 {
   font-size: 30px;
   font-weight: bold;
 }
+header #headerLogo {
+  max-width: 15vh;
+}
 
 footer {
   margin: 0;
@@ -93,19 +96,19 @@ footer {
   width: 100%;
   color: black;
 }
-footer h6 {
-  font-size: 15px;
-}
-footer a {
+footer .social-links a {
   display: inline-block;
-  padding: 1vh;
+  padding: 3vh;
   vertical-align: middle;
 }
-footer a:focus, footer a:hover {
-  background-color: rgb(77, 57, 206) !important;
+footer .social-links a:focus, footer .social-links a:hover {
+  background-color: slateblue !important;
   color: white !important;
   outline: 2px solid #000;
   outline-offset: 2px;
+}
+footer .copyright {
+  padding-top: 1vh;
 }
 
 #home {
@@ -126,9 +129,9 @@ footer a:focus, footer a:hover {
   transition-duration: 0.4s;
 }
 .navigation-button:focus, .navigation-button:hover {
-  background-color: rgb(77, 57, 206) !important;
+  background-color: slateblue !important;
   color: white !important;
-  outline: 2px solid #000;
+  outline: 2px solid black;
   outline-offset: 2px;
 }
 
@@ -242,7 +245,7 @@ footer a:focus, footer a:hover {
   margin: 0 10px;
 }
 .quiz-navigation .navigation-button:focus, .quiz-navigation .navigation-button:hover {
-  background-color: rgb(77, 57, 206);
+  background-color: slateblue;
   color: white;
   outline: 2px solid #000;
   outline-offset: 2px;
@@ -282,7 +285,7 @@ footer a:focus, footer a:hover {
   transition-duration: 0.4s;
 }
 #spotifyLink:hover {
-  background-color: rgb(77, 57, 206);
+  background-color: slateblue;
   color: black;
 }
 
