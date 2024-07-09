@@ -35,7 +35,6 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
       [currentQuestionIndex]: selectedChoice,
     });
 
-    console.log(updatedWeights);
     setAnsweredQuestions(answeredQuestions.map((answered, index) =>
       index === currentQuestionIndex || answered ? true : false
     ));
@@ -46,8 +45,8 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   };
 
   const handleFinishQuiz = () => {
-    const areAllQuestionsAnswered = answeredQuestions.every(answered => answered);
-    if (areAllQuestionsAnswered) {
+    const validateQuestionsAnswered = answeredQuestions.every(answered => answered);
+    if (validateQuestionsAnswered) {
       setIsQuizComplete(true);
     } else {
       alert('Please answer all questions before completing the quiz.');
