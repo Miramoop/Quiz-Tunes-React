@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Typography from '@mui/material/Typography';
 import ImageButton from './ImageButton';
 import ImageOverlay from './ImageOverlay';
 import StepsComponent from './StepsComponent';
+import AlertBox from './AlertBox';
 
 const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -10,6 +11,14 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [answeredQuestions, setAnsweredQuestions] = useState(
     new Array(questions.length).fill(false)
   );
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    const allAnswered = answeredQuestions.every((answered) => answered);
+    if (allAnswered) {
+      setError(false); // Hide the error message if all questions are answered
+    }
+  }, [answeredQuestions]);
 
   const handleChoiceSelection = (selectedChoice) => {
     const previousChoice = selectedChoices[currentQuestionIndex];
@@ -35,9 +44,11 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
       [currentQuestionIndex]: selectedChoice,
     });
 
-    setAnsweredQuestions(answeredQuestions.map((answered, index) =>
-      index === currentQuestionIndex || answered ? true : false
-    ));
+    setAnsweredQuestions((prevAnswers) =>
+      prevAnswers.map((answered, index) =>
+        index === currentQuestionIndex || answered
+      )
+    );
   };
 
   const handleStepClick = (index) => {
@@ -45,11 +56,11 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   };
 
   const handleFinishQuiz = () => {
-    const validateQuestionsAnswered = answeredQuestions.every(answered => answered);
-    if (validateQuestionsAnswered) {
+    const allAnswered = answeredQuestions.every((answered) => answered);
+    if (allAnswered) {
       setIsQuizComplete(true);
     } else {
-      alert('Please answer all questions before completing the quiz.');
+      setError(true);
     }
   };
 
@@ -76,7 +87,9 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
               onClick={() => handleChoiceSelection(choice)}
               style={{
                 border: isSelected ? '2px solid blue' : 'none',
-                backgroundColor: isSelected ? 'rgba(0, 0, 255, 0.1)' : 'initial',
+                backgroundColor: isSelected
+                  ? 'rgba(0, 0, 255, 0.1)'
+                  : 'initial',
               }}
             >
               <div
@@ -107,7 +120,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
         )}
         {isLastQuestion ? (
           <button className="navigation-button" onClick={handleFinishQuiz}>
-            Finish
+            Done
           </button>
         ) : (
           <button
@@ -118,9 +131,12 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
           </button>
         )}
       </div>
+      {error && <AlertBox />}
     </section>
   );
 };
 
 export default Quiz;
+
+
 
