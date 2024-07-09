@@ -46,8 +46,8 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   };
 
   const handleFinishQuiz = () => {
-    const allQuestionsAnswered = answeredQuestions.every((answered) => answered);
-    if (allQuestionsAnswered) {
+    const areAllQuestionsAnswered = answeredQuestions.every(answered => answered);
+    if (areAllQuestionsAnswered) {
       setIsQuizComplete(true);
     } else {
       alert('Please answer all questions before completing the quiz.');
