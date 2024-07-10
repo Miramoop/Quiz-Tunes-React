@@ -4,10 +4,6 @@ module.exports = {
   content: [],
   theme: {
     extend: {
-      colors: {
-        primary: '#000000', 
-        'bg-primary': '#000000', 
-      },
     },
   },
   plugins: [
