@@ -1,17 +1,12 @@
 /** @type {import('tailwindcss').Config} */
-// tailwind.config.js
 module.exports = {
-  content: [],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   theme: {
-    extend: {
-    },
+    extend: {},
   },
   plugins: [
-    require('tailwindcss'),
-    require('autoprefixer'),
-    require('daisyui'),
+    require("tailwindcss"),
+    require("autoprefixer"),
+    require("daisyui"),
   ],
 };
-
-
-
