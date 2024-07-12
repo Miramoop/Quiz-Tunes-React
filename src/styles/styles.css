@@ -26,7 +26,7 @@
 }
 body {
   background: lightgoldenrodyellow;
-  background-image: linear-gradient(180deg, slateblue, palegoldenrod);
+  background-image: linear-gradient(180deg, #315A42, #5A5731);
   display: flex;
   flex-direction: column;
   margin: 0vh;
@@ -39,20 +39,6 @@ img {
   height: auto;
   margin: 2vh auto;
   max-width: 100%;
-}
-
-button {
-  align-items: center !important;
-  background: white !important;
-  border-radius: 10px !important;
-  padding: 3vh !important;
-  transition-duration: 0.4s !important;
-}
-button:focus, button:hover {
-  background-color: slateblue !important;
-  color: white !important;
-  outline: 2px solid #000 !important;
-  outline-offset: 2px !important;
 }
 
 #quiz,
@@ -72,25 +58,48 @@ button:focus, button:hover {
   padding-bottom: 3vh;
 }
 
-header {
-  background-color: #333; /* Example background color */
-  color: white;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+header .navbar {
+  background: #31355a;
+  border: inset #31355a;
 }
-header h1 {
-  font-size: 24px;
-  font-weight: bold;
+header .header-navigation-bar-button {
+  padding: 3vh;
+  vertical-align: middle;
 }
+header .header-navigation-bar-button:focus, header .header-navigation-bar-button:hover {
+  background-color: #5A3149;
+  color: #FFF;
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+header .menu-item a {
+  display: inline-block;
+  padding: 3vh;
+  vertical-align: middle;
+}
+header .menu-item a:focus, header .menu-item a:hover {
+  background-color: #5A3149;
+  color: #FFF;
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+header #headerLogo {
+  margin: 0;
+  max-width: 100px;
+}
+header .dropdown-content {
+  position: absolute;
+  top: 110%;
+  background-color: #31355a;
+}
+
 footer {
   margin: 0;
-  padding: 1vh;
   text-align: center;
   width: 100%;
-  color: black;
+  color: #000;
+  background-color: #5A5731;
+  border: outset #5A5731;
 }
 footer .social-links a {
   display: inline-block;
@@ -98,8 +107,8 @@ footer .social-links a {
   vertical-align: middle;
 }
 footer .social-links a:focus, footer .social-links a:hover {
-  background-color: slateblue !important;
-  color: white !important;
+  background-color: #5A3149;
+  color: #FFF;
   outline: 2px solid #000;
   outline-offset: 2px;
 }
@@ -110,7 +119,7 @@ footer .copyright {
 #home {
   text-align: center;
   width: 100%;
-  color: black;
+  color: #000;
 }
 
 #headerLogo {
@@ -119,14 +128,14 @@ footer .copyright {
 
 .navigation-button {
   align-items: center;
-  background: white !important;
+  background: #FFF;
   border-radius: 10px;
   padding: 3vh;
   transition-duration: 0.4s;
 }
 .navigation-button:focus, .navigation-button:hover {
-  background-color: slateblue !important;
-  color: white !important;
+  background-color: #5A3149;
+  color: #FFF;
   outline: 2px solid black;
   outline-offset: 2px;
 }
@@ -234,15 +243,15 @@ footer .copyright {
 }
 .quiz-navigation .navigation-button {
   align-items: center;
-  background: white;
+  background: #FFF;
   border-radius: 10px;
   padding: 3vh;
   transition-duration: 0.4s;
   margin: 0 10px;
 }
 .quiz-navigation .navigation-button:focus, .quiz-navigation .navigation-button:hover {
-  background-color: slateblue;
-  color: white;
+  background-color: #5A3149;
+  color: #FFF;
   outline: 2px solid #000;
   outline-offset: 2px;
 }
@@ -281,8 +290,8 @@ footer .copyright {
   transition-duration: 0.4s;
 }
 #spotifyLink:hover {
-  background-color: slateblue;
-  color: black;
+  background-color: #5A3149;
+  color: #000;
 }
 
 @media screen and (min-width: 768px) {
