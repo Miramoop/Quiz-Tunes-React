@@ -22,8 +22,6 @@ function App() {
   const [spotifyLink, setSpotifyLink] = useState("");
   const [youTubeVideos, setYouTubeVideos] = useState([]);
   const [spotifyTrack, setSpotifyTrack] = useState(null);
-  // const [trackName, setTrackName] = useState('');
-  // const [artistName, setArtistName] = useState('');
 
   useEffect(() => {
     setError(false);
@@ -91,6 +89,7 @@ function App() {
             weights={weights}
             updateWeights={updateWeights}
             setIsQuizComplete={setIsQuizComplete}
+            
           />
         )}
       {isQuizComplete && !isCalculatedResults && (
@@ -111,5 +110,3 @@ function App() {
 }
 
 export default App;
-
-
