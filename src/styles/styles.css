@@ -114,7 +114,7 @@ footer a:focus, footer a:hover {
 #home {
   text-align: center;
   width: 100%;
-  color: black;
+  color: #000;
   background-image: linear-gradient(180deg, #315A42, #5A5731);
 }
 
@@ -127,10 +127,14 @@ footer a:focus, footer a:hover {
   transition-duration: 0.4s;
 }
 #startQuizButton:focus, #startQuizButton:hover {
-  background-color: slateblue;
-  color: white;
+  background-color: #5A3149;
+  color: #FFF;
   outline: 2px solid black;
   outline-offset: 2px;
+}
+
+#headerLogo {
+  max-width: 15vh;
 }
 
 #quiz {
@@ -243,8 +247,8 @@ footer a:focus, footer a:hover {
   margin: 0 10px;
 }
 .quiz-navigation .navigation-button:focus, .quiz-navigation .navigation-button:hover {
-  background-color: slateblue;
-  color: white;
+  background-color: #5A3149;
+  color: #FFF;
   outline: 2px solid black;
   outline-offset: 2px;
 }
