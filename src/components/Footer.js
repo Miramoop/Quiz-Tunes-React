@@ -4,7 +4,7 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => (
-<footer className="footer footer-center bg-primary text-primary-content p-10"> 
+<footer className="footer footer-center text-primary-content p-2"> 
   <aside>
     <img
       id="miramoopLogo"
@@ -48,6 +48,3 @@ const Footer = () => (
 );
 
 export default Footer;
-
-
-

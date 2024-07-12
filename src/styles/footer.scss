@@ -1,9 +1,10 @@
 footer {
   margin: 0;
-  padding: 1vh;
   text-align: center;
   width: 100%;
   color: $mainTextColor;
+  background-color: #5A5731;
+  border: outset #5A5731;
 
   .social-links {
   a {
@@ -13,30 +14,14 @@ footer {
 
     &:focus,
     &:hover {
-      background-color: $hoverColor !important;
-      color: $buttonLinkColor !important;
+      background-color: $hoverColor;
+      color: $buttonLinkColor;
       outline: 2px solid #000;
       outline-offset: 2px;
     }
 }
 }
-
   .copyright {
     padding-top: 1vh;
   }
 }
-
-//   @media (max-width: 600px) {
-//   }
-
-//   @media (min-width: 601px) and (max-width: 900px) {
-//   }
-
-
-
-
-
-
-
-
-
