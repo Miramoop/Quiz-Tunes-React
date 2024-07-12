@@ -1,19 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 const QuizResults = ({
   resetQuiz,
-  displaySpotifyInfo,
-  fetchYouTubeDataAndDisplay,
   spotifyLink,
   youTubeVideos,
   spotifyTrack,
   dominantGenre,
 }) => {
-  const [isSpotifyTrackButtonDisabled, setSpotifyTrackButtonDisabled] =
-    useState(false);
-  const [isYouTubeVideoButtonDisabled, setYouTubeVideoButtonDisabled] =
-    useState(false);
-  const [videosFetched, setVideosFetched] = useState(false);
 
   return (
     <section id="results">
@@ -57,8 +50,7 @@ const QuizResults = ({
       </div>
 
       <div id="videoSection">
-        {videosFetched &&
-          youTubeVideos &&
+        {youTubeVideos &&
           youTubeVideos.length > 0 &&
           youTubeVideos.map((video) => (
             <div key={video.id.videoId} className="video-container">
@@ -86,29 +78,6 @@ const QuizResults = ({
           aria-label="Reset and Start the Quiz Over"
         >
           Return to HomePage
-        </button>
-        <button
-          id="spotifyTrackButton"
-          onClick={() => {
-            setSpotifyTrackButtonDisabled(true);
-            displaySpotifyInfo();
-          }}
-          aria-label="View the Spotify Track"
-          disabled={isSpotifyTrackButtonDisabled}
-        >
-          View the Spotify Track
-        </button>
-        <button
-          id="youtubeVideoButton"
-          onClick={() => {
-            setYouTubeVideoButtonDisabled(true);
-            fetchYouTubeDataAndDisplay();
-            setVideosFetched(true);
-          }}
-          aria-label="View the YouTube Video"
-          disabled={isYouTubeVideoButtonDisabled}
-        >
-          View the YouTube Video
         </button>
       </div>
     </section>

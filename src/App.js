@@ -22,8 +22,8 @@ function App() {
   const [spotifyLink, setSpotifyLink] = useState("");
   const [youTubeVideos, setYouTubeVideos] = useState([]);
   const [spotifyTrack, setSpotifyTrack] = useState(null);
-  const [trackName, setTrackName] = useState('');
-  const [artistName, setArtistName] = useState('');
+  // const [trackName, setTrackName] = useState('');
+  // const [artistName, setArtistName] = useState('');
 
   useEffect(() => {
     setError(false);
@@ -45,11 +45,27 @@ function App() {
     setCurrentQuestionIndex(0);
   };
 
-  const handleCalculateResults = () => {
+  const handleCalculateResults = async () => {
     setCalculatedResults(true);
     const dominant = calculateDominantGenre(weights);
     setDominantGenre(dominant);
-    displayRecommendedTracks(dominant);
+
+    try {
+      const trackInfo = await fetchTrackInfo(dominant);
+      setSpotifyTrack(trackInfo);
+
+      if (trackInfo.spotifyUrl) {
+        setSpotifyLink(trackInfo.spotifyUrl);
+      } else {
+        throw new Error("No Spotify link available.");
+      }
+
+      const videos = await fetchYouTubeVideos(trackInfo.name, trackInfo.artist);
+      setYouTubeVideos(videos.items);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setError(true);
+    }
   };
 
   const resetQuiz = () => {
@@ -60,44 +76,6 @@ function App() {
     setYouTubeVideos([]);
     setSpotifyTrack(null);
     setDominantGenre(null);
-  };
-
-  const displaySpotifyInfo = () => {
-    try {
-      if (!spotifyTrack) {
-        throw new Error("No Spotify track information available.");
-      }
-  
-      const { spotifyUrl } = spotifyTrack; 
-
-      setSpotifyLink(spotifyUrl);
-    } catch (error) {
-      console.error("Error in displaying Spotify link:", error);
-      setError(true); 
-    }
-  };
-
-    const displayRecommendedTracks = async (genre) => {
-      try {
-        const trackInfo = await fetchTrackInfo(genre);
-        setSpotifyTrack(trackInfo);
-  
-        if (trackInfo.name && trackInfo.artist) {
-          setTrackName(trackInfo.name);
-          setArtistName(trackInfo.artist);
-        }
-      } catch (error) {
-        console.error("Error fetching recommended tracks:", error);
-      }
-    };
-
-  const fetchYouTubeDataAndDisplay = async () => {
-    try {
-      const videos = await fetchYouTubeVideos(trackName, artistName);
-      setYouTubeVideos(videos.items);
-    } catch (error) {
-      console.error("Error displaying YouTube videos:", error);
-    }
   };
 
   return (
@@ -121,8 +99,6 @@ function App() {
       {isCalculatedResults && (
         <QuizResults
           resetQuiz={resetQuiz}
-          displaySpotifyInfo={displaySpotifyInfo} 
-          fetchYouTubeDataAndDisplay={fetchYouTubeDataAndDisplay}
           spotifyLink={spotifyLink}
           youTubeVideos={youTubeVideos}
           spotifyTrack={spotifyTrack}
@@ -135,4 +111,5 @@ function App() {
 }
 
 export default App;
+
 
