@@ -19,10 +19,3 @@ const StepsComponent = ({ totalSteps, currentStepIndex, handleStepClick, answere
 };
 
 export default StepsComponent;
-
-
-
-
-
-
-
