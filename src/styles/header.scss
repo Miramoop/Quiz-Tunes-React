@@ -1,23 +1,46 @@
 header {
-    background-color: #333; /* Example background color */
-    color: white;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  .navbar {
+    background: #31355a;
+    border: inset #31355a;
+  }
 
-    h1 {
-        font-size: 24px;
-        font-weight: bold;
-    }
+  .header-navigation-bar-button {
+    padding: 3vh;
+    vertical-align: middle;
 
-    #headerLogo {
-       
+    &:focus,
+    &:hover {
+      background-color: $hoverColor;
+      color: $buttonLinkColor;
+      outline: 2px solid #000;
+      outline-offset: 2px;
     }
+  }
 
-    nav {
-   
+  .menu-item {
+    a {
+      display: inline-block;
+      padding: 3vh;
+      vertical-align: middle;
+
+      &:focus,
+      &:hover {
+        background-color: $hoverColor;
+        color: $buttonLinkColor;
+        outline: 2px solid #000;
+        outline-offset: 2px;
+      }
     }
+  }
+
+  #headerLogo {
+    margin: 0;
+    max-width: 100px;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 110%;
+    background-color: #31355a;
+  }
 }
-
