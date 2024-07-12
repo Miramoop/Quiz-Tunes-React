@@ -34,7 +34,6 @@ const QuizResults = ({
             )}
           </div>
         </div>
-
         <div id="spotifyLinkDiv">
           {spotifyLink && (
             <a
@@ -48,7 +47,7 @@ const QuizResults = ({
           )}
         </div>
       </div>
-
+      
       <div id="videoSection">
         {youTubeVideos &&
           youTubeVideos.length > 0 &&
