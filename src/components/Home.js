@@ -14,6 +14,3 @@ const Home = ({ startQuiz }) => (
 );
 
 export default Home;
-
-
-
