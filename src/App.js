@@ -9,7 +9,7 @@ import { calculateDominantGenre } from "./utils";
 import { fetchTrackInfo } from "./services/spotifyService";
 import { fetchYouTubeVideos } from "./services/youtubeService";
 import { loadInitialData } from "./services/dataService";
-import './styles/styles.css';
+import "./styles/styles.css";
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
@@ -22,8 +22,8 @@ function App() {
   const [spotifyLink, setSpotifyLink] = useState("");
   const [youTubeVideos, setYouTubeVideos] = useState([]);
   const [spotifyTrack, setSpotifyTrack] = useState(null);
-  const [trackName, setTrackName] = useState('');
-  const [artistName, setArtistName] = useState('');
+  const [trackName, setTrackName] = useState("");
+  const [artistName, setArtistName] = useState("");
 
   useEffect(() => {
     setError(false);
@@ -67,29 +67,29 @@ function App() {
       if (!spotifyTrack) {
         throw new Error("No Spotify track information available.");
       }
-  
-      const { spotifyUrl } = spotifyTrack; 
+
+      const { spotifyUrl } = spotifyTrack;
 
       setSpotifyLink(spotifyUrl);
     } catch (error) {
       console.error("Error in displaying Spotify link:", error);
-      setError(true); 
+      setError(true);
     }
   };
 
-    const displayRecommendedTracks = async (genre) => {
-      try {
-        const trackInfo = await fetchTrackInfo(genre);
-        setSpotifyTrack(trackInfo);
-  
-        if (trackInfo.name && trackInfo.artist) {
-          setTrackName(trackInfo.name);
-          setArtistName(trackInfo.artist);
-        }
-      } catch (error) {
-        console.error("Error fetching recommended tracks:", error);
+  const displayRecommendedTracks = async (genre) => {
+    try {
+      const trackInfo = await fetchTrackInfo(genre);
+      setSpotifyTrack(trackInfo);
+
+      if (trackInfo.name && trackInfo.artist) {
+        setTrackName(trackInfo.name);
+        setArtistName(trackInfo.artist);
       }
-    };
+    } catch (error) {
+      console.error("Error fetching recommended tracks:", error);
+    }
+  };
 
   const fetchYouTubeDataAndDisplay = async () => {
     try {
@@ -102,7 +102,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header handleResetQuiz={resetQuiz} />
       {error && <div>I'm an Error</div>}
       {currentQuestionIndex === -1 && <Home startQuiz={handleStartQuiz} />}
       {currentQuestionIndex >= 0 &&
@@ -121,7 +121,7 @@ function App() {
       {isCalculatedResults && (
         <QuizResults
           resetQuiz={resetQuiz}
-          displaySpotifyInfo={displaySpotifyInfo} 
+          displaySpotifyInfo={displaySpotifyInfo}
           fetchYouTubeDataAndDisplay={fetchYouTubeDataAndDisplay}
           spotifyLink={spotifyLink}
           youTubeVideos={youTubeVideos}
