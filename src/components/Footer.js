@@ -10,8 +10,10 @@ const Footer = () => (
       src="/img/logo/miramoopLogo.png"
       alt="Miramoop Logo"
     />
-    <p className="font-bold">Miramoop Coding</p>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+    <p>
+      Copyright © {new Date().getFullYear()} Miramoop <br></br> All right
+      reserved
+    </p>
     <nav>
       <div className="grid grid-flow-col social-links">
         <a
