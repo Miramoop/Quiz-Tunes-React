@@ -6,7 +6,7 @@
 
 body {
   background: lightgoldenrodyellow;
-  background-image: linear-gradient(180deg, #315A42, #5A5731);
+  background-image: linear-gradient(180deg, #315a42, #5a5731);
   display: flex;
   flex-direction: column;
   margin: 0vh;
@@ -26,9 +26,14 @@ img {
 #choicesText,
 #choices,
 #quizComplete,
-#quizCompleteTextContainer {
+#errorScreen,
+#completeTextContainer {
   align-items: center;
   padding: 1vh;
   text-align: center;
   width: 100%;
+}
+
+#errorContainer {
+  padding-bottom: 3vh;
 }
