@@ -1,4 +1,4 @@
-footer {
+.footer {
   margin: 0;
   text-align: center;
   width: 100%;
@@ -7,7 +7,7 @@ footer {
   border: outset #5a5731;
   margin: 0;
   text-align: center;
-  row-gap: 1rem !important;
+  row-gap: 1rem;
 
   .social-links {
     a {

@@ -90,7 +90,7 @@ header .handleResetQuiz:hover #headerLogo, header .handleResetQuiz:focus #header
   transform: scale(1.1);
 }
 
-footer {
+.footer {
   margin: 0;
   text-align: center;
   width: 100%;
@@ -99,30 +99,30 @@ footer {
   border: outset #5a5731;
   margin: 0;
   text-align: center;
-  row-gap: 1rem !important;
+  row-gap: 1rem;
 }
-footer .social-links a {
+.footer .social-links a {
   display: inline-block;
   padding: 10px;
   margin: 10px;
   vertical-align: middle;
   transition: transform 0.2s;
 }
-footer .social-links a:focus, footer .social-links a:hover {
+.footer .social-links a:focus, .footer .social-links a:hover {
   background-color: #6a5acd;
   color: #fff;
   outline: 2px solid #000;
   outline-offset: 2px;
   transform: scale(1.1);
 }
-footer p {
+.footer p {
   padding: 0px;
 }
-footer #miramoopLogo {
+.footer #miramoopLogo {
   margin: 0;
 }
 @media screen and (max-width: 600px) {
-  footer #miramoopLogo {
+  .footer #miramoopLogo {
     max-width: 150px;
   }
 }
