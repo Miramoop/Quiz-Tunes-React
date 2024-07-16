@@ -7,7 +7,7 @@
 
 body {
   background: lightgoldenrodyellow;
-  background-image: linear-gradient(180deg, slateblue, palegoldenrod);
+  background-image: linear-gradient(180deg, #315A42, #5A5731);
   display: flex;
   flex-direction: column;
   margin: 0vh;
@@ -53,19 +53,35 @@ header {
   color: #000;
   display: block;
   margin: 0;
-  overflow: hidden;
-  text-align: center;
-  width: 100%;
+  max-width: 100px;
+}
+header .dropdown-content {
+  position: absolute;
+  top: 110%;
+  background-color: #31355a;
 }
 
 footer {
   margin: 0;
-  padding: 1vh;
   text-align: center;
   width: 100%;
+  color: #000;
+  background-color: #5A5731;
+  border: outset #5A5731;
 }
-footer a {
-  padding: 0.4vh;
+footer .social-links a {
+  display: inline-block;
+  padding: 3vh;
+  vertical-align: middle;
+}
+footer .social-links a:focus, footer .social-links a:hover {
+  background-color: #5A3149;
+  color: #FFF;
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+footer .copyright {
+  padding-top: 1vh;
 }
 
 #home {
