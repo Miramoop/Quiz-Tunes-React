@@ -11,7 +11,7 @@ const Footer = () => (
       alt="Miramoop Logo"
     />
     <p>
-      Copyright © {new Date().getFullYear()} Miramoop <br></br> All right
+      Copyright © {new Date().getFullYear()} Miramoop <br></br> All rights
       reserved
     </p>
     <nav>
