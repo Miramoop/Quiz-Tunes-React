@@ -1,3 +1,4 @@
+@import './tailwind.css';
 @import 'daisyui/dist/full.css';
 * {
   box-sizing: border-box;
@@ -25,7 +26,7 @@
 }
 body {
   background: lightgoldenrodyellow;
-  background-image: linear-gradient(180deg, slateblue, palegoldenrod);
+  background-image: linear-gradient(180deg, #315A42, #5A5731);
   display: flex;
   flex-direction: column;
   margin: 0vh;
@@ -38,20 +39,6 @@ img {
   height: auto;
   margin: 2vh auto;
   max-width: 100%;
-}
-
-button {
-  align-items: center !important;
-  background: white !important;
-  border-radius: 10px !important;
-  padding: 3vh !important;
-  transition-duration: 0.4s !important;
-}
-button:focus, button:hover {
-  background-color: rgb(77, 57, 206) !important;
-  color: white !important;
-  outline: 2px solid #000 !important;
-  outline-offset: 2px !important;
 }
 
 #quiz,
@@ -71,30 +58,68 @@ button:focus, button:hover {
   padding-bottom: 3vh;
 }
 
-header {
-  align-items: center;
-  color: black;
-  display: block;
+header .navbar {
+  background: #31355a;
+  border: inset #31355a;
+}
+header .header-navigation-bar-button {
+  padding: 3vh;
+  vertical-align: middle;
+}
+header .header-navigation-bar-button:focus, header .header-navigation-bar-button:hover {
+  background-color: #5A3149;
+  color: #FFF;
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+header .menu-item a {
+  display: inline-block;
+  padding: 3vh;
+  vertical-align: middle;
+}
+header .menu-item a:focus, header .menu-item a:hover {
+  background-color: #5A3149;
+  color: #FFF;
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+header #headerLogo {
   margin: 0;
-  overflow: hidden;
-  text-align: center;
-  width: 100%;
+  max-width: 100px;
+}
+header .dropdown-content {
+  position: absolute;
+  top: 110%;
+  background-color: #31355a;
 }
 
 footer {
   margin: 0;
-  padding: 1vh;
   text-align: center;
   width: 100%;
+  color: #000;
+  background-color: #5A5731;
+  border: outset #5A5731;
 }
-footer a {
-  padding: 0.4vh;
+footer .social-links a {
+  display: inline-block;
+  padding: 3vh;
+  vertical-align: middle;
+}
+footer .social-links a:focus, footer .social-links a:hover {
+  background-color: #5A3149;
+  color: #FFF;
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+footer .copyright {
+  padding-top: 1vh;
 }
 
 #home {
   text-align: center;
   width: 100%;
-  color: black;
+  color: #000;
 }
 
 #headerLogo {
@@ -103,15 +128,15 @@ footer a {
 
 .navigation-button {
   align-items: center;
-  background: white !important;
+  background: #FFF;
   border-radius: 10px;
   padding: 3vh;
   transition-duration: 0.4s;
 }
 .navigation-button:focus, .navigation-button:hover {
-  background-color: rgb(77, 57, 206) !important;
-  color: white !important;
-  outline: 2px solid #000;
+  background-color: #5A3149;
+  color: #FFF;
+  outline: 2px solid black;
   outline-offset: 2px;
 }
 
@@ -218,15 +243,15 @@ footer a {
 }
 .quiz-navigation .navigation-button {
   align-items: center;
-  background: white;
+  background: #FFF;
   border-radius: 10px;
   padding: 3vh;
   transition-duration: 0.4s;
   margin: 0 10px;
 }
 .quiz-navigation .navigation-button:focus, .quiz-navigation .navigation-button:hover {
-  background-color: rgb(77, 57, 206);
-  color: white;
+  background-color: #5A3149;
+  color: #FFF;
   outline: 2px solid #000;
   outline-offset: 2px;
 }
@@ -265,8 +290,8 @@ footer a {
   transition-duration: 0.4s;
 }
 #spotifyLink:hover {
-  background-color: rgb(77, 57, 206);
-  color: black;
+  background-color: #5A3149;
+  color: #000;
 }
 
 @media screen and (min-width: 768px) {

@@ -1,9 +1,46 @@
 header {
-    align-items: center;
-    color: $mainTextColor;
-    display: block;
+  .navbar {
+    background: #31355a;
+    border: inset #31355a;
+  }
+
+  .header-navigation-bar-button {
+    padding: 3vh;
+    vertical-align: middle;
+
+    &:focus,
+    &:hover {
+      background-color: $hoverColor;
+      color: $buttonLinkColor;
+      outline: 2px solid #000;
+      outline-offset: 2px;
+    }
+  }
+
+  .menu-item {
+    a {
+      display: inline-block;
+      padding: 3vh;
+      vertical-align: middle;
+
+      &:focus,
+      &:hover {
+        background-color: $hoverColor;
+        color: $buttonLinkColor;
+        outline: 2px solid #000;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  #headerLogo {
     margin: 0;
-    overflow: hidden;
-    text-align: center;
-    width: 100%;
+    max-width: 100px;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 110%;
+    background-color: #31355a;
+  }
 }
