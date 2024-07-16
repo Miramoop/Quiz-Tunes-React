@@ -3,32 +3,39 @@ footer {
   text-align: center;
   width: 100%;
   color: $mainTextColor;
-  background-color: #5A5731;
-  border: outset #5A5731;
+  background-color: #5a5731;
+  border: outset #5a5731;
   margin: 0;
-  padding: 1vh;
   text-align: center;
-  width: 100%;
+  row-gap: 1rem !important;
 
   .social-links {
-  a {
-    display: inline-block; 
-    padding: 3vh;
-    vertical-align: middle; 
-
-    &:focus,
-    &:hover {
-      background-color: $hoverColor;
-      color: $buttonLinkColor;
-      outline: 2px solid #000;
-      outline-offset: 2px;
+    a {
+      display: inline-block;
+      padding: 10px;
+      margin: 10px;
+      vertical-align: middle;
+      transition: transform 0.2s;
+      &:focus,
+      &:hover {
+        background-color: $hoverColor;
+        color: $buttonLinkColor;
+        outline: 2px solid #000;
+        outline-offset: 2px;
+        transform: scale(1.1);
+      }
     }
-}
-}
-  .copyright {
-    padding-top: 1vh;
-  a {
-    padding: 0.4vh;
   }
-}
+
+  p {
+    padding: 0px;
+  }
+
+  #miramoopLogo {
+    margin: 0;
+
+    @media screen and (max-width: 600px) {
+      max-width: 150px;
+    }
+  }
 }

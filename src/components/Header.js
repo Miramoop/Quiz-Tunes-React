@@ -25,7 +25,7 @@ const Header = ({ handleResetQuiz }) => {
             </button>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow p-2"
+              className="menu menu-sm dropdown-content rounded-box z-[2] mt-3 w-52 p-2 shadow p-2"
             >
               <li className="menu-item">
                 <a

@@ -77,6 +77,11 @@ header .handleResetQuiz #headerLogo {
   max-width: 100px;
   transition: transform 0.2s;
 }
+@media screen and (max-width: 600px) {
+  header .handleResetQuiz #headerLogo {
+    max-width: 75px;
+  }
+}
 header .handleResetQuiz:hover #headerLogo, header .handleResetQuiz:focus #headerLogo {
   transform: scale(1.1);
 }
@@ -86,29 +91,36 @@ footer {
   text-align: center;
   width: 100%;
   color: #000;
-  background-color: #5A5731;
-  border: outset #5A5731;
+  background-color: #5a5731;
+  border: outset #5a5731;
   margin: 0;
-  padding: 1vh;
   text-align: center;
-  width: 100%;
+  row-gap: 1rem !important;
 }
 footer .social-links a {
   display: inline-block;
-  padding: 3vh;
+  padding: 10px;
+  margin: 10px;
   vertical-align: middle;
+  transition: transform 0.2s;
 }
 footer .social-links a:focus, footer .social-links a:hover {
   background-color: #6a5acd;
   color: #fff;
   outline: 2px solid #000;
   outline-offset: 2px;
+  transform: scale(1.1);
 }
-footer .copyright {
-  padding-top: 1vh;
+footer p {
+  padding: 0px;
 }
-footer .copyright a {
-  padding: 0.4vh;
+footer #miramoopLogo {
+  margin: 0;
+}
+@media screen and (max-width: 600px) {
+  footer #miramoopLogo {
+    max-width: 150px;
+  }
 }
 
 #home {
@@ -379,6 +391,11 @@ header .handleResetQuiz #headerLogo {
   max-width: 100px;
   transition: transform 0.2s;
 }
+@media screen and (max-width: 600px) {
+  header .handleResetQuiz #headerLogo {
+    max-width: 75px;
+  }
+}
 header .handleResetQuiz:hover #headerLogo, header .handleResetQuiz:focus #headerLogo {
   transform: scale(1.1);
 }
@@ -388,29 +405,36 @@ footer {
   text-align: center;
   width: 100%;
   color: #000;
-  background-color: #5A5731;
-  border: outset #5A5731;
+  background-color: #5a5731;
+  border: outset #5a5731;
   margin: 0;
-  padding: 1vh;
   text-align: center;
-  width: 100%;
+  row-gap: 1rem !important;
 }
 footer .social-links a {
   display: inline-block;
-  padding: 3vh;
+  padding: 10px;
+  margin: 10px;
   vertical-align: middle;
+  transition: transform 0.2s;
 }
 footer .social-links a:focus, footer .social-links a:hover {
   background-color: #6a5acd;
   color: #fff;
   outline: 2px solid #000;
   outline-offset: 2px;
+  transform: scale(1.1);
 }
-footer .copyright {
-  padding-top: 1vh;
+footer p {
+  padding: 0px;
 }
-footer .copyright a {
-  padding: 0.4vh;
+footer #miramoopLogo {
+  margin: 0;
+}
+@media screen and (max-width: 600px) {
+  footer #miramoopLogo {
+    max-width: 150px;
+  }
 }
 
 #home {
