@@ -1,7 +1,7 @@
 header {
   .navbar {
-    background: #31355a;
-    border: inset #31355a;
+    background: $mainBlueColor;
+    border: inset $mainBlueColor;
   }
 
   .header-navigation-bar-button {
@@ -41,6 +41,6 @@ header {
   .dropdown-content {
     position: absolute;
     top: 110%;
-    background-color: #31355a;
+    background-color: $mainBlueColor;
   }
 }

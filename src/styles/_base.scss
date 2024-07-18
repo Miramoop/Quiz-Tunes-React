@@ -16,7 +16,6 @@
   }
 }
 
-
 @media screen and (min-width: 1400px) {
   .wrapper {
     max-width: 1320px;
@@ -27,7 +26,7 @@
 
 body {
   background: lightgoldenrodyellow;
-  background-image: linear-gradient(180deg, #315A42, #5A5731);
+  background-image: linear-gradient(180deg, $mainGreenColor, $mainBrownColor);
   display: flex;
   flex-direction: column;
   margin: 0vh;
