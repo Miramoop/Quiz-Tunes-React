@@ -19,7 +19,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 - [📺 Obtain the YouTube API Key](#-obtain-the-youtube-api-key)
 - [💾 Check for Node and Npm Installations](#-check-for-node-and-npm-installations)
 - [💻 Make Repo into React App](#-make-repo-into-react-app)
-- [👕 Install all the dependencies for style elements](#-install-style-dependencies)
+<!-- - [👕 Install all the dependencies for style elements](#-install-style-dependencies) -->
 
 ## 👽 Clone the Repo
 
@@ -56,8 +56,9 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
          <pre><code>C:\Users\YOURUSERNAME> cd quiz-tunes-react</pre></code>
       <li>Next, we must create an <code>environment file</code> using the following command</li>
        <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> echo. > environment.env </pre></code>
-      <li>Now we must access that file using the following command</li>
-      <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> echo. > environment.env </pre></code>
+      <li>Now we must <code>access the project folder</code> using the following command</li>
+      <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> start . </pre></code>
+      <li>Now right click on the <code>environment file</code> and click open with notepad</li>
       <blockquote>
       <strong>❗️IMPORTANT:</strong> We will get the exact keys that need to be added into this file in the next two steps, so keep this file open.
       </blockquote>
@@ -162,10 +163,8 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
       <blockquote>
       <strong>📓NOTE:</strong> If either of these commands do not give a version number or give an error we must install node and npm
       </blockquote>
-      <li>Install npm using the below command</li>
-         <pre><code>npm install latest</code></pre>
-      <li>Install node using the below command</li>
-         <pre><code>npm install node</code></pre>
+      <li>Install the latest Long Term Support (LTS) version of Node from this website: <a href="https://nodejs.org/en/download/prebuilt-installer"> Node Downloads Page</a></li>
+      <img src="public/img/readmeInstructions/nodedownloadbutton.png" alt="Node (LTS) Download button circled in red">
       <li>Run the same commands to check the versions of each to ensure that they installed properly</li>
       <blockquote>
       <strong>❗️IMPORTANT:</strong> If the command prompt does not allow you to run any of these commands. Make sure to exit and run command prompt as administrator
@@ -193,9 +192,9 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
       <blockquote>
       <strong>❗️IMPORTANT:</strong> To terminate the local development server, open the windows powershell that was opened by your local machine to host the local server & press "ctrl + c", then press y when prompted.
       </blockquote>
-      <blockquote>
-      <strong>📓NOTE:</strong> The browser window where the local development server is being run will not close automatically, you must close it yourself.
-      </blockquote>
+      <!-- <blockquote>
+      <strong>📓NOTE:</strong> You will notice that the styles may not look correct, so it is critical that we install the style dependencies as explained in the next step.
+      </blockquote> -->
       <li> Here is some more info on React, if you need any help:  <a href="https://react.dev/"> Docs on React</a></li>
     </ol>
 
@@ -203,7 +202,7 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 
   </details>
 
-## 👕 Install Style Dependencies
+<!-- ## 👕 Install Style Dependencies
 
 <details>
   <summary>Click to show / hide <code>Install Style Dependencies</code></summary></br>
@@ -226,4 +225,10 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 
 [[↑ Back to Top ↑]](#-table-of-contents)
 
-</details>
+</details> -->
+
+<!--
+  <li>Install npm using the below command</li>
+         <pre><code>npm install latest</code></pre>
+      <li>Install node using the below command</li>
+         <pre><code>npm install node</code></pre> -->
