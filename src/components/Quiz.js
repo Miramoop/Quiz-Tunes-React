@@ -55,7 +55,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const handleStepClick = (index) => {
     setCurrentQuestionIndex(index);
   };
-
+  
   const handleFinishQuiz = () => {
     const allAnswered = answeredQuestions.every((answered) => answered);
     if (allAnswered) {

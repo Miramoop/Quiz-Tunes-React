@@ -47,11 +47,27 @@ function App() {
     setCurrentQuestionIndex(0);
   };
 
-  const handleCalculateResults = () => {
+  const handleCalculateResults = async () => {
     setCalculatedResults(true);
     const dominant = calculateDominantGenre(weights);
     setDominantGenre(dominant);
-    displayRecommendedTracks(dominant);
+
+    try {
+      const trackInfo = await fetchTrackInfo(dominant);
+      setSpotifyTrack(trackInfo);
+
+      if (trackInfo.spotifyUrl) {
+        setSpotifyLink(trackInfo.spotifyUrl);
+      } else {
+        throw new Error("No Spotify link available.");
+      }
+
+      const videos = await fetchYouTubeVideos(trackInfo.name, trackInfo.artist);
+      setYouTubeVideos(videos.items);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setError(true);
+    }
   };
 
   const resetQuiz = () => {
@@ -100,7 +116,7 @@ function App() {
       setErrorMessage('Error occured trying to fetch the YouTube video. Please try again!');
     }
   };
-
+  
   return (
     <div className="App">
       <Header />
@@ -114,6 +130,7 @@ function App() {
             weights={weights}
             updateWeights={updateWeights}
             setIsQuizComplete={setIsQuizComplete}
+            
           />
         )}
       {isQuizComplete && !isCalculatedResults && (
@@ -122,8 +139,6 @@ function App() {
       {isCalculatedResults && (
         <QuizResults
           resetQuiz={resetQuiz}
-          displaySpotifyInfo={displaySpotifyInfo} 
-          fetchYouTubeDataAndDisplay={fetchYouTubeDataAndDisplay}
           spotifyLink={spotifyLink}
           youTubeVideos={youTubeVideos}
           spotifyTrack={spotifyTrack}
@@ -136,4 +151,3 @@ function App() {
 }
 
 export default App;
-
