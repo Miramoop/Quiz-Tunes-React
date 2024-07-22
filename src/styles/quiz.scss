@@ -116,3 +116,29 @@
     }
   }
 }
+
+.steps {
+  visibility: hidden;
+  padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .steps {
+    visibility: visible;
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .steps {
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .steps {
+    visibility: visible;
+    transform: scale(1.2);
+  }
+}

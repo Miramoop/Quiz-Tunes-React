@@ -4,9 +4,29 @@
   scroll-behavior: smooth;
 }
 
+.wrapper {
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
 body {
   background: lightgoldenrodyellow;
-  background-image: linear-gradient(180deg, #315a42, #5a5731);
+  background-image: linear-gradient(180deg, $mainGreenColor, $mainBrownColor);
   display: flex;
   flex-direction: column;
   margin: 0vh;

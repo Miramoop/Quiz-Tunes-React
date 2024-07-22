@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Quiz from "./components/Quiz";
 import QuizComplete from "./components/QuizComplete";
 import QuizResults from "./components/QuizResults";
+import AlertBox from "./components/AlertBox";
 import { calculateDominantGenre } from "./utils";
 import { fetchTrackInfo } from "./services/spotifyService";
 import { fetchYouTubeVideos } from "./services/youtubeService";
@@ -17,13 +18,14 @@ function App() {
   const [weights, setWeights] = useState({});
   const [isQuizComplete, setIsQuizComplete] = useState(false);
   const [isCalculatedResults, setCalculatedResults] = useState(false);
-  const [error, setError] = useState(false);
   const [dominantGenre, setDominantGenre] = useState(null);
   const [spotifyLink, setSpotifyLink] = useState("");
   const [youTubeVideos, setYouTubeVideos] = useState([]);
   const [spotifyTrack, setSpotifyTrack] = useState(null);
-  const [trackName, setTrackName] = useState("");
-  const [artistName, setArtistName] = useState("");
+  const [trackName, setTrackName] = useState('');
+  const [artistName, setArtistName] = useState('');
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     setError(false);
@@ -31,9 +33,9 @@ function App() {
       const { questions, weights } = loadInitialData();
       setQuestions(questions);
       setWeights(weights);
-    } catch (e) {
-      console.error(e);
+    } catch (error) {
       setError(true);
+      setErrorMessage('Error occured trying to read data. Please refresh the page!');
     }
   }, []);
 
@@ -45,11 +47,27 @@ function App() {
     setCurrentQuestionIndex(0);
   };
 
-  const handleCalculateResults = () => {
+  const handleCalculateResults = async () => {
     setCalculatedResults(true);
     const dominant = calculateDominantGenre(weights);
     setDominantGenre(dominant);
-    displayRecommendedTracks(dominant);
+
+    try {
+      const trackInfo = await fetchTrackInfo(dominant);
+      setSpotifyTrack(trackInfo);
+
+      if (trackInfo.spotifyUrl) {
+        setSpotifyLink(trackInfo.spotifyUrl);
+      } else {
+        throw new Error("No Spotify link available.");
+      }
+
+      const videos = await fetchYouTubeVideos(trackInfo.name, trackInfo.artist);
+      setYouTubeVideos(videos.items);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setError(true);
+    }
   };
 
   const resetQuiz = () => {
@@ -63,28 +81,29 @@ function App() {
   };
 
   const displaySpotifyInfo = () => {
-    try {
       if (!spotifyTrack) {
-        throw new Error("No Spotify track information available.");
+        setError(true);
+        setErrorMessage('Error occured trying to fetch Spotify Data. Please try again!');
+        return;
       }
 
       const { spotifyUrl } = spotifyTrack;
 
       setSpotifyLink(spotifyUrl);
-    } catch (error) {
-      console.error("Error in displaying Spotify link:", error);
-      setError(true);
-    }
   };
 
-  const displayRecommendedTracks = async (genre) => {
-    try {
-      const trackInfo = await fetchTrackInfo(genre);
-      setSpotifyTrack(trackInfo);
-
-      if (trackInfo.name && trackInfo.artist) {
-        setTrackName(trackInfo.name);
-        setArtistName(trackInfo.artist);
+    const displayRecommendedTracks = async (genre) => {
+      try {
+        const trackInfo = await fetchTrackInfo(genre);
+        setSpotifyTrack(trackInfo);
+  
+        if (trackInfo.name && trackInfo.artist) {
+          setTrackName(trackInfo.name);
+          setArtistName(trackInfo.artist);
+        }
+      } catch (error) {
+        setError(true);
+        setErrorMessage('Error occured trying to fetch the recommended tracks. Please try again!');
       }
     } catch (error) {
       console.error("Error fetching recommended tracks:", error);
@@ -96,14 +115,15 @@ function App() {
       const videos = await fetchYouTubeVideos(trackName, artistName);
       setYouTubeVideos(videos.items);
     } catch (error) {
-      console.error("Error displaying YouTube videos:", error);
+      setError(true);
+      setErrorMessage('Error occured trying to fetch the YouTube video. Please try again!');
     }
   };
-
+  
   return (
     <div className="App">
-      <Header handleResetQuiz={resetQuiz} />
-      {error && <div>I'm an Error</div>}
+      <Header />
+      {error && <AlertBox message={errorMessage} />}
       {currentQuestionIndex === -1 && <Home startQuiz={handleStartQuiz} />}
       {currentQuestionIndex >= 0 &&
         currentQuestionIndex < questions.length &&
@@ -113,6 +133,7 @@ function App() {
             weights={weights}
             updateWeights={updateWeights}
             setIsQuizComplete={setIsQuizComplete}
+            
           />
         )}
       {isQuizComplete && !isCalculatedResults && (
@@ -121,8 +142,6 @@ function App() {
       {isCalculatedResults && (
         <QuizResults
           resetQuiz={resetQuiz}
-          displaySpotifyInfo={displaySpotifyInfo}
-          fetchYouTubeDataAndDisplay={fetchYouTubeDataAndDisplay}
           spotifyLink={spotifyLink}
           youTubeVideos={youTubeVideos}
           spotifyTrack={spotifyTrack}
