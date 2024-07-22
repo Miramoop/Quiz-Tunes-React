@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = ({ startQuiz }) => (
   <section id="home">
-    <div className="hero" style={{ minHeight: "75vh" }}>
+    <div className="hero">
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md">
