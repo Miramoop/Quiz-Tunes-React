@@ -1,27 +1,27 @@
 footer {
   margin: 0;
-  padding: 1vh;
   text-align: center;
   width: 100%;
   color: $mainTextColor;
+  background-color: $mainBrownColor;
+  border: outset $mainBrownColor;
 
-  h6 {
-    font-size: 15px;
-  }
+  .social-links {
+    a {
+      display: inline-block;
+      padding: 3vh;
+      vertical-align: middle;
 
-  a {
-    display: inline-block; 
-    padding: 1vh;
-    vertical-align: middle; 
-
-    &:focus,
-    &:hover {
-      background-color: $hoverColor !important;
-      color: $buttonLinkColor !important;
-      outline: 2px solid #000;
-      outline-offset: 2px;
+      &:focus,
+      &:hover {
+        background-color: $hoverColor;
+        color: $buttonLinkColor;
+        outline: 2px solid #000;
+        outline-offset: 2px;
+      }
     }
   }
+  .copyright {
+    padding-top: 1vh;
+  }
 }
-
-
