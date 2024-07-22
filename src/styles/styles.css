@@ -41,6 +41,20 @@ img {
   max-width: 100%;
 }
 
+button {
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 3vh;
+  transition-duration: 0.4s;
+}
+button:focus, button:hover {
+  background-color: slateblue;
+  color: white;
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
 #quiz,
 #questionText,
 #choicesText,
@@ -258,6 +272,29 @@ footer .copyright {
   outline-offset: 2px;
 }
 
+.steps {
+  visibility: hidden;
+  padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .steps {
+    visibility: visible;
+    transform: scale(0.8);
+  }
+}
+@media screen and (min-width: 800px) {
+  .steps {
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .steps {
+    visibility: visible;
+    transform: scale(1.2);
+  }
+}
 .results {
   display: flex;
   flex-direction: column;
