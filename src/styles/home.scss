@@ -2,15 +2,17 @@
   text-align: center;
   width: 100%;
   color: $mainTextColor;
+  background-image: linear-gradient(180deg, $mainGreenColor, $mainBrownColor);
 }
 
-#headerLogo {
-  max-width: 15vh;
+.hero {
+  min-height: 75vh;
 }
 
-.navigation-button {
+#startQuizButton {
   align-items: center;
-  background: $buttonLinkColor;
+  outline: 2px solid $outlineColor;
+  background: $mainBlueColor;
   border-radius: 10px;
   padding: 3vh;
   transition-duration: 0.4s;
@@ -19,7 +21,7 @@
   &:hover {
     background-color: $hoverColor;
     color: $buttonLinkColor;
-    outline: 2px solid black;
+    outline: 2px solid $outlineColor;
     outline-offset: 2px;
   }
 }

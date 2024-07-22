@@ -120,23 +120,25 @@ footer .copyright {
   text-align: center;
   width: 100%;
   color: #000;
+  background-image: linear-gradient(180deg, #315a42, #5a5731);
 }
 
-#headerLogo {
-  max-width: 15vh;
+.hero {
+  min-height: 75vh;
 }
 
-.navigation-button {
+#startQuizButton {
   align-items: center;
-  background: #fff;
+  outline: 2px solid #000;
+  background: #31355a;
   border-radius: 10px;
   padding: 3vh;
   transition-duration: 0.4s;
 }
-.navigation-button:focus, .navigation-button:hover {
+#startQuizButton:focus, #startQuizButton:hover {
   background-color: #5a3149;
   color: #fff;
-  outline: 2px solid black;
+  outline: 2px solid #000;
   outline-offset: 2px;
 }
 
