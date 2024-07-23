@@ -2,11 +2,26 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-image: linear-gradient(180deg, #315A42, #5A5731);
+}
+
+.card {
+  background-color: #000;
+}
+
+figure {
+  img {
+    margin: 10;
+  }
+}
+
+p,
+h2,
+a,
+button {
+  color: $mainTextColor;
 }
 
 #buttonHolder,
-.resultsContent p,
 #resultsSection .videoContent {
   align-content: space-between;
 }
@@ -28,13 +43,20 @@
   padding: 5px;
 }
 
-#spotifyLink {
-  flex-grow: 1;
-  transition-duration: 0.4s;
-
+.btn-primary {
+  background-color: $brightPurpleColor;
+  border-color: none;
+  color: $mainTextColor;
+  font-weight: normal;
+  padding: 10px;
+  transition: transform 0.2s;
+  &:focus,
   &:hover {
     background-color: $hoverColor;
-    color: $mainTextColor;
+    color: $buttonLinkColor;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    transform: scale(1.1);
   }
 }
 

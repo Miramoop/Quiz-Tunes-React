@@ -7,51 +7,51 @@ const QuizResults = ({
   spotifyTrack,
   dominantGenre,
 }) => {
-
   return (
     <section id="results">
-      <div id="resultsContent" role="alert">
-        <h2>Your Recommended Song is: </h2>
-        <div className="resultsSection">
-          <div id="trackInfo">
-            {spotifyTrack && (
-              <>
-                <img
-                  src={spotifyTrack.albumCover}
-                  alt={`Album Cover for ${spotifyTrack.albumName}`}
-                />
-                <p>Track Name: {spotifyTrack.name}</p>
-                <p>Artist: {spotifyTrack.artist}</p>
-                <p>Album: {spotifyTrack.albumName}</p>
-                <p>
-                  Genre:{" "}
-                  {dominantGenre
-                    ? dominantGenre.charAt(0).toUpperCase() +
-                      dominantGenre.slice(1)
-                    : "Not Available"}
-                </p>
-              </>
-            )}
+      {spotifyTrack ? (
+        <div className="card lg:card-side shadow-xl">
+          <figure>
+            <img
+              src={spotifyTrack.albumCover}
+              alt={`Album Cover for ${spotifyTrack.albumName} by ${spotifyTrack.artist}`}
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Your Recommended Song is:</h2>
+            <p>Track: {spotifyTrack.name}</p>
+            <p>Artist: {spotifyTrack.artist}</p>
+            <p>Album: {spotifyTrack.albumName}</p>
+            <p>
+              Genre:{" "}
+              {dominantGenre
+                ? dominantGenre.charAt(0).toUpperCase() + dominantGenre.slice(1)
+                : "Not Available"}
+            </p>
+            <div className="card-actions justify-end">
+              <div id="spotifyLinkDiv">
+                {spotifyLink && (
+                  <a
+                    className="btn btn-primary"
+                    id="spotifyLink"
+                    href={spotifyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Listen on Spotify
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
         </div>
-        <div id="spotifyLinkDiv">
-          {spotifyLink && (
-            <a
-              id="spotifyLink"
-              href={spotifyLink}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Link to Spotify
-            </a>
-          )}
-        </div>
-      </div>
-      
-      <div id="videoSection">
-        {youTubeVideos &&
-          youTubeVideos.length > 0 &&
-          youTubeVideos.map((video) => (
+      ) : (
+        <p>No song information available.</p>
+      )}
+
+      {youTubeVideos && youTubeVideos.length > 0 && (
+        <div id="videoSection">
+          {youTubeVideos.map((video) => (
             <div key={video.id.videoId} className="video-container">
               <iframe
                 title={video.snippet.title}
@@ -68,10 +68,12 @@ const QuizResults = ({
               </noscript>
             </div>
           ))}
-      </div>
+        </div>
+      )}
 
       <div id="buttonHolder">
         <button
+          className="btn btn-primary"
           id="resetQuizButton"
           onClick={resetQuiz}
           aria-label="Reset and Start the Quiz Over"
