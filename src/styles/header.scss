@@ -1,9 +1,4 @@
 header {
-  .navbar {
-    background: $mainBlueColor;
-    border: inset $mainBlueColor;
-  }
-
   .header-navigation-bar-button {
     padding: 3vh;
     vertical-align: middle;
@@ -15,6 +10,13 @@ header {
       outline: 2px solid #000;
       outline-offset: 2px;
     }
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 110%;
+    right: -11px;
+    background-color: $darkPurpleColor;
   }
 
   .menu-item {
