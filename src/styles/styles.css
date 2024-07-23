@@ -113,11 +113,13 @@ header .handleResetQuiz .dropdown-content {
   background-color: #5a5731;
   border: outset #5a5731;
 }
+.footer #miramoopLogo {
+  margin: 0;
+}
 .footer .social-links a {
   display: inline-block;
   padding: 20px;
-  margin: 10px;
-  vertical-align: middle;
+  justify-content: center;
   transition: transform 0.5s;
 }
 .footer .social-links a:focus, .footer .social-links a:hover {
@@ -126,9 +128,6 @@ header .handleResetQuiz .dropdown-content {
   outline: 2px solid #000;
   outline-offset: 2px;
   transform: scale(0.8);
-}
-.footer .copyright {
-  padding-top: 1vh;
 }
 
 #home {

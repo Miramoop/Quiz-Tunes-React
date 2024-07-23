@@ -6,12 +6,15 @@
   background-color: $mainBrownColor;
   border: outset $mainBrownColor;
 
+  #miramoopLogo {
+    margin: 0;
+  }
+
   .social-links {
     a {
       display: inline-block;
       padding: 20px;
-      margin: 10px;
-      vertical-align: middle;
+      justify-content: center;
       transition: transform 0.5s;
 
       &:focus,
@@ -23,8 +26,5 @@
         transform: scale(0.8);
       }
     }
-  }
-  .copyright {
-    padding-top: 1vh;
   }
 }
