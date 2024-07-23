@@ -60,7 +60,7 @@ img {
 
 header .navbar {
   background: #31355a;
-  border: inset #31355a;
+  filter: drop-shadow(0 0 0.75rem #000);
 }
 header .header-navigation-bar-button {
   padding: 10px;
@@ -99,26 +99,25 @@ header .handleResetQuiz #headerLogo {
   max-width: 100px;
   transition: transform 0.2s;
 }
-header .handleResetQuiz .dropdown-content {
-  position: absolute;
-  top: 110%;
-  background-color: #31355a;
+header .handleResetQuiz:focus, header .handleResetQuiz:hover {
+  transform: scale(1.1);
 }
 
 .footer {
   margin: 0;
+  padding-top: 20px;
   text-align: center;
   width: 100%;
   color: #000;
   background-color: #5a5731;
-  border: outset #5a5731;
+  filter: drop-shadow(0 0 0.75rem #000);
 }
-.footer #miramoopLogo {
-  margin: 0;
+.footer .companyName {
+  font-weight: bold;
 }
 .footer .social-links a {
   display: inline-block;
-  padding: 20px;
+  padding: 5px 20px;
   justify-content: center;
   transition: transform 0.5s;
 }

@@ -1,19 +1,21 @@
 .footer {
   margin: 0;
+  padding-top: 20px;
   text-align: center;
   width: 100%;
   color: $mainTextColor;
   background-color: $mainBrownColor;
-  border: outset $mainBrownColor;
+  //   border: outset $mainBrownColor;
+  filter: drop-shadow(0 0 0.75rem $borderColor);
 
-  #miramoopLogo {
-    margin: 0;
+  .companyName {
+    font-weight: bold;
   }
 
   .social-links {
     a {
       display: inline-block;
-      padding: 20px;
+      padding: 5px 20px;
       justify-content: center;
       transition: transform 0.5s;
 

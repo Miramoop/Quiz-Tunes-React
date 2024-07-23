@@ -6,11 +6,12 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => (
   <footer className="footer footer-center text-primary-content">
     <aside>
-      <img
+      {/* <img
         id="miramoopLogo"
         src="/img/logo/miramoopLogo.png"
         alt="Miramoop Logo"
-      />
+      /> */}
+      <p className="companyName">Miramoop Coding</p>
       <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
       <nav>
         <div className="grid grid-flow-col social-links">
