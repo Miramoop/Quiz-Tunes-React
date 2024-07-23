@@ -21,7 +21,7 @@ const Header = ({ handleResetQuiz }) => {
               className="header-navigation-bar-button lg:hidden"
               aria-label="Navigation Bar Button"
             >
-              <FontAwesomeIcon icon={faBars} size="1x" />
+              <FontAwesomeIcon icon={faBars} size="2x" />
             </button>
             <ul
               tabIndex={0}
