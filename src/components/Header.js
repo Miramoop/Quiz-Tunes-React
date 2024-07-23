@@ -7,15 +7,15 @@ function Header() {
     <header>
       <div className="navbar">
         <div className="navbar-start">
-        <img
+          <img
             id="headerLogo"
             src="/img/logo/QuizTunesLogo.png"
             alt="Quiz Tunes Logo"
           />
         </div>
         <div className="navbar-end">
-        <div className="dropdown lg:hidden">
-            <button 
+          <div className="dropdown lg:hidden">
+            <button
               className="header-navigation-bar-button lg:hidden"
               aria-label="Navigation Bar Button"
             >
@@ -26,7 +26,7 @@ function Header() {
               className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow right-0 p-2"
             >
               <li className="menu-item">
-                <a 
+                <a
                   href="https://github.com/Miramoop"
                   target="_blank"
                   rel="noopener noreferrer"
