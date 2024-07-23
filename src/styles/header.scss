@@ -48,10 +48,12 @@ header {
       margin: 0;
       max-width: 100px;
       transition: transform 0.2s;
+    }
 
-  .dropdown-content {
-    position: absolute;
-    top: 110%;
-    background-color: $mainBlueColor;
+    .dropdown-content {
+      position: absolute;
+      top: 110%;
+      background-color: $mainBlueColor;
+    }
   }
 }
