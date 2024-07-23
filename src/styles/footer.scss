@@ -7,8 +7,8 @@ footer {
   border: outset $mainBrownColor;
 
   .social-links {
+    display: flex;
     a {
-      display: inline-block;
       padding: 3vh;
       vertical-align: middle;
 

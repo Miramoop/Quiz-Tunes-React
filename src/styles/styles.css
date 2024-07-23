@@ -101,8 +101,10 @@ footer {
   background-color: #5a5731;
   border: outset #5a5731;
 }
+footer .social-links {
+  display: flex;
+}
 footer .social-links a {
-  display: inline-block;
   padding: 3vh;
   vertical-align: middle;
 }
