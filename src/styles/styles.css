@@ -26,7 +26,7 @@
 }
 body {
   background: lightgoldenrodyellow;
-  background-image: linear-gradient(180deg, #315a42, #5a5731);
+  background-image: linear-gradient(180deg, #282339, #6f57c9);
   display: flex;
   flex-direction: column;
   margin: 0vh;
@@ -73,6 +73,7 @@ header .header-navigation-bar-button:focus, header .header-navigation-bar-button
   outline-offset: 2px;
 }
 header .menu-item a {
+  color: #fff;
   display: inline-block;
   padding: 3vh;
   vertical-align: middle;
@@ -262,8 +263,22 @@ footer .copyright {
   text-align: center;
 }
 
+.card {
+  background-color: #000;
+}
+
+figure img {
+  margin: 10;
+}
+
+p,
+h2,
+a,
+button {
+  color: #fff;
+}
+
 #buttonHolder,
-.resultsContent p,
 #resultsSection .videoContent {
   align-content: space-between;
 }
@@ -285,13 +300,20 @@ footer .copyright {
   padding: 5px;
 }
 
-#spotifyLink {
-  flex-grow: 1;
-  transition-duration: 0.4s;
+.btn-primary {
+  background-color: #6f57c9;
+  border-color: none;
+  color: #fff;
+  font-weight: normal;
+  padding: 10px;
+  transition: transform 0.2s;
 }
-#spotifyLink:hover {
+.btn-primary:focus, .btn-primary:hover {
   background-color: #5a3149;
-  color: #000;
+  color: #fff;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {
