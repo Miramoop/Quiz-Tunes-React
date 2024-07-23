@@ -1,7 +1,8 @@
 header {
   .navbar {
     background: $mainBlueColor;
-    border: inset $mainBlueColor;
+    // border: inset $mainBlueColor;
+    filter: drop-shadow(0 0 0.75rem $borderColor);
   }
 
   .header-navigation-bar-button {
@@ -49,11 +50,9 @@ header {
       max-width: 100px;
       transition: transform 0.2s;
     }
-
-    .dropdown-content {
-      position: absolute;
-      top: 110%;
-      background-color: $mainBlueColor;
+    &:focus,
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

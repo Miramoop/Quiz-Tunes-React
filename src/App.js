@@ -127,7 +127,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header handleResetQuiz={resetQuiz} />
       {error && <AlertBox message={errorMessage} />}
       {currentQuestionIndex === -1 && <Home startQuiz={handleStartQuiz} />}
       {currentQuestionIndex >= 0 &&
