@@ -4,7 +4,7 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => (
-  <footer className="footer footer-center text-primary-content p-2">
+  <footer className="footer footer-center text-primary-content">
     <aside>
       <img
         id="miramoopLogo"
@@ -15,7 +15,7 @@ const Footer = () => (
       <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
     </aside>
     <nav>
-      <div className="grid grid-flow-col gap-4 social-links">
+      <div className="grid grid-flow-col gap-1 social-links">
         <a
           href="https://github.com/Miramoop"
           target="_blank"

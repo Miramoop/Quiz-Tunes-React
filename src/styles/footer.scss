@@ -9,8 +9,10 @@
   .social-links {
     a {
       display: inline-block;
-      padding: 3vh;
+      padding: 20px;
+      margin: 10px;
       vertical-align: middle;
+      transition: transform 0.5s;
 
       &:focus,
       &:hover {
@@ -18,6 +20,7 @@
         color: $buttonLinkColor;
         outline: 2px solid #000;
         outline-offset: 2px;
+        transform: scale(0.8);
       }
     }
   }

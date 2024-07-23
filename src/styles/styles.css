@@ -115,14 +115,17 @@ header .handleResetQuiz .dropdown-content {
 }
 .footer .social-links a {
   display: inline-block;
-  padding: 3vh;
+  padding: 20px;
+  margin: 10px;
   vertical-align: middle;
+  transition: transform 0.5s;
 }
 .footer .social-links a:focus, .footer .social-links a:hover {
   background-color: #5a3149;
   color: #fff;
   outline: 2px solid #000;
   outline-offset: 2px;
+  transform: scale(0.8);
 }
 .footer .copyright {
   padding-top: 1vh;
