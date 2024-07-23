@@ -12,11 +12,12 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
     new Array(questions.length).fill(false)
   );
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     const allAnswered = answeredQuestions.every((answered) => answered);
     if (allAnswered) {
-      setError(false); 
+      setError(false);
     }
   }, [answeredQuestions]);
 
@@ -61,6 +62,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
       setIsQuizComplete(true);
     } else {
       setError(true);
+      setErrorMessage('Error! Please answer all the questions before clicking done!');
     }
   };
 
@@ -131,7 +133,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
           </button>
         )}
       </div>
-      {error && <AlertBox />}
+      {error && <AlertBox message={errorMessage} />}
     </section>
   );
 };

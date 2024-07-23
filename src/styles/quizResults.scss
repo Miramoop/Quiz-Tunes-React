@@ -19,10 +19,10 @@
   max-width: 560px;
   margin: auto;
 
-    iframe {
-      width: 100%;
-      height: auto;
-    }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
 }
 #spotifyContent {
   padding: 5px;
@@ -32,10 +32,10 @@
   flex-grow: 1;
   transition-duration: 0.4s;
 
-    &:hover {
-      background-color: $hoverColor;
-      color: $mainTextColor;
-    }
+  &:hover {
+    background-color: $hoverColor;
+    color: $mainTextColor;
+  }
 }
 
 @media screen and (min-width: 768px) {
