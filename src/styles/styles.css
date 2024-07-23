@@ -41,20 +41,6 @@ img {
   max-width: 100%;
 }
 
-button {
-  align-items: center;
-  background: #AAB0EE;
-  border-radius: 10px;
-  padding: 3vh;
-  transition-duration: 0.4s;
-}
-button:focus, button:hover {
-  background-color: #6a5acd;
-  color: #AAB0EE;
-  outline: 2px solid #000;
-  outline-offset: 2px;
-}
-
 #quiz,
 #questionText,
 #choicesText,
@@ -134,7 +120,6 @@ footer .copyright {
   text-align: center;
   width: 100%;
   color: #000;
-  background-image: linear-gradient(180deg, #315a42, #5a5731);
 }
 
 .hero {
@@ -268,15 +253,37 @@ footer .copyright {
 .quiz-navigation .navigation-button:focus, .quiz-navigation .navigation-button:hover {
   background-color: #5a3149;
   color: #fff;
-  outline: 2px solid black;
+  outline: 2px solid #000;
   outline-offset: 2px;
 }
 
+.steps {
+  visibility: hidden;
+  padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .steps {
+    visibility: visible;
+    transform: scale(0.8);
+  }
+}
+@media screen and (min-width: 800px) {
+  .steps {
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .steps {
+    visibility: visible;
+    transform: scale(1.2);
+  }
+}
 #results {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-image: linear-gradient(180deg, #315A42, #5A5731);
 }
 
 #buttonHolder,
