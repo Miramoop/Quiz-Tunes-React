@@ -11,8 +11,8 @@
   width: 100%;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: black;
-  color: white;
+  background-color: $imageButtonBackground;
+  color: $mainTextColor;
   font-size: 1.5rem;
   text-align: center;
   border-radius: 8px;
@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: $imageButtonBackground;
   transition: background-color 0.3s;
 
   &:hover,
@@ -79,8 +79,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
-  color: white;
+  background: $imageButtonBackground;
+  color: $mainTextColor;
   text-align: center;
   padding: 10px;
   box-sizing: border-box;

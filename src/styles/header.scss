@@ -1,7 +1,6 @@
 header {
   .navbar {
-    background: $mainBlueColor;
-    filter: drop-shadow(0 0 0.75rem $borderColor);
+    background: $backgroundPrimary;
   }
 
   .header-navigation-bar-button {
@@ -22,7 +21,7 @@ header {
     position: absolute;
     top: 110%;
     right: -11px;
-    background-color: #31355a;
+    background-color: $backgroundPrimary;
   }
 
   .menu-item {

@@ -21,7 +21,7 @@ const YoutubeMockup = ({ youTubeVideos }) => {
       ? he.decode(youTubeVideos[0].snippet.title)
       : "No video title available";
   return (
-    <div className="youtube-mockup">
+    <section className="youtube-mockup">
       <div className="browser-toolbar">
         <div className="navbar">
           <div className="navbar-start">
@@ -81,7 +81,7 @@ const YoutubeMockup = ({ youTubeVideos }) => {
           <p>No videos available</p>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

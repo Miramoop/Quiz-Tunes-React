@@ -59,8 +59,7 @@ img {
 }
 
 header .navbar {
-  background: #31355a;
-  filter: drop-shadow(0 0 0.75rem #000);
+  background: #282339;
 }
 header .header-navigation-bar-button {
   padding: 10px;
@@ -78,7 +77,7 @@ header .dropdown-content {
   position: absolute;
   top: 110%;
   right: -11px;
-  background-color: #31355a;
+  background-color: #282339;
 }
 header .menu-item a {
   display: inline-block;
@@ -109,13 +108,14 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
   text-align: center;
   width: 100%;
   color: #fff;
-  background-color: #5a5731;
-  filter: drop-shadow(0 0 0.75rem #000);
+  background-color: #6f57c9;
 }
 .footer .companyName {
   font-weight: bold;
 }
-
+.footer .social-links {
+  display: flex;
+}
 .footer .social-links a {
   display: inline-block;
   padding: 5px 20px;
@@ -134,7 +134,6 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
   text-align: center;
   width: 100%;
   color: #fff;
-  background-image: linear-gradient(180deg, #315a42, #5a5731);
 }
 
 .hero {
@@ -144,7 +143,7 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
 #startQuizButton {
   align-items: center;
   outline: 2px solid #000;
-  background: #31355a;
+  background: #fff;
   border-radius: 10px;
   padding: 3vh;
   transition-duration: 0.4s;
@@ -169,8 +168,8 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
   width: 100%;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   font-size: 1.5rem;
   text-align: center;
   border-radius: 8px;
@@ -202,7 +201,7 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: #000;
   transition: background-color 0.3s;
 }
 .MuiButtonBase-root:hover, .MuiButtonBase-root.Mui-focusVisible {
@@ -237,8 +236,8 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
@@ -339,7 +338,7 @@ button {
 }
 
 .btn-primary {
-  background-color: #6f57c9;
+  background-color: #fff;
   border-color: none;
   color: #fff;
   font-weight: normal;

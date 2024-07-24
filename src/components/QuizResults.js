@@ -11,18 +11,16 @@ const QuizResults = ({
 }) => {
   return (
     <section id="results">
-      {/* {spotifyTrack && spotifyLink && dominantGenre ? (
+      {spotifyTrack && spotifyLink && dominantGenre ? (
         <SpotifyCard
           spotifyTrack={spotifyTrack}
           spotifyLink={spotifyLink}
           dominantGenre={dominantGenre}
         />
       ) : (
-        <p>No Spotify Recommendations available.</p>
-      )} */}
-
+        <p>No Spotify recommendations available.</p>
+      )}
       <YoutubeMockup youTubeVideos={youTubeVideos} />
-
       <div id="buttonHolder">
         <button
           className="btn btn-primary"

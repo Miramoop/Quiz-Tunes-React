@@ -4,9 +4,7 @@
   text-align: center;
   width: 100%;
   color: $mainTextColor;
-  background-color: $mainBrownColor;
-  //   border: outset $mainBrownColor;
-  filter: drop-shadow(0 0 0.75rem $borderColor);
+  background-color: $backgroundSecondary;
 
   .companyName {
     font-weight: bold;
