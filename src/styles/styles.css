@@ -115,6 +115,7 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
 .footer .companyName {
   font-weight: bold;
 }
+
 .footer .social-links a {
   display: inline-block;
   padding: 5px 20px;
@@ -267,7 +268,7 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
 .quiz-navigation .navigation-button:focus, .quiz-navigation .navigation-button:hover {
   background-color: #5a3149;
   color: #fff;
-  outline: 2px solid black;
+  outline: 2px solid #000;
   outline-offset: 2px;
 }
 
