@@ -26,7 +26,7 @@
 }
 body {
   background: lightgoldenrodyellow;
-  background-image: linear-gradient(180deg, #315a42, #5a5731);
+  background-image: linear-gradient(180deg, #282339, #6f57c9);
   display: flex;
   flex-direction: column;
   margin: 0vh;
@@ -108,7 +108,7 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
   padding-top: 20px;
   text-align: center;
   width: 100%;
-  color: #000;
+  color: #fff;
   background-color: #5a5731;
   filter: drop-shadow(0 0 0.75rem #000);
 }
@@ -132,7 +132,7 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
 #home {
   text-align: center;
   width: 100%;
-  color: #000;
+  color: #fff;
   background-image: linear-gradient(180deg, #315a42, #5a5731);
 }
 
@@ -298,11 +298,24 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-image: linear-gradient(180deg, #315A42, #5A5731);
+}
+
+.card {
+  background-color: #000;
+}
+
+figure img {
+  margin: 10;
+}
+
+p,
+h2,
+a,
+button {
+  color: #fff;
 }
 
 #buttonHolder,
-.resultsContent p,
 #resultsSection .videoContent {
   align-content: space-between;
 }
@@ -324,13 +337,20 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
   padding: 5px;
 }
 
-#spotifyLink {
-  flex-grow: 1;
-  transition-duration: 0.4s;
+.btn-primary {
+  background-color: #6f57c9;
+  border-color: none;
+  color: #fff;
+  font-weight: normal;
+  padding: 10px;
+  transition: transform 0.2s;
 }
-#spotifyLink:hover {
+.btn-primary:focus, .btn-primary:hover {
   background-color: #5a3149;
-  color: #000;
+  color: #fff;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {

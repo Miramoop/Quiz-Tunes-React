@@ -1,4 +1,14 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircle,
+  faCircleXmark,
+  faArrowLeft,
+  faArrowRight,
+  faArrowRotateRight,
+  faSquareMinus,
+  faExpand,
+} from "@fortawesome/free-solid-svg-icons";
 import he from "he";
 
 const YoutubeMockup = ({ youTubeVideos }) => {
@@ -11,8 +21,33 @@ const YoutubeMockup = ({ youTubeVideos }) => {
       ? he.decode(youTubeVideos[0].snippet.title)
       : "No video title available";
   return (
-    <div className="mockup-browser bg-base-300 border">
-      <div className="mockup-browser-toolbar">
+    <div className="youtube-mockup">
+      <div className="browser-toolbar">
+        <div className="navbar">
+          <div className="navbar-start">
+            <button aria-label="Navigation Bar Button">
+              <FontAwesomeIcon icon={faArrowLeft} size="2x" />
+            </button>
+            <button aria-label="Navigation Bar Button">
+              <FontAwesomeIcon icon={faArrowRight} size="2x" />
+            </button>
+            <button aria-label="Navigation Bar Button">
+              <FontAwesomeIcon icon={faArrowRotateRight} size="2x" />
+            </button>
+          </div>
+          <div className="navbar-middle"></div>
+          <div className="navbar-end">
+            <button aria-label="Navigation Bar Button">
+              <FontAwesomeIcon icon={faSquareMinus} size="2x" />
+            </button>
+            <button aria-label="Navigation Bar Button">
+              <FontAwesomeIcon icon={faExpand} size="2x" />
+            </button>
+            <button aria-label="Navigation Bar Button">
+              <FontAwesomeIcon icon={faCircleXmark} size="2x" />
+            </button>
+          </div>
+        </div>
         <div className="input">{youtubeVideoUrl}</div>
       </div>
       <div className="bg-base-200 flex flex-col items-center px-4 py-16">
