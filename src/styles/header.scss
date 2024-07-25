@@ -1,46 +1,56 @@
 header {
   .navbar {
-    background: $mainBlueColor;
-    border: inset $mainBlueColor;
+    background: $backgroundPrimary;
   }
 
   .header-navigation-bar-button {
-    padding: 3vh;
+    padding: 10px;
     vertical-align: middle;
-
+    transition: transform 0.2s;
     &:focus,
     &:hover {
       background-color: $hoverColor;
       color: $buttonLinkColor;
       outline: 2px solid $outlineColor;
       outline-offset: 2px;
+      transform: scale(1.1);
     }
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 110%;
+    right: -11px;
+    background-color: $backgroundPrimary;
   }
 
   .menu-item {
     a {
       display: inline-block;
-      padding: 3vh;
+      padding: 20px;
+      margin: 10px;
       vertical-align: middle;
-
+      transition: transform 0.2s;
       &:focus,
       &:hover {
         background-color: $hoverColor;
         color: $buttonLinkColor;
         outline: 2px solid $outlineColor;
         outline-offset: 2px;
+        transform: scale(1.1);
       }
     }
   }
 
-  #headerLogo {
-    margin: 0;
-    max-width: 100px;
-  }
-
-  .dropdown-content {
-    position: absolute;
-    top: 110%;
-    background-color: $mainBlueColor;
+  .handleResetQuiz {
+    #headerLogo {
+      margin: 0;
+      max-width: 100px;
+      transition: transform 0.2s;
+    }
+    &:focus,
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

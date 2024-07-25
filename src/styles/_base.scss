@@ -26,7 +26,11 @@
 
 body {
   background: lightgoldenrodyellow;
-  background-image: linear-gradient(180deg, $mainGreenColor, $mainBrownColor);
+  background-image: linear-gradient(
+    180deg,
+    $backgroundPrimary,
+    $backgroundSecondary
+  );
   display: flex;
   flex-direction: column;
   margin: 0vh;
