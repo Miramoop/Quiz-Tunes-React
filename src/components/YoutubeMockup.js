@@ -146,7 +146,7 @@ const YouTubeMockup = ({ youTubeVideos }) => {
           </button>
         </div>
       </nav>
-      <div className="content-wrapper">
+      <div className="youtube-content-wrapper">
         <div className="video-section">
           {youTubeVideos && youTubeVideos.length > 0 ? (
             <article

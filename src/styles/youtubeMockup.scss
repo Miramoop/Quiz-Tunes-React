@@ -1,3 +1,7 @@
+.mockup {
+  margin-bottom: 15px;
+}
+
 //YouTube Mockup Styles
 .youtube-mockup {
   background-color: $grayOne;
@@ -221,7 +225,7 @@
   );
 }
 
-.content-wrapper {
+.youtube-content-wrapper {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -233,6 +237,14 @@
 .video-section {
   flex: 2;
   padding: 1rem;
+}
+
+.video-container,
+.youtube-description {
+  @media (max-width: 320px) {
+    max-width: 290px;
+    overflow: hidden;
+  }
 }
 
 .right-section {

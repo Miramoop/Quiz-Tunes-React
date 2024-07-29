@@ -331,6 +331,10 @@ button {
     text-align: center;
   }
 }
+.mockup {
+  margin-bottom: 15px;
+}
+
 .youtube-mockup {
   background-color: #2f4f4f;
 }
@@ -557,7 +561,7 @@ button {
   background-image: linear-gradient(105deg, transparent 0%, transparent 40%, #000 50%, transparent 60%, transparent 100%);
 }
 
-.content-wrapper {
+.youtube-content-wrapper {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -569,6 +573,14 @@ button {
 .video-section {
   flex: 2;
   padding: 1rem;
+}
+
+@media (max-width: 320px) {
+  .video-container,
+  .youtube-description {
+    max-width: 290px;
+    overflow: hidden;
+  }
 }
 
 .right-section {
@@ -633,6 +645,7 @@ button {
 
 .card {
   background-color: #000;
+  margin-bottom: 15px;
 }
 
 .card-body {
