@@ -23,7 +23,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import he from "he";
 
-const Mockup = ({ youTubeVideos }) => {
+const YouTubeMockup = ({ youTubeVideos }) => {
   const youtubeVideoUrl =
     youTubeVideos && youTubeVideos.length > 0
       ? `https://www.youtube.com/watch?v=${youTubeVideos[0].id.videoId}`
@@ -204,4 +204,4 @@ const Mockup = ({ youTubeVideos }) => {
   );
 };
 
-export default Mockup;
+export default YouTubeMockup;

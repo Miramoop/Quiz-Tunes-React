@@ -1,16 +1,23 @@
 .card {
   background-color: #000;
-  @media (min-width: 1300px) {
-    align-items: stretch;
-    flex-direction: row;
-  }
-  @media (max-width: 1000px) {
-    margin-bottom: 10px;
-  }
+}
+
+.card-body {
+  justify-content: center;
+  padding-top: 0px;
 }
 
 figure {
   img {
-    margin: 10;
+    margin: 25px 25px 25px 25px;
+    border-radius: 5%;
   }
+}
+
+h2 {
+  justify-content: center;
+}
+
+.spotify-content {
+  padding: 5px;
 }
