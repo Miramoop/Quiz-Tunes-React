@@ -327,12 +327,11 @@ button {
   #results {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
     text-align: center;
   }
 }
 .mockup {
-  margin-bottom: 15px;
+  margin: 15px;
 }
 
 .youtube-mockup {
@@ -645,7 +644,7 @@ button {
 
 .card {
   background-color: #000;
-  margin-bottom: 15px;
+  margin: 15px;
 }
 
 .card-body {
