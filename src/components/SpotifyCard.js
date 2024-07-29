@@ -2,7 +2,7 @@ import React from "react";
 
 const SpotifyCard = ({ spotifyTrack, spotifyLink, dominantGenre }) => {
   return (
-    <div className="card lg:card-side shadow-xl">
+    <div className="card shadow-xl">
       <figure>
         <img
           src={spotifyTrack.albumCover}
@@ -16,7 +16,7 @@ const SpotifyCard = ({ spotifyTrack, spotifyLink, dominantGenre }) => {
           <li>Artist: {spotifyTrack.artist}</li>
           <li>Album: {spotifyTrack.albumName}</li>
           <li>
-            Genre:{" "}
+            Genre:
             {dominantGenre
               ? dominantGenre.charAt(0).toUpperCase() + dominantGenre.slice(1)
               : "Not Available"}

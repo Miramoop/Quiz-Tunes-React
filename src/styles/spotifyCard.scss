@@ -1,0 +1,16 @@
+.card {
+  background-color: #000;
+  @media (min-width: 1300px) {
+    align-items: stretch;
+    flex-direction: row;
+  }
+  @media (max-width: 1000px) {
+    margin-bottom: 10px;
+  }
+}
+
+figure {
+  img {
+    margin: 10;
+  }
+}
