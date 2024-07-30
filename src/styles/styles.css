@@ -551,20 +551,15 @@ button {
   }
 }
 
-.youtube-search-icon-mobile {
-  display: none;
-}
-@media (max-width: 375px) {
-  .youtube-search-icon-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #cfcbcb;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-left: 10px;
-  }
+.youtube-search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cfcbcb;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
 }
 
 @media (max-width: 425px) {
@@ -579,11 +574,6 @@ button {
   border-radius: 0.5rem;
   color: #fff;
   box-sizing: border-box;
-}
-
-.youtube-search-icon {
-  background-color: #cfcbcb;
-  padding: 0px 10px 0px 10px;
 }
 
 .rounded-icon {
