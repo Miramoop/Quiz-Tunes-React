@@ -1,10 +1,10 @@
 .footer {
   margin: 0;
-  padding-top: 20px;
+  padding: 10px 0;
   text-align: center;
   width: 100%;
   color: $mainTextColor;
-  background-color: $backgroundSecondary;
+  row-gap: 1rem;
 
   .companyName {
     font-weight: bold;

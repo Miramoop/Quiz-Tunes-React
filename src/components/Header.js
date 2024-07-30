@@ -23,7 +23,7 @@ const Header = ({ handleResetQuiz }) => {
           <div className="dropdown lg:hidden">
             <button
               className="header-navigation-bar-button lg:hidden"
-              aria-label="Navigation Bar Button"
+              aria-label="Navigation Bar"
             >
               <FontAwesomeIcon icon={faBars} size="2x" />
             </button>

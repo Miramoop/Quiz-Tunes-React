@@ -86,11 +86,11 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
 
 .footer {
   margin: 0;
-  padding-top: 20px;
+  padding: 10px 0;
   text-align: center;
   width: 100%;
   color: #fff;
-  background-color: #6f57c9;
+  row-gap: 1rem;
 }
 .footer .companyName {
   font-weight: bold;
