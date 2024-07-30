@@ -8,6 +8,7 @@ const Home = ({ startQuiz }) => (
         <div className="max-w-md">
           <h1
             className="mb-5 text-5xl font-bold"
+            role="alert"
             aria-live="polite"
             aria-label=" Welcome to Quiz Tunes!"
           >
@@ -15,6 +16,7 @@ const Home = ({ startQuiz }) => (
           </h1>
           <p
             className="mb-5"
+            role="alert"
             aria-live="polite"
             aria-label="Discover new music with Quiz Tunes, a web application that offers a fun and interactive quiz experience."
           >
