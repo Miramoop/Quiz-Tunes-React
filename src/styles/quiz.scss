@@ -106,6 +106,8 @@
     padding: 3vh;
     transition-duration: 0.4s;
     margin: 0 10px;
+    color: $mainButtonTextColor;
+    font-weight: bold;
 
     &:focus,
     &:hover {

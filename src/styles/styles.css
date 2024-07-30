@@ -125,7 +125,9 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
 #startQuizButton {
   align-items: center;
   outline: 2px solid #000;
-  background: #fff;
+  font-weight: bold;
+  color: #000;
+  background: #cfcbcb;
   border-radius: 10px;
   padding: 3vh;
   transition-duration: 0.4s;
@@ -245,6 +247,8 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
   padding: 3vh;
   transition-duration: 0.4s;
   margin: 0 10px;
+  color: #000;
+  font-weight: bold;
 }
 .quiz-navigation .navigation-button:focus, .quiz-navigation .navigation-button:hover {
   background-color: #5a3149;
@@ -276,6 +280,29 @@ header .handleResetQuiz:focus, header .handleResetQuiz:hover {
     transform: scale(1.2);
   }
 }
+#quizComplete {
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}
+
+#calculateResultsButton {
+  align-items: center;
+  outline: 2px solid #000;
+  background: #cfcbcb;
+  border-radius: 10px;
+  padding: 3vh;
+  transition-duration: 0.4s;
+  font-weight: bold;
+  color: #000;
+}
+#calculateResultsButton:focus, #calculateResultsButton:hover {
+  background-color: #5a3149;
+  color: #fff;
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
 p,
 h2,
 a,
@@ -301,20 +328,21 @@ button {
   height: auto;
 }
 
-.btn-primary {
-  background-color: #fff;
-  border-color: none;
-  color: #fff;
-  font-weight: normal;
-  padding: 10px;
-  transition: transform 0.2s;
+#resetQuizButton {
+  align-items: center;
+  outline: 2px solid #000;
+  font-weight: bold;
+  color: #000;
+  background: #cfcbcb;
+  border-radius: 10px;
+  padding: 3vh;
+  transition-duration: 0.4s;
 }
-.btn-primary:focus, .btn-primary:hover {
+#resetQuizButton:focus, #resetQuizButton:hover {
   background-color: #5a3149;
   color: #fff;
-  outline: 2px solid #fff;
+  outline: 2px solid #000;
   outline-offset: 2px;
-  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {

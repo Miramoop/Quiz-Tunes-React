@@ -11,6 +11,8 @@
   border-radius: 10px;
   padding: 3vh;
   transition-duration: 0.4s;
+  font-weight: bold;
+  color: $mainButtonTextColor;
 
   &:focus,
   &:hover {

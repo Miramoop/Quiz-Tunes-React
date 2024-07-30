@@ -24,20 +24,22 @@ button {
   }
 }
 
-.btn-primary {
-  background-color: $buttonColor;
-  border-color: none;
-  color: $mainTextColor;
-  font-weight: normal;
-  padding: 10px;
-  transition: transform 0.2s;
+#resetQuizButton {
+  align-items: center;
+  outline: 2px solid $outlineColor;
+  font-weight: bold;
+  color: $mainButtonTextColor;
+  background: $buttonColor;
+  border-radius: 10px;
+  padding: 3vh;
+  transition-duration: 0.4s;
+
   &:focus,
   &:hover {
     background-color: $hoverColor;
     color: $buttonLinkColor;
-    outline: 2px solid #fff;
+    outline: 2px solid $outlineColor;
     outline-offset: 2px;
-    transform: scale(1.1);
   }
 }
 

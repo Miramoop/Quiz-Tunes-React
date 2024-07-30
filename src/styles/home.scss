@@ -11,6 +11,8 @@
 #startQuizButton {
   align-items: center;
   outline: 2px solid $outlineColor;
+  font-weight: bold;
+  color: $mainButtonTextColor;
   background: $buttonColor;
   border-radius: 10px;
   padding: 3vh;
