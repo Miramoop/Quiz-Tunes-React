@@ -10,8 +10,8 @@
 
 figure {
   img {
-    margin: 25px 25px 25px 25px;
     border-radius: 5%;
+    margin: 25px;
 
     @media (max-width: 1024px) {
       width: 270px;

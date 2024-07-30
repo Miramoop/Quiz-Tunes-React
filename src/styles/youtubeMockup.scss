@@ -21,23 +21,23 @@
 }
 
 .browser-toolbar {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
   background-color: $blueTwo;
-  padding: 0 1rem;
-  box-sizing: border-box;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
+  padding: 0 1rem;
+  width: 100%;
 }
 
 .browser-toolbar-start,
 .browser-toolbar-middle,
 .browser-toolbar-end {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .browser-toolbar-start {
@@ -81,11 +81,11 @@
 
 .mockup-navbar,
 .youtube-mockup-navbar {
-  display: flex;
   align-items: center;
+  background-color: $blackOne;
+  display: flex;
   min-height: 3rem;
   width: 100%;
-  background-color: $blackOne;
 }
 
 .youtube-navbar-icons {
@@ -101,12 +101,12 @@
 
 .mockup-navbar-start,
 .youtube-navbar-start {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
   align-items: center;
+  display: flex;
+  justify-content: flex-start;
   padding-left: 5px;
   padding-right: 5px;
+  width: 100%;
 }
 
 .mockup-navbar-start {
@@ -123,11 +123,11 @@
 
 .mockup-navbar-end,
 .youtube-navbar-end {
+  align-items: center;
   display: flex;
-  width: 100%;
   justify-content: flex-end;
   padding-right: 5px;
-  align-items: center;
+  width: 100%;
 }
 
 .mockup-navbar-end .skeleton,
@@ -145,34 +145,33 @@
 }
 
 .mockup-navbar-middle {
-  flex: 1;
   display: flex;
+  flex: 1;
   justify-content: center;
 
   @media (max-width: 520px) {
     display: left;
-    width: 80%;
     padding-left: 5px;
+    width: 80%;
   }
 }
 
 .address-bar {
-  display: flex;
   align-items: center;
-  justify-content: left;
-  width: 100%;
-  height: 2rem;
-  padding: 0 1rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid transparent;
   background-color: $grayTwo;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
   color: $whiteOne;
+  display: flex;
+  font-size: 1rem;
+  height: 2rem;
+  justify-content: left;
+  line-height: 1.5rem;
   overflow: hidden;
-  white-space: nowrap;
+  padding: 0 1rem;
   text-overflow: ellipsis;
-
+  white-space: nowrap;
+  width: 100%;
   @media (max-width: 1024px) {
     width: 90%;
   }
@@ -183,8 +182,8 @@
 }
 
 .youtube-search-wrapper {
-  display: flex;
   align-items: center;
+  display: flex;
   width: 100%;
   @media (max-width: 320px) {
     padding-left: 10px;
@@ -192,27 +191,27 @@
 }
 
 .youtube-search {
-  display: flex;
   align-items: center;
-  flex: 1;
   background-color: $grayTwo;
-  border-radius: 0.5rem;
   border-color: $youtubeBorder;
+  border-radius: 0.5rem;
   border-width: 2px;
+  display: flex;
+  flex: 1;
   @media (max-width: 375px) {
     display: none;
   }
 }
 
 .youtube-search-icon {
-  display: flex;
   align-items: center;
-  justify-content: center;
   background-color: $youtubeBorder;
-  width: 30px;
-  height: 30px;
   border-radius: 50%;
+  display: flex;
+  height: 30px;
+  justify-content: center;
   margin-left: 10px;
+  width: 30px;
 }
 
 .youtube-icon {
@@ -222,40 +221,38 @@
 }
 .youtube-search-input {
   background: $grayTwo;
-  padding: 0px 100px 0px 100px;
   border-radius: 0.5rem;
-  color: $mainTextColor;
   box-sizing: border-box;
+  color: $mainTextColor;
+  padding: 0px 100px 0px 100px;
 }
 
 .rounded-icon {
-  display: flex;
   align-items: center;
-  justify-content: center;
   background-color: $youtubeBorder;
-  width: 30px;
-  height: 30px;
   border-radius: 50%;
+  display: flex;
+  height: 30px;
+  justify-content: center;
   margin-left: 10px;
+  width: 30px;
 }
 
 .mobile-icons {
   display: none;
   @media (max-width: 425px) {
-    display: flex;
     align-items: center;
-    justify-content: center;
     background-color: $youtubeBorder;
-    width: 30px;
-    height: 30px;
     border-radius: 50%;
+    display: flex;
+    height: 30px;
+    justify-content: center;
     margin-left: 10px;
+    width: 30px;
   }
 }
 
 .skeleton {
-  border-color: $youtubeBorder;
-  border-width: 1px;
   background-color: $grayOne;
   background-image: linear-gradient(
     105deg,
@@ -265,6 +262,8 @@
     transparent 60%,
     transparent 100%
   );
+  border-color: $youtubeBorder;
+  border-width: 1px;
 }
 
 .youtube-navbar-skeleton {
@@ -275,12 +274,12 @@
 }
 
 .youtube-content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
   background-color: $grayTwo;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
 .video-section {
@@ -330,8 +329,8 @@
 }
 
 .youtube-title {
-  display: flex;
   align-items: left;
+  display: flex;
 }
 
 .youtube-description {
@@ -347,16 +346,16 @@
 }
 
 .video-info {
-  display: flex;
   border-radius: 5px;
-  padding-top: 1px;
+  display: flex;
   padding-bottom: 5px;
+  padding-top: 1px;
 }
 
 .youtube-title {
+  color: $mainTextColor;
   font-size: 1.25rem;
   font-weight: bold;
-  color: $mainTextColor;
 }
 
 .youtube-description {
