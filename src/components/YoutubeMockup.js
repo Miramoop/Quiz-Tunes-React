@@ -129,14 +129,11 @@ const YouTubeMockup = ({ youTubeVideos }) => {
               >
                 Search
               </div>
-              <div className="youtube-search-icon">
-                <FontAwesomeIcon icon={faMagnifyingGlass} size="1x" />
-              </div>
             </div>
             <div className="rounded-icon">
               <FontAwesomeIcon icon={faMicrophone} size="1x" />
             </div>
-            <div className="youtube-search-icon-mobile">
+            <div className="youtube-search-icon">
               <FontAwesomeIcon icon={faMagnifyingGlass} size="1x" />
             </div>
           </div>
