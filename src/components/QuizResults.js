@@ -23,7 +23,6 @@ const QuizResults = ({
       <YoutubeMockup youTubeVideos={youTubeVideos} />
       <div id="buttonHolder">
         <button
-          // className="btn btn-primary"
           id="resetQuizButton"
           onClick={resetQuiz}
           aria-label="Reset and Start the Quiz Over"
