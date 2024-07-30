@@ -1,12 +1,11 @@
-#results {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-image: linear-gradient(180deg, #315A42, #5A5731);
+p,
+h2,
+a,
+button {
+  color: $mainTextColor;
 }
 
 #buttonHolder,
-.resultsContent p,
 #resultsSection .videoContent {
   align-content: space-between;
 }
@@ -24,17 +23,21 @@
     height: auto;
   }
 }
-#spotifyContent {
-  padding: 5px;
-}
 
-#spotifyLink {
-  flex-grow: 1;
-  transition-duration: 0.4s;
-
+.btn-primary {
+  background-color: $buttonColor;
+  border-color: none;
+  color: $mainTextColor;
+  font-weight: normal;
+  padding: 10px;
+  transition: transform 0.2s;
+  &:focus,
   &:hover {
     background-color: $hoverColor;
-    color: $mainTextColor;
+    color: $buttonLinkColor;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    transform: scale(1.1);
   }
 }
 
@@ -45,11 +48,10 @@
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1024px) {
   #results {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
   }
 }

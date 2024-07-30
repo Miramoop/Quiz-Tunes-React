@@ -4,17 +4,17 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => (
-  <footer className="footer footer-center text-primary-content">
-    <aside>
-      {/* <img
-        id="miramoopLogo"
-        src="/img/logo/miramoopLogo.png"
-        alt="Miramoop Logo"
-      /> */}
-      <p className="companyName">Miramoop Coding</p>
-      <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
-      <nav>
-        <div className="grid grid-flow-col social-links">
+<footer className="footer footer-center text-primary-content p-2">
+    <img
+      id="miramoopLogo"
+      src="/img/logo/miramoopLogo.png"
+      alt="Miramoop Logo"
+    />
+    <p className="font-bold">Miramoop Coding</p>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+    <nav>
+      <ul className="social-links">
+        <li>
           <a
             href="https://github.com/Miramoop"
             target="_blank"
@@ -23,6 +23,8 @@ const Footer = () => (
           >
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
+        </li>
+        <li>
           <a
             href="https://www.linkedin.com/in/mirandamorris845/"
             target="_blank"
@@ -31,6 +33,8 @@ const Footer = () => (
           >
             <FontAwesomeIcon icon={faLinkedin} size="2x" />
           </a>
+        </li>
+        <li>
           <a
             href="https://www.miramoop.com/"
             target="_blank"
@@ -39,9 +43,9 @@ const Footer = () => (
           >
             <FontAwesomeIcon icon={faBriefcase} size="2x" />
           </a>
-        </div>
-      </nav>
-    </aside>
+        </li>
+      </ul>
+    </nav>
   </footer>
 );
 
