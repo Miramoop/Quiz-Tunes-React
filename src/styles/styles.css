@@ -334,6 +334,10 @@ button {
   margin: 15px;
 }
 
+.no-hover-effect:hover {
+  cursor: default;
+}
+
 .youtube-mockup {
   background-color: #2f4f4f;
 }
@@ -405,6 +409,11 @@ button {
 
 .tabs {
   overflow: hidden;
+  white-space: nowrap;
+}
+
+.tabs ul li {
+  padding: 0 12px;
 }
 
 .mockup-navbar,
@@ -415,9 +424,14 @@ button {
   width: 100%;
   background-color: #000;
 }
-.mockup-navbar button,
-.youtube-mockup-navbar button {
+
+.youtube-navbar-icons {
   padding: 5px;
+}
+@media (max-width: 640px) {
+  .youtube-navbar-icons {
+    display: none;
+  }
 }
 
 .youtube-mockup-navbar {
@@ -429,13 +443,9 @@ button {
   display: flex;
   width: 100%;
   justify-content: flex-start;
+  align-items: center;
   padding-left: 5px;
-}
-@media (max-width: 320px) {
-  .mockup-navbar-start,
-  .youtube-navbar-start {
-    display: none;
-  }
+  padding-right: 5px;
 }
 
 @media (max-width: 600px) {
@@ -456,6 +466,7 @@ button {
   width: 100%;
   justify-content: flex-end;
   padding-right: 5px;
+  align-items: center;
 }
 
 @media (max-width: 640px) {
@@ -465,9 +476,12 @@ button {
   }
 }
 
-@media (max-width: 640px) {
-  .youtube-navbar-end {
-    visibility: hidden;
+.youtube-navbar-middle {
+  width: 100%;
+}
+@media (max-width: 425px) {
+  .youtube-navbar-middle {
+    display: none;
   }
 }
 
@@ -475,13 +489,6 @@ button {
   flex: 1;
   display: flex;
   justify-content: center;
-}
-@media (max-width: 375px) {
-  .mockup-navbar-middle {
-    display: left;
-    width: 50%;
-    padding-left: 5px;
-  }
 }
 @media (max-width: 520px) {
   .mockup-navbar-middle {
@@ -508,6 +515,15 @@ button {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+@media (max-width: 1024px) {
+  .address-bar {
+    width: 90%;
+  }
+}
+
+.address-bar-search-icon {
+  padding-right: 5px;
+}
 
 .youtube-search-wrapper {
   display: flex;
@@ -524,21 +540,56 @@ button {
   display: flex;
   align-items: center;
   flex: 1;
-  background-color: #000;
+  background-color: #808080;
   border-radius: 0.5rem;
   border-color: #cfcbcb;
   border-width: 2px;
 }
+@media (max-width: 375px) {
+  .youtube-search {
+    display: none;
+  }
+}
+
+.youtube-search-icon-mobile {
+  display: none;
+}
+@media (max-width: 375px) {
+  .youtube-search-icon-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cfcbcb;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .youtube-icon {
+    display: none;
+  }
+}
 
 .youtube-search-input {
-  background: transparent;
+  background: #808080;
+  padding: 0px 100px 0px 100px;
+  border-radius: 0.5rem;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 .youtube-search-icon {
   background-color: #cfcbcb;
+  padding: 0px 10px 0px 10px;
 }
 
 .rounded-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #cfcbcb;
   width: 30px;
   height: 30px;
@@ -546,12 +597,20 @@ button {
   margin-left: 10px;
 }
 
-.youtube-microphone-icon {
-  background-color: #cfcbcb;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-left: 10px;
+.mobile-icons {
+  display: none;
+}
+@media (max-width: 425px) {
+  .mobile-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cfcbcb;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
 }
 
 .skeleton {
@@ -559,6 +618,15 @@ button {
   border-width: 1px;
   background-color: #2f4f4f;
   background-image: linear-gradient(105deg, transparent 0%, transparent 40%, #000 50%, transparent 60%, transparent 100%);
+}
+
+.youtube-navbar-skeleton {
+  margin: 5px;
+}
+@media (max-width: 425px) {
+  .youtube-navbar-skeleton {
+    display: none;
+  }
 }
 
 .youtube-content-wrapper {
@@ -575,11 +643,26 @@ button {
   padding: 1rem;
 }
 
+@media (max-width: 375px) {
+  .video-container,
+  .youtube-description {
+    margin: 5px;
+    max-width: 300px;
+    overflow: hidden;
+  }
+}
 @media (max-width: 320px) {
   .video-container,
   .youtube-description {
-    max-width: 260px;
+    margin: 5px;
+    max-width: 250px;
     overflow: hidden;
+  }
+}
+
+@media (max-width: 320px) {
+  .youtube-share {
+    display: none;
   }
 }
 
@@ -657,6 +740,11 @@ button {
 figure img {
   margin: 25px 25px 25px 25px;
   border-radius: 5%;
+}
+@media (max-width: 1024px) {
+  figure img {
+    width: 270px;
+  }
 }
 @media (max-width: 320px) {
   figure img {

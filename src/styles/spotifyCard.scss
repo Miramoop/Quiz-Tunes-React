@@ -13,6 +13,10 @@ figure {
     margin: 25px 25px 25px 25px;
     border-radius: 5%;
 
+    @media (max-width: 1024px) {
+      width: 270px;
+    }
+
     @media (max-width: 320px) {
       width: 250px;
     }
