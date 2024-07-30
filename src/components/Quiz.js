@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import Typography from '@mui/material/Typography';
-import ImageButton from './ImageButton';
-import ImageOverlay from './ImageOverlay';
-import StepsComponent from './StepsComponent';
-import AlertBox from './AlertBox';
+import React, { useState, useEffect, useRef } from "react";
+import Typography from "@mui/material/Typography";
+import ImageButton from "./ImageButton";
+import ImageOverlay from "./ImageOverlay";
+import StepsComponent from "./StepsComponent";
+import AlertBox from "./AlertBox";
 
 const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -12,7 +12,9 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
     new Array(questions.length).fill(false)
   );
   const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
+  const [announcement, setAnnouncement] = useState("");
+  const liveRegionRef = useRef(null);
 
   useEffect(() => {
     const allAnswered = answeredQuestions.every((answered) => answered);
@@ -20,6 +22,20 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
       setError(false);
     }
   }, [answeredQuestions]);
+
+  useEffect(() => {
+    if (liveRegionRef.current) {
+      liveRegionRef.current.textContent = `Question ${
+        currentQuestionIndex + 1
+      }: ${questions[currentQuestionIndex].question}`;
+    }
+  }, [currentQuestionIndex, questions]);
+
+  useEffect(() => {
+    if (liveRegionRef.current && announcement) {
+      liveRegionRef.current.textContent = announcement;
+    }
+  }, [announcement]);
 
   const handleChoiceSelection = (selectedChoice) => {
     const previousChoice = selectedChoices[currentQuestionIndex];
@@ -46,23 +62,26 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
     });
 
     setAnsweredQuestions((prevAnswers) =>
-      prevAnswers.map((answered, index) =>
-        index === currentQuestionIndex || answered
+      prevAnswers.map(
+        (answered, index) => index === currentQuestionIndex || answered
       )
     );
+    setAnnouncement(`You have selected ${selectedChoice.choice}`);
   };
 
   const handleStepClick = (index) => {
     setCurrentQuestionIndex(index);
   };
-  
+
   const handleFinishQuiz = () => {
     const allAnswered = answeredQuestions.every((answered) => answered);
     if (allAnswered) {
       setIsQuizComplete(true);
     } else {
       setError(true);
-      setErrorMessage('Error! Please answer all the questions before clicking done!');
+      setErrorMessage(
+        "Error! Please answer all the questions before clicking done!"
+      );
     }
   };
 
@@ -78,7 +97,18 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
         handleStepClick={handleStepClick}
         answeredQuestions={answeredQuestions}
       />
-      <div id="questionText">{currentQuestion.question}</div>
+      <div
+        id="questionText"
+        role="alert"
+        aria-live="assertive"
+        aria-describedby="question-description"
+        ref={liveRegionRef}
+      >
+        <h2 id="question-description" className="sr-only">
+          Question {currentQuestionIndex + 1}
+        </h2>
+        <p>{currentQuestion.question}</p>
+      </div>
       <div className="choices">
         {currentQuestion.choices.map((choice) => {
           const isSelected =
@@ -88,10 +118,10 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
               key={choice.choice}
               onClick={() => handleChoiceSelection(choice)}
               style={{
-                border: isSelected ? '2px solid blue' : 'none',
+                border: isSelected ? "2px solid blue" : "none",
                 backgroundColor: isSelected
-                  ? 'rgba(0, 0, 255, 0.1)'
-                  : 'initial',
+                  ? "rgba(0, 0, 255, 0.1)"
+                  : "initial",
               }}
             >
               <div
