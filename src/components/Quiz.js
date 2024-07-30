@@ -100,7 +100,7 @@ const Quiz = ({ questions, weights, updateWeights, setIsQuizComplete }) => {
       <div
         id="questionText"
         role="alert"
-        aria-live="assertive"
+        aria-live="polite"
         aria-describedby="question-description"
         ref={liveRegionRef}
       >
