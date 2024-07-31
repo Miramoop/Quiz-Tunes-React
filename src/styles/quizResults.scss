@@ -6,7 +6,7 @@ button {
 }
 
 #buttonHolder,
-#resultsSection .videoContenst {
+#resultsSection .videoContent {
   align-content: space-between;
 }
 
@@ -22,9 +22,6 @@ button {
     width: 100%;
     height: auto;
   }
-}
-#spotifyContent {
-  padding: 5px;
 }
 
 .btn-primary {
@@ -55,7 +52,6 @@ button {
   #results {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
     text-align: center;
   }
 }

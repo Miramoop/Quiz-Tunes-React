@@ -23,7 +23,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import he from "he";
 
-const Mockup = ({ youTubeVideos }) => {
+const YouTubeMockup = ({ youTubeVideos }) => {
   const youtubeVideoUrl =
     youTubeVideos && youTubeVideos.length > 0
       ? `https://www.youtube.com/watch?v=${youTubeVideos[0].id.videoId}`
@@ -39,114 +39,128 @@ const Mockup = ({ youTubeVideos }) => {
 
   return (
     <section className="mockup">
-      <header className="browser-toolbar">
+      <div className="browser-toolbar no-hover-effect" role="presentation">
         <div className="browser-toolbar-start">
-          <button className="toolbar-icons" aria-label="toolbar icons">
+          <div className="toolbar-icons" aria-label="toolbar icons">
             <FontAwesomeIcon icon={faWindowRestore} size="1x" />
-          </button>
-          <div role="tablist" className="tabs tabs-boxed">
-            <a role="tab" className="tab tab-active">
-              YouTube
-            </a>
-            <a role="tab" className="tab">
-              Miramoop Coding
-            </a>
-            <a role="tab" className="tab">
-              Quiz Tunes
-            </a>
           </div>
-          <button className="toolbar-icons-end" aria-label="toolbar icons">
+          <div className="tabs tabs-boxed no-hover-effect" role="presentation">
+            <ul>
+              <li role="tab" className="tab tab-active no-hover-effect">
+                YouTube
+              </li>
+              <li role="tab" className="tab no-hover-effect">
+                Miramoop Coding
+              </li>
+              <li role="tab" className="tab no-hover-effect">
+                Quiz Tunes
+              </li>
+            </ul>
+          </div>
+          <div className="toolbar-icons-end">
             <FontAwesomeIcon icon={faPlus} size="1x" />
-          </button>
-          <button className="toolbar-icons-end" aria-label="toolbar icons">
+          </div>
+          <div className="toolbar-icons-end">
             <FontAwesomeIcon icon={faChevronDown} size="1x" />
-          </button>
+          </div>
         </div>
         <div className="browser-toolbar-middle"></div>
         <div className="browser-toolbar-end">
-          <button className="toolbar-icons" aria-label="toolbar icons">
+          <div className="toolbar-icons">
             <FontAwesomeIcon icon={faMinus} size="1x" />
-          </button>
-          <button className="toolbar-icons" aria-label="toolbar icons">
+          </div>
+          <div className="toolbar-icons">
             <FontAwesomeIcon icon={faExpand} size="1x" />
-          </button>
-          <button className="toolbar-icons" aria-label="toolbar icons">
+          </div>
+          <div className="toolbar-icons">
             <FontAwesomeIcon icon={faXmark} size="1x" />
-          </button>
+          </div>
         </div>
-      </header>
-      <nav className="mockup-navbar">
+      </div>
+      <div className="mockup-navbar">
         <div className="mockup-navbar-start">
-          <button className="toolbar-icons" aria-label="toolbar icons">
+          <div className="toolbar-icons">
             <FontAwesomeIcon icon={faArrowLeft} size="1x" />
-          </button>
-          <button className="toolbar-icons" aria-label="toolbar icons">
+          </div>
+          <div className="toolbar-icons">
             <FontAwesomeIcon icon={faArrowRight} size="1x" />
-          </button>
-          <button className="toolbar-icons" aria-label="toolbar icons">
+          </div>
+          <div className="toolbar-icons">
             <FontAwesomeIcon icon={faArrowRotateRight} size="1x" />
-          </button>
+          </div>
         </div>
         <div className="mockup-navbar-middle">
-          <div className="address-bar">
-            <button className="address-bar-search-icon">
+          <div className="address-bar" role="presentation">
+            <div className="address-bar-search-icon">
               <FontAwesomeIcon icon={faMagnifyingGlass} size="1x" />
-            </button>
-            <span className="youtube-video-url">{youtubeVideoUrl}</span>
+            </div>
+            <span className="youtube-video-url no-hover-effect">
+              {youtubeVideoUrl}
+            </span>
           </div>
         </div>
         <div className="mockup-navbar-end">
-          <button>
+          <div>
             <div className="skeleton h-5 w-5 shrink-0 rounded-full"></div>
-          </button>
-          <button className="toolbar-icons" aria-label="toolbar icons">
+          </div>
+          <div className="toolbar-icons">
             <FontAwesomeIcon icon={faPuzzlePiece} size="1x" />
-          </button>
-          <button className="mobile-toolbar-icon" aria-label="toolbar icons">
+          </div>
+          <div className="mobile-toolbar-icon">
             <FontAwesomeIcon icon={faBars} size="1x" />
-          </button>
+          </div>
         </div>
-      </nav>
-      <nav className="youtube-mockup-navbar">
+      </div>
+      <div className="youtube-mockup-navbar">
         <div className="youtube-navbar-start">
-          <button>
+          <div className="youtube-navbar-bars">
             <FontAwesomeIcon icon={faBars} size="1x" />
-          </button>
-          <button className="youtube-icon">
+          </div>
+          <div className="youtube-navbar-icons youtube-icon">
             <FontAwesomeIcon icon={faYoutube} size="1x" />
-          </button>
+          </div>
         </div>
         <div className="youtube-navbar-middle">
           <div className="youtube-search-wrapper">
             <div className="youtube-search">
-              <input
-                className="youtube-search-input"
-                type="text"
-                placeholder="Search"
-                disabled
-              />
-              <button className="youtube-search-icon">
+              <div
+                className="youtube-search-input no-hover-effect"
+                role="presentation"
+              >
+                Search
+              </div>
+              <div className="youtube-search-icon">
                 <FontAwesomeIcon icon={faMagnifyingGlass} size="1x" />
-              </button>
+              </div>
             </div>
-            <button className="rounded-icon">
+            <div className="rounded-icon">
               <FontAwesomeIcon icon={faMicrophone} size="1x" />
-            </button>
+            </div>
+            <div className="youtube-search-icon-mobile">
+              <FontAwesomeIcon icon={faMagnifyingGlass} size="1x" />
+            </div>
           </div>
         </div>
         <div className="youtube-navbar-end">
-          <button className="youtube-icons" aria-label="youtube icons">
+          <div className="mobile-icons">
+            <FontAwesomeIcon icon={faMicrophone} size="1x" />
+          </div>
+          <div className="mobile-icons">
+            <FontAwesomeIcon icon={faMagnifyingGlass} size="1x" />
+          </div>
+
+          <div className="youtube-navbar-icons">
             <FontAwesomeIcon icon={faVideo} size="1x" />
-          </button>
-          <button className="youtube-icons" aria-label="youtube icons">
+          </div>
+          <div className="youtube-navbar-icons">
             <FontAwesomeIcon icon={faBell} size="1x" />
-          </button>
-          <button>
-            <div className="skeleton h-5 w-5 shrink-0 rounded-full"></div>
-          </button>
+          </div>
+          <div>
+            <div className="skeleton h-5 w-5 shrink-0 rounded-full youtube-navbar-skeleton"></div>
+          </div>
         </div>
-      </nav>
-      <div className="content-wrapper">
+      </div>
+      <div className="youtube-content-wrapper">
         <div className="video-section">
           {youTubeVideos && youTubeVideos.length > 0 ? (
             <article
@@ -163,7 +177,9 @@ const Mockup = ({ youTubeVideos }) => {
               ></iframe>
               <div className="video-info">
                 <div className="flex flex-col w-full">
-                  <div className="youtube-title">{youtubeTitle}</div>
+                  <div className="youtube-title" role="presentation">
+                    {youtubeTitle}
+                  </div>
                   <div className="flex w-full mt-2 justify-start">
                     <div className="flex items-center gap-4">
                       <div className="skeleton h-8 w-8 shrink-0 rounded-full"></div>
@@ -171,27 +187,32 @@ const Mockup = ({ youTubeVideos }) => {
                     </div>
                     <div className="flex flex-col gap-4 ml-4 flex-1">
                       <div className="flex justify-end">
-                        <button className="rounded-icon">
+                        <div className="rounded-icon">
                           <FontAwesomeIcon icon={faThumbsUp} size="1x" />
-                        </button>
-                        <button className="rounded-icon">
+                        </div>
+                        <div className="rounded-icon">
                           <FontAwesomeIcon icon={faThumbsDown} size="1x" />
-                        </button>
-                        <button className="rounded-icon">
+                        </div>
+                        <div className="rounded-icon youtube-share">
                           <FontAwesomeIcon icon={faShare} size="1x" />
-                        </button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="youtube-description">{youtubeDescription}</div>
+              <div
+                className="youtube-description no-hover-effect"
+                role="presentation"
+              >
+                {youtubeDescription}
+              </div>
             </article>
           ) : (
             <p>No videos available</p>
           )}
         </div>
-        <div className="right-section">
+        <div className="right-section" role="presentation">
           <div className="skeleton h-32 w-full"></div>
           <div className="skeleton h-10 w-full"></div>
           <div className="skeleton h-32 w-full"></div>
@@ -204,4 +225,4 @@ const Mockup = ({ youTubeVideos }) => {
   );
 };
 
-export default Mockup;
+export default YouTubeMockup;

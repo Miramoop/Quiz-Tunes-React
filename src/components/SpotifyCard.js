@@ -11,17 +11,19 @@ const SpotifyCard = ({ spotifyTrack, spotifyLink, dominantGenre }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">Your Recommended Song is:</h2>
-        <ul>
-          <li>Track: {spotifyTrack.name}</li>
-          <li>Artist: {spotifyTrack.artist}</li>
-          <li>Album: {spotifyTrack.albumName}</li>
-          <li>
-            Genre:
-            {dominantGenre
-              ? dominantGenre.charAt(0).toUpperCase() + dominantGenre.slice(1)
-              : "Not Available"}
-          </li>
-        </ul>
+        <div className="spotify-content">
+          <ul>
+            <li>Track: {spotifyTrack.name}</li>
+            <li>Artist: {spotifyTrack.artist}</li>
+            <li>Album: {spotifyTrack.albumName}</li>
+            <li>
+              Genre:{" "}
+              {dominantGenre
+                ? dominantGenre.charAt(0).toUpperCase() + dominantGenre.slice(1)
+                : "Not Available"}
+            </li>
+          </ul>
+        </div>
         <div className="card-actions justify-end">
           <div id="spotifyLinkDiv">
             {spotifyLink && (

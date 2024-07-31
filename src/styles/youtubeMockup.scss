@@ -1,4 +1,11 @@
-//YouTube Mockup Styles
+.mockup {
+  margin: 15px;
+}
+
+.no-hover-effect:hover {
+  cursor: default;
+}
+
 .youtube-mockup {
   background-color: $grayOne;
 }
@@ -13,7 +20,6 @@
   width: 100%;
 }
 
-//Browser Toolbar Styles
 .browser-toolbar {
   display: flex;
   align-items: center;
@@ -24,6 +30,7 @@
   box-sizing: border-box;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  overflow: hidden;
 }
 
 .browser-toolbar-start,
@@ -65,9 +72,13 @@
 
 .tabs {
   overflow: hidden;
+  white-space: nowrap;
 }
 
-//browser navbar styles
+.tabs ul li {
+  padding: 0 12px;
+}
+
 .mockup-navbar,
 .youtube-mockup-navbar {
   display: flex;
@@ -75,9 +86,13 @@
   min-height: 3rem;
   width: 100%;
   background-color: $blackOne;
-  button {
-    padding: 5px;
+}
+
+.youtube-navbar-icons {
+  @media (max-width: 640px) {
+    display: none;
   }
+  padding: 5px;
 }
 
 .youtube-mockup-navbar {
@@ -89,10 +104,9 @@
   display: flex;
   width: 100%;
   justify-content: flex-start;
+  align-items: center;
   padding-left: 5px;
-  @media (max-width: 320px) {
-    display: none;
-  }
+  padding-right: 5px;
 }
 
 .mockup-navbar-start {
@@ -113,6 +127,7 @@
   width: 100%;
   justify-content: flex-end;
   padding-right: 5px;
+  align-items: center;
 }
 
 .mockup-navbar-end .skeleton,
@@ -122,9 +137,10 @@
   }
 }
 
-.youtube-navbar-end {
-  @media (max-width: 640px) {
-    visibility: hidden;
+.youtube-navbar-middle {
+  width: 100%;
+  @media (max-width: 425px) {
+    display: none;
   }
 }
 
@@ -132,12 +148,6 @@
   flex: 1;
   display: flex;
   justify-content: center;
-
-  @media (max-width: 375px) {
-    display: left;
-    width: 50%;
-    padding-left: 5px;
-  }
 
   @media (max-width: 520px) {
     display: left;
@@ -162,15 +172,22 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
 }
 
-//youtube
+.address-bar-search-icon {
+  padding-right: 5px;
+}
+
 .youtube-search-wrapper {
   display: flex;
   align-items: center;
   width: 100%;
   @media (max-width: 320px) {
-    padding-left: 20px;
+    padding-left: 10px;
   }
 }
 
@@ -178,33 +195,70 @@
   display: flex;
   align-items: center;
   flex: 1;
-  background-color: $blackOne;
+  background-color: $grayTwo;
   border-radius: 0.5rem;
   border-color: $youtubeBorder;
   border-width: 2px;
+  @media (max-width: 375px) {
+    display: none;
+  }
 }
 
+.youtube-search-icon-mobile {
+  display: none;
+  @media (max-width: 375px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $youtubeBorder;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+}
+
+.youtube-icon {
+  @media (max-width: 425px) {
+    display: none;
+  }
+}
 .youtube-search-input {
-  background: transparent;
+  background: $grayTwo;
+  padding: 0px 100px 0px 100px;
+  border-radius: 0.5rem;
+  color: $mainTextColor;
+  box-sizing: border-box;
 }
 
 .youtube-search-icon {
   background-color: $youtubeBorder;
+  padding: 0px 10px 0px 10px;
 }
 
 .rounded-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $youtubeBorder;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-left: 10px;
 }
-.youtube-microphone-icon {
-  background-color: $youtubeBorder;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-left: 10px;
+
+.mobile-icons {
+  display: none;
+  @media (max-width: 425px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $youtubeBorder;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
 }
 
 .skeleton {
@@ -221,7 +275,14 @@
   );
 }
 
-.content-wrapper {
+.youtube-navbar-skeleton {
+  margin: 5px;
+  @media (max-width: 425px) {
+    display: none;
+  }
+}
+
+.youtube-content-wrapper {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -233,6 +294,25 @@
 .video-section {
   flex: 2;
   padding: 1rem;
+}
+
+.video-container,
+.youtube-description {
+  @media (max-width: 375px) {
+    margin: 5px;
+    max-width: 300px;
+    overflow: hidden;
+  }
+  @media (max-width: 320px) {
+    margin: 5px;
+    max-width: 250px;
+    overflow: hidden;
+  }
+}
+.youtube-share {
+  @media (max-width: 320px) {
+    display: none;
+  }
 }
 
 .right-section {
@@ -276,8 +356,9 @@
 
 .video-info {
   display: flex;
-  padding: 1rem;
   border-radius: 5px;
+  padding-top: 1px;
+  padding-bottom: 5px;
 }
 
 .youtube-title {
