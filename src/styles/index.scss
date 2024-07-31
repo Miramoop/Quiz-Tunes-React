@@ -1,11 +1,14 @@
-@import './tailwind.css';
+@import "./tailwind.css";
 
-@import "./variables"; 
-@import "./base"; 
+@import "./variables";
+@import "./base";
 @import "./header";
 @import "./footer";
 @import "./home";
 @import "./quiz";
+@import "./quizComplete";
 @import "./quizResults";
+@import "./youtubeMockup";
+@import "./spotifyCard";
 
-@import 'daisyui/dist/full.css'; 
+@import "daisyui/dist/full.css";

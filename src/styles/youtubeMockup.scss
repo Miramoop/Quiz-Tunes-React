@@ -1,0 +1,367 @@
+.mockup {
+  margin: 15px;
+}
+
+.no-hover-effect:hover {
+  cursor: default;
+}
+
+.youtube-mockup {
+  background-color: $grayOne;
+}
+
+.main-content {
+  background-color: $grayTwo;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.browser-toolbar {
+  align-items: center;
+  background-color: $blueTwo;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.browser-toolbar-start,
+.browser-toolbar-middle,
+.browser-toolbar-end {
+  align-items: center;
+  display: flex;
+}
+
+.browser-toolbar-start {
+  justify-content: flex-start;
+}
+
+.browser-toolbar-middle {
+  flex: 1;
+  justify-content: center;
+}
+
+.browser-toolbar-end {
+  justify-content: flex-end;
+  @media (max-width: 425px) {
+    display: none;
+  }
+}
+
+.toolbar-icons {
+  padding: 10px;
+}
+
+.toolbar-icons-end {
+  padding: 10px;
+  @media (max-width: 425px) {
+    display: none;
+  }
+}
+.tabs-boxed {
+  background-color: transparent !important;
+}
+
+.tabs {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tabs ul li {
+  padding: 0 12px;
+}
+
+.mockup-navbar,
+.youtube-mockup-navbar {
+  align-items: center;
+  background-color: $blackOne;
+  display: flex;
+  min-height: 3rem;
+  width: 100%;
+}
+
+.youtube-navbar-icons {
+  @media (max-width: 640px) {
+    display: none;
+  }
+  padding: 5px;
+}
+
+.youtube-mockup-navbar {
+  background-color: $grayOne;
+}
+
+.mockup-navbar-start,
+.youtube-navbar-start {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100%;
+}
+
+.mockup-navbar-start {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.mockup-navbar-end {
+  @media (max-width: 640px) {
+    display: none;
+  }
+}
+
+.mockup-navbar-end,
+.youtube-navbar-end {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+  width: 100%;
+}
+
+.mockup-navbar-end .skeleton,
+.mockup-navbar-end .toolbar-icons {
+  @media (max-width: 640px) {
+    display: none;
+  }
+}
+
+.youtube-navbar-middle {
+  width: 100%;
+  @media (max-width: 425px) {
+    display: none;
+  }
+}
+
+.mockup-navbar-middle {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+
+  @media (max-width: 520px) {
+    display: left;
+    padding-left: 5px;
+    width: 80%;
+  }
+}
+
+.address-bar {
+  align-items: center;
+  background-color: $grayTwo;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  color: $whiteOne;
+  display: flex;
+  font-size: 1rem;
+  height: 2rem;
+  justify-content: left;
+  line-height: 1.5rem;
+  overflow: hidden;
+  padding: 0 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
+}
+
+.address-bar-search-icon {
+  padding-right: 5px;
+}
+
+.youtube-search-wrapper {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  @media (max-width: 320px) {
+    padding-left: 10px;
+  }
+}
+
+.youtube-search {
+  align-items: center;
+  background-color: $grayTwo;
+  border-color: $youtubeBorder;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  display: flex;
+  flex: 1;
+  @media (max-width: 375px) {
+    display: none;
+  }
+}
+
+.youtube-search-icon {
+  align-items: center;
+  background-color: $youtubeBorder;
+  border-radius: 50%;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  margin-left: 10px;
+  width: 30px;
+}
+
+.youtube-icon {
+  @media (max-width: 425px) {
+    display: none;
+  }
+}
+.youtube-search-input {
+  background: $grayTwo;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: $mainTextColor;
+  padding: 0px 100px 0px 100px;
+}
+
+.rounded-icon {
+  align-items: center;
+  background-color: $youtubeBorder;
+  border-radius: 50%;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  margin-left: 10px;
+  width: 30px;
+}
+
+.mobile-icons {
+  display: none;
+  @media (max-width: 425px) {
+    align-items: center;
+    background-color: $youtubeBorder;
+    border-radius: 50%;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    margin-left: 10px;
+    width: 30px;
+  }
+}
+
+.skeleton {
+  background-color: $grayOne;
+  background-image: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 40%,
+    $blackOne 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  border-color: $youtubeBorder;
+  border-width: 1px;
+}
+
+.youtube-navbar-skeleton {
+  margin: 5px;
+  @media (max-width: 425px) {
+    display: none;
+  }
+}
+
+.youtube-content-wrapper {
+  background-color: $grayTwo;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.video-section {
+  flex: 2;
+  padding: 1rem;
+}
+
+.video-container,
+.youtube-description {
+  @media (max-width: 375px) {
+    margin: 5px;
+    max-width: 300px;
+    overflow: hidden;
+  }
+  @media (max-width: 320px) {
+    margin: 5px;
+    max-width: 250px;
+    overflow: hidden;
+  }
+}
+.youtube-share {
+  @media (max-width: 320px) {
+    display: none;
+  }
+}
+
+.right-section {
+  flex: 0 1 250px;
+  padding: 15px;
+
+  @media (max-width: 1700px) {
+    display: none;
+  }
+}
+
+.right-section .skeleton {
+  margin-bottom: 0.5rem;
+  max-width: 100%;
+}
+
+.right-section .skeleton:last-child {
+  margin-bottom: 0;
+}
+
+.flex-col-gap {
+  margin-top: 1rem;
+}
+
+.youtube-title {
+  align-items: left;
+  display: flex;
+}
+
+.youtube-description {
+  background-color: $blackOne;
+  border-radius: 5px;
+  border-color: $youtubeBorder;
+  border-width: 1px;
+}
+
+.youtube-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.video-info {
+  border-radius: 5px;
+  display: flex;
+  padding-bottom: 5px;
+  padding-top: 1px;
+}
+
+.youtube-title {
+  color: $mainTextColor;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.youtube-description {
+  background-color: $blackOne;
+  border-radius: 5px;
+  border: 1px solid $youtubeBorder;
+  color: $mainTextColor;
+  padding: 0.5rem;
+}

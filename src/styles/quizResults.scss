@@ -1,13 +1,33 @@
-#results {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+p,
+h2,
+a,
+button {
+  color: $mainTextColor;
 }
 
-#buttonHolder,
-.resultsContent p,
-#resultsSection .videoContent {
-  align-content: space-between;
+#buttonHolder {
+  display: grid;
+  margin: 20px 0;
+  place-items: center;
+}
+
+#resetQuizButton {
+  align-items: center;
+  background: $buttonColor;
+  border-radius: 10px;
+  color: $mainButtonTextColor;
+  font-weight: bold;
+  outline: 2px solid $outlineColor;
+  padding: 3vh;
+  transition-duration: 0.4s;
+
+  &:focus,
+  &:hover {
+    background-color: $hoverColor;
+    color: $buttonLinkColor;
+    outline: 2px solid $outlineColor;
+    outline-offset: 2px;
+  }
 }
 
 .videoContent {
@@ -15,40 +35,25 @@
 }
 
 .video-container {
-  max-width: 560px;
   margin: auto;
-
+  max-width: 560px;
   iframe {
-    width: 100%;
     height: auto;
-  }
-}
-#spotifyContent {
-  padding: 5px;
-}
-
-#spotifyLink {
-  flex-grow: 1;
-  transition-duration: 0.4s;
-
-  &:hover {
-    background-color: $hoverColor;
-    color: $mainTextColor;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 768px) {
   .video-container iframe {
-    width: 560px;
     height: 315px;
+    width: 560px;
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1024px) {
   #results {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
   }
 }

@@ -10,7 +10,7 @@ import { calculateDominantGenre } from "./utils";
 import { fetchTrackInfo } from "./services/spotifyService";
 import { fetchYouTubeVideos } from "./services/youtubeService";
 import { loadInitialData } from "./services/dataService";
-import './styles/styles.css';
+import "./styles/styles.css";
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
@@ -22,10 +22,10 @@ function App() {
   const [spotifyLink, setSpotifyLink] = useState("");
   const [youTubeVideos, setYouTubeVideos] = useState([]);
   const [spotifyTrack, setSpotifyTrack] = useState(null);
-  const [trackName, setTrackName] = useState('');
-  const [artistName, setArtistName] = useState('');
+  const [trackName, setTrackName] = useState("");
+  const [artistName, setArtistName] = useState("");
   const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     setError(false);
@@ -35,7 +35,9 @@ function App() {
       setWeights(weights);
     } catch (error) {
       setError(true);
-      setErrorMessage('Error occured trying to read data. Please refresh the page!');
+      setErrorMessage(
+        "Error occured trying to read data. Please refresh the page!"
+      );
     }
   }, []);
 
@@ -81,31 +83,35 @@ function App() {
   };
 
   const displaySpotifyInfo = () => {
-      if (!spotifyTrack) {
-        setError(true);
-        setErrorMessage('Error occured trying to fetch Spotify Data. Please try again!');
-        return;
-      }
-  
-      const { spotifyUrl } = spotifyTrack; 
+    if (!spotifyTrack) {
+      setError(true);
+      setErrorMessage(
+        "Error occured trying to fetch Spotify Data. Please try again!"
+      );
+      return;
+    }
 
-      setSpotifyLink(spotifyUrl);
+    const { spotifyUrl } = spotifyTrack;
+
+    setSpotifyLink(spotifyUrl);
   };
 
-    const displayRecommendedTracks = async (genre) => {
-      try {
-        const trackInfo = await fetchTrackInfo(genre);
-        setSpotifyTrack(trackInfo);
-  
-        if (trackInfo.name && trackInfo.artist) {
-          setTrackName(trackInfo.name);
-          setArtistName(trackInfo.artist);
-        }
-      } catch (error) {
-        setError(true);
-        setErrorMessage('Error occured trying to fetch the recommended tracks. Please try again!');
+  const displayRecommendedTracks = async (genre) => {
+    try {
+      const trackInfo = await fetchTrackInfo(genre);
+      setSpotifyTrack(trackInfo);
+
+      if (trackInfo.name && trackInfo.artist) {
+        setTrackName(trackInfo.name);
+        setArtistName(trackInfo.artist);
       }
-    };
+    } catch (error) {
+      setError(true);
+      setErrorMessage(
+        "Error occured trying to fetch the recommended tracks. Please try again!"
+      );
+    }
+  };
 
   const fetchYouTubeDataAndDisplay = async () => {
     try {
@@ -113,13 +119,15 @@ function App() {
       setYouTubeVideos(videos.items);
     } catch (error) {
       setError(true);
-      setErrorMessage('Error occured trying to fetch the YouTube video. Please try again!');
+      setErrorMessage(
+        "Error occured trying to fetch the YouTube video. Please try again!"
+      );
     }
   };
-  
+
   return (
     <div className="App">
-      <Header />
+      <Header handleResetQuiz={resetQuiz} />
       {error && <AlertBox message={errorMessage} />}
       {currentQuestionIndex === -1 && <Home startQuiz={handleStartQuiz} />}
       {currentQuestionIndex >= 0 &&
@@ -130,7 +138,6 @@ function App() {
             weights={weights}
             updateWeights={updateWeights}
             setIsQuizComplete={setIsQuizComplete}
-            
           />
         )}
       {isQuizComplete && !isCalculatedResults && (

@@ -1,16 +1,22 @@
-footer {
+.footer {
+  color: $mainTextColor;
   margin: 0;
+  padding: 10px 0;
+  row-gap: 1rem;
   text-align: center;
   width: 100%;
-  color: $mainTextColor;
-  background-color: $mainBrownColor;
-  border: outset $mainBrownColor;
+
+  .companyName {
+    font-weight: bold;
+  }
 
   .social-links {
     display: flex;
     a {
-      padding: 3vh;
-      vertical-align: middle;
+      display: inline-block;
+      justify-content: center;
+      padding: 10px 10px;
+      transition: transform 0.5s;
 
       &:focus,
       &:hover {
@@ -18,10 +24,8 @@ footer {
         color: $buttonLinkColor;
         outline: 2px solid $outlineColor;
         outline-offset: 2px;
+        transform: scale(0.8);
       }
     }
-  }
-  .copyright {
-    padding-top: 1vh;
   }
 }

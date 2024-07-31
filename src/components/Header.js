@@ -2,28 +2,34 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-function Header() {
+const Header = ({ handleResetQuiz }) => {
   return (
     <header>
       <div className="navbar">
         <div className="navbar-start">
-          <img
-            id="headerLogo"
-            src="/img/logo/QuizTunesLogo.png"
-            alt="Quiz Tunes Logo"
-          />
+          <button
+            onClick={handleResetQuiz}
+            className="handleResetQuiz"
+            aria-label="Return to Homepage"
+          >
+            <img
+              id="headerLogo"
+              src="/img/logo/QuizTunesLogo.png"
+              alt="Quiz Tunes Logo"
+            />
+          </button>
         </div>
         <div className="navbar-end">
           <div className="dropdown lg:hidden">
             <button
               className="header-navigation-bar-button lg:hidden"
-              aria-label="Navigation Bar Button"
+              aria-label="Navigation Bar"
             >
-              <FontAwesomeIcon icon={faBars} size="1x" />
+              <FontAwesomeIcon icon={faBars} size="2x" />
             </button>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow right-0 p-2"
+              className="menu menu-sm dropdown-content rounded-box z-[2] mt-3 w-52 p-2 shadow p-2"
             >
               <li className="menu-item">
                 <a
@@ -95,6 +101,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;
