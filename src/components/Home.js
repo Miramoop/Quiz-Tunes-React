@@ -6,8 +6,14 @@ const Home = ({ startQuiz }) => (
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Welcome to Quiz Tunes!</h1>
-          <p className="mb-5">
+          <h1
+            className="mb-5 text-5xl font-bold"
+            role="alert"
+            aria-live="polite"
+          >
+            Welcome to Quiz Tunes!
+          </h1>
+          <p className="mb-5" role="alert" aria-live="polite">
             Discover new music with Quiz Tunes, a web application that offers a
             fun and interactive quiz experience.
           </p>

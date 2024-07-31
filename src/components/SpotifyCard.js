@@ -10,13 +10,21 @@ const SpotifyCard = ({ spotifyTrack, spotifyLink, dominantGenre }) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Your Recommended Song is:</h2>
+        <h2 className="card-title" role="alert" aria-live="polite">
+          Your Recommended Song is:
+        </h2>
         <div className="spotify-content">
           <ul>
-            <li>Track: {spotifyTrack.name}</li>
-            <li>Artist: {spotifyTrack.artist}</li>
-            <li>Album: {spotifyTrack.albumName}</li>
-            <li>
+            <li role="alert" aria-live="polite">
+              Track: {spotifyTrack.name}
+            </li>
+            <li role="alert" aria-live="polite">
+              Artist: {spotifyTrack.artist}
+            </li>
+            <li role="alert" aria-live="polite">
+              Album: {spotifyTrack.albumName}
+            </li>
+            <li role="alert" aria-live="polite">
               Genre:{" "}
               {dominantGenre
                 ? dominantGenre.charAt(0).toUpperCase() + dominantGenre.slice(1)

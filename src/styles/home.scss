@@ -1,7 +1,7 @@
 #home {
+  color: $mainTextColor;
   text-align: center;
   width: 100%;
-  color: $mainTextColor;
 }
 
 .hero {
@@ -10,9 +10,11 @@
 
 #startQuizButton {
   align-items: center;
-  outline: 2px solid $outlineColor;
   background: $buttonColor;
   border-radius: 10px;
+  color: $mainButtonTextColor;
+  font-weight: bold;
+  outline: 2px solid $outlineColor;
   padding: 3vh;
   transition-duration: 0.4s;
 

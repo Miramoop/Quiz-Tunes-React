@@ -1,29 +1,31 @@
 #quiz {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 800px;
+  height: 100vh;
+  justify-content: center;
   margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
 }
 
 #questionText {
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 20px;
   background-color: $imageButtonBackground;
+  border-radius: 8px;
   color: $mainTextColor;
   font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding: 20px;
   text-align: center;
-  border-radius: 8px;
+  width: 100%;
 }
 
 .choices {
   display: grid;
   gap: 10px;
-  width: 100%;
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 20px;
+  width: 100%;
 
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
@@ -35,15 +37,15 @@
 }
 
 .MuiButtonBase-root {
-  position: relative;
-  height: 200px;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
   align-items: center;
-  justify-content: center;
   background-color: $imageButtonBackground;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
   transition: background-color 0.3s;
+  width: 100%;
 
   &:hover,
   &.Mui-focusVisible {
@@ -61,52 +63,53 @@
 }
 
 .image-bg {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
   z-index: 0;
 }
 
 .image-overlay {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: flex;
   align-items: center;
-  justify-content: center;
   background: $imageButtonBackground;
-  color: $mainTextColor;
-  text-align: center;
-  padding: 10px;
   box-sizing: border-box;
+  color: $mainTextColor;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
 }
 
 .image-text {
-  padding: 10px;
-  border-radius: 4px;
   background: white;
+  border-radius: 4px;
   color: black;
+  padding: 10px;
 }
 
 .quiz-navigation {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
   margin-bottom: 20px;
+  margin-top: 20px;
 
   .navigation-button {
     align-items: center;
     background: $buttonLinkColor;
     border-radius: 10px;
+    color: $mainButtonTextColor;
+    font-weight: bold;
+    margin: 0 10px;
     padding: 3vh;
     transition-duration: 0.4s;
-    margin: 0 10px;
-
     &:focus,
     &:hover {
       background-color: $hoverColor;
@@ -118,27 +121,27 @@
 }
 
 .steps {
-  visibility: hidden;
   padding: 10px;
+  visibility: hidden;
 }
 
 @media screen and (min-width: 600px) {
   .steps {
-    visibility: visible;
     transform: scale(0.8);
+    visibility: visible;
   }
 }
 
 @media screen and (min-width: 800px) {
   .steps {
-    visibility: visible;
     transform: scale(1);
+    visibility: visible;
   }
 }
 
 @media screen and (min-width: 1400px) {
   .steps {
-    visibility: visible;
     transform: scale(1.2);
+    visibility: visible;
   }
 }

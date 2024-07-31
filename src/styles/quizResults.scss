@@ -5,9 +5,29 @@ button {
   color: $mainTextColor;
 }
 
-#buttonHolder,
-#resultsSection .videoContent {
-  align-content: space-between;
+#buttonHolder {
+  display: grid;
+  margin: 20px 0;
+  place-items: center;
+}
+
+#resetQuizButton {
+  align-items: center;
+  background: $buttonColor;
+  border-radius: 10px;
+  color: $mainButtonTextColor;
+  font-weight: bold;
+  outline: 2px solid $outlineColor;
+  padding: 3vh;
+  transition-duration: 0.4s;
+
+  &:focus,
+  &:hover {
+    background-color: $hoverColor;
+    color: $buttonLinkColor;
+    outline: 2px solid $outlineColor;
+    outline-offset: 2px;
+  }
 }
 
 .videoContent {
@@ -15,36 +35,18 @@ button {
 }
 
 .video-container {
-  max-width: 560px;
   margin: auto;
-
+  max-width: 560px;
   iframe {
-    width: 100%;
     height: auto;
-  }
-}
-
-.btn-primary {
-  background-color: $buttonColor;
-  border-color: none;
-  color: $mainTextColor;
-  font-weight: normal;
-  padding: 10px;
-  transition: transform 0.2s;
-  &:focus,
-  &:hover {
-    background-color: $hoverColor;
-    color: $buttonLinkColor;
-    outline: 2px solid #fff;
-    outline-offset: 2px;
-    transform: scale(1.1);
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 768px) {
   .video-container iframe {
-    width: 560px;
     height: 315px;
+    width: 560px;
   }
 }
 

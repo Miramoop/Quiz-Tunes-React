@@ -7,7 +7,11 @@ const Header = ({ handleResetQuiz }) => {
     <header>
       <div className="navbar">
         <div className="navbar-start">
-          <button onClick={handleResetQuiz} className="handleResetQuiz">
+          <button
+            onClick={handleResetQuiz}
+            className="handleResetQuiz"
+            aria-label="Return to Homepage"
+          >
             <img
               id="headerLogo"
               src="/img/logo/QuizTunesLogo.png"
@@ -19,7 +23,7 @@ const Header = ({ handleResetQuiz }) => {
           <div className="dropdown lg:hidden">
             <button
               className="header-navigation-bar-button lg:hidden"
-              aria-label="Navigation Bar Button"
+              aria-label="Navigation Bar"
             >
               <FontAwesomeIcon icon={faBars} size="2x" />
             </button>

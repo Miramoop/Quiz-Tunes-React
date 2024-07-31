@@ -7,9 +7,14 @@ const QuizComplete = ({ handleCalculateResults }) => (
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">Quiz is Complete!</h1>
-          <p className="mb-5">
-            Thanks for taking the quiz! 
-            Press the button to get your song recommendation!
+          <p
+            className="mb-5"
+            role="alert"
+            aria-live="polite"
+            aria-label=" Welcome to Quiz Tunes!"
+          >
+            Thanks for taking the quiz! Press the button to get your song
+            recommendation!
           </p>
           <button
             id="calculateResultsButton"
