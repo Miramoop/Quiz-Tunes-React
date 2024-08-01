@@ -19,6 +19,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
 - [📺 Obtain the YouTube API Key](#-obtain-the-youtube-api-key)
 - [💾 Check for Node and Npm Installations](#-check-for-node-and-npm-installations)
 - [💻 Make Repo into React App](#-make-repo-into-react-app)
+- [📌 Dependencies Used](#-dependencies-used)
 
 ## 👽 Clone the Repo
 
@@ -56,7 +57,7 @@ Quiz Tunes is a web application built with REACT, HTML, SASS, JavaScript, Spotif
       <li>Next, we must create an environment variables file using the following command</li>
        <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> echo. > environment.env </pre></code>
       <li>Now we must access that file using the following command</li>
-      <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> echo. > environment.env </pre></code>
+      <pre><code>C:\Users\YOURUSERNAME\quiz-tunes-react> start environment.env </pre></code>
       <blockquote>
       <strong>❗️IMPORTANT:</strong> We will get the exact keys that need to be added into this file in the next two steps, so keep this file open.
       </blockquote>
@@ -201,3 +202,20 @@ REACT_APP_API_KEY=PLACE YOUR YOUTUBE API KEY HERE
 [[↑ Back to Top ↑]](#-table-of-contents)
 
   </details>
+
+## 📌 Dependencies Used
+
+ <details>
+    <summary>Click to show / hide <code>Dependencies Used</code></summary></br>
+    <ol>
+      <li>Tailwind CSS: <a href="https://tailwindui.com/documentation"> Tailwind CSS Docs</a></li>
+      <li>Material UI: <a href="https://mui.com/material-ui/getting-started/"> Material UI Docs</a></li>
+      <li>Daisy UI: <a href="https://daisyui.com/docs/install/"> Daisy UI Docs</a></li>
+        <blockquote>
+      <strong>📓NOTE:</strong> These should all be included in the clone of my repo.
+      </blockquote>
+    </ol>
+
+[[↑ Back to Top ↑]](#-table-of-contents)
+
+</details>
