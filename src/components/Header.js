@@ -43,7 +43,7 @@ const Header = ({ handleResetQuiz }) => {
               </li>
               <li className="menu-item">
                 <a
-                  href="https://www.linkedin.com/in/mirandamorris845/"
+                  href="https://www.linkedin.com/in/miramoop/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Page"
